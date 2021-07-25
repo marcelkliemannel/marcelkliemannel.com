@@ -1,0 +1,200 @@
+@import '_layout', '_colors';
+
+$base-line-height: .8rem;
+$paragraph-gap: .8rem;
+$title-margin-top: calc(1rem + #{$paragraph-gap});
+$normal-text-font-size: 1rem;
+$normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height});
+
+.text {
+  color: $text-color-bright-background;
+
+  p {
+    margin: $paragraph-gap 0;
+    font-size: $normal-text-font-size;
+    line-height: $normal-text-line-height;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: $text-color-bright-background;
+    text-decoration: none;
+    border-bottom: 1px solid $text-color-bright-background;
+
+    &:hover {
+      // 'border-bottom: none;' would lead to a change in the line height if 
+      // link has a multi line text.
+      border-bottom-color: $color-green-400;
+    }
+
+    &:focus, &:active {
+      outline: dashed 1px $color-dark-300;
+      border-bottom-color: transparent;
+    }
+  }
+
+  img {
+    margin: 0 auto;
+  
+    &[src$='#center'] {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  ul {
+    margin-left: 1.4rem;
+    padding-top: $paragraph-gap;
+
+    li {
+      list-style-type: square;
+    }
+  }
+
+  ol {
+    margin-left: 1.5rem;
+    padding-top: $paragraph-gap;
+
+    li {
+      list-style-type: decimal;
+    }
+  }
+
+  li { 
+    list-style-position: inside;
+    text-indent: -1.2rem;
+    margin-bottom: $paragraph-gap;
+  }
+
+  blockquote {
+    margin: 0;
+    padding: $paragraph-gap;
+    padding-left: 1rem;
+    color: $color-dark-500;
+    border-left: 2px solid $color-bright-500;
+
+    p {
+      padding: 0;
+    }
+  }
+
+  code {
+    font-family: $monospace-font-family;
+    font-size: .9rem;
+    background-color: $color-bright-400;
+    padding: .2rem .4rem;
+    white-space: pre;
+  }
+
+  .highlight {
+    margin: $paragraph-gap 0;
+  }
+
+  pre {
+    margin: 0;
+    display: block;
+    background-color: $color-bright-300;
+    padding: .6rem;
+    line-height: 1.6rem;
+
+    code {
+      font-size: .9rem;
+      background-color: transparent !important;
+      display: block;
+      padding: 0;
+    }
+  }
+
+  // Don't affect code block
+  table:not([class="lntable"]) {
+    $normal-border: 1px solid $color-bright-500;
+
+    margin: $paragraph-gap 0;
+    font-size: $normal-text-font-size;
+    line-height: $normal-text-line-height;
+    width: 100%;
+    border-collapse: collapse;
+    border: $normal-border;
+
+    td { 
+      padding: .4rem .6rem;
+      border-right: 1px solid $color-bright-500;
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  
+    thead {
+      background-color: $color-bright-300;
+
+      th {
+        font-size: .9rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-bottom: 2px solid $color-bright-500;
+        border-right: 2px solid $color-bright-500;
+  
+        &:last-child {
+          border-right: 0;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: $normal-border;
+
+        &:nth-child(even) {
+          background-color: $color-bright-200;
+        }
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &-on-dark-background {
+    $text-color-dark-background: $color-bright-100;
+    color: $text-color-dark-background;
+
+    a {
+      color: $text-color-dark-background !important;
+      border-bottom-color: $text-color-dark-background;
+    
+      &:focus, &:active {
+        outline-color: $color-dark-300;
+      }
+    }
+
+    code {
+      color: $text-color-bright-background !important;
+    }
+  }
+
+  &-small {
+    p {
+      font-size: calc(#{$normal-text-font-size} * .8) !important;
+    }
+  }
+
+  .table-of-contents {
+    margin: $paragraph-gap 0;
+
+    #TableOfContents {
+      display: none;
+      background-color: $color-bright-300;
+      padding: 0 calc(#{$paragraph-gap} * 2) $paragraph-gap;
+      margin-top: .3rem;
+    }
+  }
+}

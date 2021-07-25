@@ -1,0 +1,12 @@
+{{ define "main" }}
+
+{{ partial "page-header.html" (dict "context" .) }}
+
+
+<div class="horizontal-wrapper-narrow vertical-wrapper-large with-safety-gap">
+
+  {{ partial "page-list.html"  (dict "context" .Pages "listClassAttr" "pages") }}
+
+</div>
+
+{{ end }}

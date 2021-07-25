@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+{{ partial "page-header.html" (dict "context" . "postPartial" "social-media.html" "postPartialParams" (dict "linkClassAttr" "button-like button-like-monospace button-like-size-m button-like-inverted-bright")) }}
+
+<div class="horizontal-wrapper-narrow vertical-wrapper-large with-safety-gap">
+
+  <h2 class="gap-bottom-large">Latest Articles</h2>
+
+  {{ partial "page-list.html" (dict "context" ( where site.RegularPages "Section" "articles" | first 10 ) "listClassAttr" "pages-flex" ) }}
+
+</div>
+
+{{ end }}

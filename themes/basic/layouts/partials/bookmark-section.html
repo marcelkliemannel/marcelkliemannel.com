@@ -1,0 +1,20 @@
+{{ with .section }}
+
+<h{{ $.level }}>{{ .Title }}</h{{ $.level }}>
+
+<ul>
+  {{ range .RegularPages }}
+
+  <li>
+    <a href="{{ .Params.link }}" target="_blank">{{ .Title }}</a><br />
+    {{ with .Plain }}<span class="description">{{ . }}</span>{{ end }}
+  </li>
+
+  {{ end }}
+</ul>
+
+{{ range .Sections }}
+  {{ partial "bookmark-section.html" (dict "section" . "level" (add $.level 1)) }}
+{{ end }}
+
+{{ end }}

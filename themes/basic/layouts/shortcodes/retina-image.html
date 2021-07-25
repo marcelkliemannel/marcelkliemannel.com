@@ -1,0 +1,14 @@
+{{ $original := .Page.Resources.GetMatch (.Get 0) }}
+{{ $options := .Get 1 }}
+{{ $title := .Get 2 }}
+
+{{ if (findRE ".*2x\\.[[:alpha:]]+" $original.RelPermalink) }}
+  {{ $image1xSize := printf "%dx%d" (div $original.Width 2) (div $original.Height 2) }}
+  {{ .Scratch.Set "image1x" ($original.Resize $image1xSize) }}
+  {{ $image1x := .Scratch.Get "image1x" }}
+  <p class="center">
+    <img src="{{ $image1x.RelPermalink }}" width="{{ $image1x.Width }}" height="{{ $image1x.Height }}" srcset="{{ $original.RelPermalink }} 2x" alt="{{ $title }}">
+  </p>
+{{ else }}
+  {{ errorf "Image '%s' is not a retina image." $original.RelPermalink }}
+{{ end }}

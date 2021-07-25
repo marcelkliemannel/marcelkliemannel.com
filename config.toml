@@ -1,0 +1,45 @@
+baseURL = "http://localhost:1313"
+languageCode = "en-us"
+title = "Marcel Kliemannel"
+theme = "basic"
+
+[markup]
+  [markup.highlight]
+    lineNos = true
+    style = "borland"
+    tabWidth = 2
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNumbersInTable = true
+    noClasses = false
+
+[menu]
+  [[menu.main]]
+    name = "Articles"
+    url = "articles/"
+    weight = 1
+  [[menu.main]]
+    name = "Projects"
+    url = "projects/"
+    weight = 2
+  [[menu.main]]
+    name = "Bookmarks"
+    url = "bookmarks/"
+    weight = 3
+  [[menu.main]]
+    name = "Contact"
+    url = "contact/"
+    weight = 4
+
+[params]
+  metaLanguage = "en"
+  metaAuthor = "Marcel Kliemannel"
+  metaDescription = "Personal website containing articles and a bookmarks collection mainly about software development and an overview over my projects."
+  aboutTheAuthorName = "Marcel Kliemannel"
+  # Text is also in the _index.md
+  aboutTheAuthorDescription = "Software Engineer, JVM Enthusiast and technical writer with a focus on architecture, backend, automation, DevOps, monitoring, performance and security."
+  gitHub = "https://github.com/marcelkliemannel"
+  stackOverflow = "https://stackoverflow.com/users/story/7059880"
+  twitter = "https://twitter.com/7ur1n9"

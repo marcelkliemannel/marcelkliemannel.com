@@ -1,0 +1,120 @@
+@import '_fonts', '_colors';
+
+.header {
+  $header-height: 4rem;
+
+  color: $color-bright-100;
+  background-color: $color-dark-900;
+
+  .logo {
+    $logo-font-size: 1.1rem;
+
+    font-family: $title-font-family;
+    font-weight: $title-font-weight-bold;
+    letter-spacing: $title-letter-spacing;
+    font-size: $logo-font-size;
+    line-height: $header-height;
+
+    a {
+      color: $color-bright-100;
+      text-decoration: none; 
+
+      &:focus, &:active {
+        outline: dashed 1px $color-dark-300;
+        border-top-color: transparent;
+        background-color: transparent;
+        border-bottom-color: transparent;
+      }
+    }
+
+    &:after {
+      display: block;
+      position: absolute;
+      $logo-text-gap: calc(calc(#{$header-height} - #{$logo-font-size}) / 2);
+      top: calc(calc(#{$logo-text-gap} + #{$logo-font-size}) + .3rem);
+      width: 2.5rem;
+      content: '';
+      border-bottom: 3px solid $color-green-400;
+    }
+  }
+
+  .main-menu-horizontal {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  $toggle-font-size: 1.4rem;
+  .main-menu-vertical-toggle {
+    margin: 0;
+    position: absolute;
+    z-index: 1001;
+    top: 50%;
+    right: $wrapper-safety-gap;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: $toggle-font-size;
+    text-decoration: none;
+    color: inherit;
+    display: none;
+    
+    // To avoid that the toggle remains green after clicking on a mobile
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: $color-green-400;
+      }
+    }
+
+    &-menu-visible {
+      color: $color-dark-900;
+    }
+  }
+
+  .main-menu-vertical {
+    color: $color-dark-900;
+    background-color: $color-bright-100;
+    border-left: 1px solid $color-dark-800;
+    border-bottom: 1px solid $color-dark-800;
+    margin: 0;
+    padding: calc(calc(#{$header-height} - #{$toggle-font-size}) + 1.2rem) calc(#{$wrapper-safety-gap} + #{$wrapper-safety-gap-intrusion}) 2rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+    z-index: 1000;
+
+    a {
+      display: block;
+    }
+
+    li {
+      margin-bottom: .5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-visible {
+      display: block;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .main-menu-horizontal {
+      display: none;
+    }
+    .main-menu-vertical-toggle {
+      display: block;
+    }
+  }
+
+  @media (min-width: 901px) {
+    .main-menu-vertical {
+      display: none !important;
+    }
+  }
+}

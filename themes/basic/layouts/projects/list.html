@@ -1,0 +1,38 @@
+{{ define "main" }}
+
+{{ partial "page-header.html" (dict "context" .) }}
+
+<div class="horizontal-wrapper-narrow vertical-wrapper-large">
+
+  <ul class="pages-list">
+    {{ range .Sections }}
+
+    <li class="with-safety-gap">
+      <div class="text gap-bottom-large">
+        <h2>{{ .Title }}</h2>
+      </div>
+      <ul class="pages-list">
+        {{ range .Pages }}
+        <li>
+          <div class="text">
+            <h3>{{ .Title }}</h3>
+
+            {{ .Content }}
+          </div>
+
+          <ul class="horizontal-links-menu group">
+            {{ with .Params.gitHub }}<li class="gap-top-paragraph"><a href="{{ . }}" target="_blank" class="button-like button-like-monospace button-like-inverted-dark"><span class="icon-github"></span> GitHub</a></li>{{ end }}
+            {{ with .Params.jetBrainsMarketplace }}<li class="gap-top-paragraph"><a href="{{ . }}" target="_blank" class="button-like button-like-monospace button-like-inverted-dark"><span class="icon-jetbrains"></span> JetBrains Marketplace</a></li>{{ end }}
+            {{ with .Params.mavenCentral }}<li class="gap-top-paragraph"><a href="{{ . }}" target="_blank" class="button-like button-like-monospace button-like-inverted-dark"><span class="icon-download3"></span> Maven Central</a></li>{{ end }}
+          </ul>
+        </li>
+        {{ end }}
+      </ul>
+    </li>
+
+    {{ end }}
+  </ul>
+
+</div>
+
+{{ end }}

@@ -1,0 +1,128 @@
+@import '_colors', '_headings';
+
+.page-meta {
+  font-size: .8rem;
+}
+
+.page-header {
+  color: $color-bright-100;
+  background-color: $color-dark-700;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  .page-meta {
+    color: $color-bright-200;
+  }
+
+  h1 {
+    font-family: $title-font-family;
+    font-weight: $title-font-weight-bold;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+
+    &:after {
+      display: block;
+      position: relative;
+      top: .3rem;
+      width: 5.5rem;
+      content: '';
+      border-bottom: 3px solid $color-green-400;
+    }
+  }
+
+  .page-description {
+    font-size: 1rem;
+  }
+}
+
+// -- Pages list -------------------------------------------------------------------------------------------------------
+
+.pages-list {
+  > li {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .pages-flex {
+    display: block;
+
+    > li {
+      margin-bottom: 2.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 901px) {
+  .pages-flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin-top: -2.5rem;
+    margin-left: -2rem;
+
+    > li {
+      flex: 0 1 50%;
+      margin-top: 2.5rem;
+      padding-left: 2rem;
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+// -- Bookmarks --------------------------------------------------------------------------------------------------------
+
+.bookmarks {
+  .description {
+    margin-top: .8rem;
+  }
+}
+
+// -- About the author -------------------------------------------------------------------------------------------------
+
+.about-the-author {
+  border: 2px solid $color-dark-800;
+  padding: 1.4rem 1.6rem;
+  position: relative;
+
+  &-title {
+    $line-height: 1.8rem;
+    display: inline-block;
+    content: 'About the Author';
+    font-family: $title-font-family;
+    font-weight: $title-font-weight-bold;
+    font-size: .9rem;
+    color: $text-color-green-400-background;
+    line-height: $line-height;
+    background-color: $color-green-400;
+    padding: 0 .4rem;
+    position: absolute;
+    top: calc(calc(#{$line-height} / 2) * -1)
+  }
+
+  &-name {
+    @include formatHeading(.1rem);
+  }
+}

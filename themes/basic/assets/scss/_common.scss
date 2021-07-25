@@ -1,0 +1,141 @@
+// -- Helper -----------------------------------------------------------------------------------------------------------
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+// -- Button like ------------------------------------------------------------------------------------------------------
+
+.button-like {
+  color: $text-color-bright-background;
+  border-bottom: 2px solid transparent;
+  display: inline-block;
+  padding: .1rem .6rem;
+  text-decoration: none;
+  text-align: center;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid $color-green-400;
+  white-space: nowrap;
+
+  &:hover {
+    color: $text-color-bright-background;
+    border-bottom-color: $color-green-400;
+  }
+
+  &:focus, &:active {
+    outline: dashed 1px $color-dark-300;
+    border-top-color: transparent !important;
+    background-color: transparent !important;
+    border-bottom-color: transparent !important;
+  }
+
+  &-secondary-dark {
+    border-bottom-color: $color-dark-900;
+  }
+
+  &-secondary-bright {
+    border-bottom-color: $color-bright-100;
+  }
+
+  &-inverted-bright {
+    color: $text-color-green-400-background !important;
+    background-color: $color-green-400;
+    border-color: $color-green-400;
+
+    &:hover {
+      color: $color-bright-100 !important;
+      border-top-color: $color-dark-700;
+      border-bottom-color: $color-green-400 !important;
+      background-color: $color-dark-700;
+    }
+  }
+
+  &-inverted-dark {
+    color: $color-bright-100 !important;
+    background-color: $color-dark-700;
+    border-color: $color-dark-700;
+
+    &:hover {
+      color: $text-color-green-400-background !important;
+      border-top-color: $color-green-400;
+      border-bottom-color: $color-dark-700 !important;
+      background-color: $color-green-400;
+    }
+
+    &:focus, &:active {
+      color: $text-color-bright-background !important;
+      border-color: transparent !important;
+      background-color: transparent !important;
+    }
+  }
+
+  &-size-m {
+    font-size: 0.8rem;
+  }
+
+  &-size-l {
+    font-size: 1rem;
+  }
+
+  &-on-dark-background {
+    color: $color-bright-100 !important;
+
+    &:hover {
+      color: $color-dark-900 !important;
+      background-color: $color-green-400;
+      border-color: $color-green-400;
+    }
+
+    &:focus, &:active {
+      color: $color-bright-100 !important;
+    }
+  }
+
+  &-monospace {
+    font-family: $monospace-font-family;
+  }
+}
+
+// -- Links Menu -------------------------------------------------------------------------------------------------------
+
+.horizontal-links-menu {
+  li {
+    display: inline-block;
+    margin-right: .5rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.vertical-links-menu {
+  li {
+    margin-top: .5rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+// -- Separator --------------------------------------------------------------------------------------------------------
+
+.separator {
+  display: block;
+  border-top: 1px solid $color-dark-200;
+}

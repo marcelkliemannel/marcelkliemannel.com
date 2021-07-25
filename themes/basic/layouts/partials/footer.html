@@ -1,0 +1,15 @@
+<div class="horizontal-wrapper-narrow vertical-wrapper-large center">
+  <nav>
+    <ul class="horizontal-links-menu group">
+      {{ range .Site.Menus.main }}
+      <li><a href="{{ $.Site.BaseURL }}{{ .URL }}" class="button-like button-like-on-dark-background button-like-size-m">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+
+  <div class="text text-small text-on-dark-background gap-top-large">
+    <p>
+      The articles are licensed under <a href="http://creativecommons.org/licenses/by-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer">Attribution-NoDerivatives 4.0 International</a>.
+    </p>
+  </div>
+</div>

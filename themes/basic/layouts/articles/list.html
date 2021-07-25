@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+{{ partial "page-header.html" (dict "context" .) }}
+
+
+<div class="horizontal-wrapper-narrow vertical-wrapper-large with-safety-gap">
+
+  {{ partial "page-list.html"  (dict "context" .Pages "listClassAttr" "pages-flex" "entryClassAttr" "") }}
+
+  <h2 class="gap-top-xl">Topics</h2>
+
+  {{ partial "tags.html" (dict "tags" .Site.Taxonomies.tags "listClassAttr" "gap-top-small" "tagClassAttr" "button-like-inverted-dark button-like-size-l" "tagIsFromTaxonomy" "true")}}
+
+</div>
+
+{{ end }}

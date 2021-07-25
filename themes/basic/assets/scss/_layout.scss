@@ -1,0 +1,88 @@
+@import '_fonts', '_colors';
+
+body, html {
+  height: 100%;
+}
+
+body {
+  font-family: $text-font-family;
+  font-size: 16px;
+  color: $color-bright-100;
+  background-color: $color-dark-900;
+}
+
+.main {
+  color: $color-dark-900;
+  background: $color-bright-100;
+}
+
+// -- Wrappers ------------------------------------------------------------------------------------------------------ //
+
+$wrapper-safety-gap: 1.6rem;
+$wrapper-safety-gap-intrusion: .3rem;
+
+.with-safety-gap {
+  padding: 0 $wrapper-safety-gap;
+}
+
+.horizontal-wrapper-narrow {
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.vertical-wrapper-large {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+// -- Alignment ------------------------------------------------------------------------------------------------------ //
+
+.center {
+  text-align: center;
+}
+
+// -- Gaps ---------------------------------------------------------------------------------------------------------- //
+
+$paragraph-gap: .8rem;
+$small-gap: .5rem;
+$medium-gap: 1rem;
+$large-gap: 2rem;
+$xl-gap: 3rem;
+
+.gap-top-paragraph {
+  margin-top: $paragraph-gap;
+}
+
+.gap-top-small {
+  margin-top: $small-gap;
+}
+
+.gap-top-medium {
+  margin-top: $medium-gap;
+}
+
+.gap-top-large {
+  margin-top: $large-gap;
+}
+
+.gap-top-xl {
+  margin-top: $xl-gap;
+}
+
+.gap-bottom-small {
+  margin-bottom: $small-gap;
+}
+
+.gap-bottom-medium {
+  margin-bottom: $medium-gap;
+}
+
+.gap-bottom-large {
+  margin-bottom: $large-gap;
+}
+
+.no-gap {
+  margin: 0 !important;
+}

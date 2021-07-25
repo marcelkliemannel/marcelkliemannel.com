@@ -1,0 +1,18 @@
+<ul{{ with $.listClassAttr }} class="{{ . }}"{{end}}>
+  {{ range .context }}
+  <li{{ with $.entryClassAttr }} class="{{ . }}"{{end}}>
+    {{ partial "page-meta.html" . }}
+    <div  class="text">
+      <h3 class="non-chapter"><a href="{{.Permalink}}">{{.Title}}</a></h3>
+
+      {{ with .Params.summary }}
+      <div class="text gap-top-small">
+        <p>{{ . }}</p>
+      </div>
+     {{ end }}
+    </div>
+
+    {{ partial "tags.html" (dict "tags" .Params.tags "listClassAttr" "gap-top-small" "tagClassAttr" "button-like-inverted-dark button-like-size-m")}}
+  </li>
+  {{ end }}
+</ul>

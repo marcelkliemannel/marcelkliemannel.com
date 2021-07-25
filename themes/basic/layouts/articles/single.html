@@ -1,0 +1,24 @@
+{{ define "main" }}
+
+{{ partial "page-header.html" (dict "context" . "withPageMeta" true) }}
+
+<div class="horizontal-wrapper-narrow vertical-wrapper-large with-safety-gap">
+  <div class="text">
+    {{- with .Content -}}
+    <div>
+      {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}&nbsp;<a href="#${2}" class="heading-anchor" ariaLabel="Anchor"><span class="icon-link"></span></a>${3}` | safeHTML }}
+    </div>
+    {{- end -}}
+  </div>
+
+  <div class="about-the-author gap-top-xl">
+    <div class="about-the-author-title">About the Author</div>
+    <div class="text">
+      <h2 class="about-the-author-name">{{ $.Site.Params.aboutTheAuthorName }}</h2>
+      <p>{{ $.Site.Params.aboutTheAuthorDescription }}</p>
+    </div>
+    {{ partial "social-media.html" (dict "context" $.Site "linkClassAttr" "button-like button-like-monospace button-like-size-m button-like-inverted-dark") }}
+  </div>
+</div>
+
+{{ end }}

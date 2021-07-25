@@ -1,0 +1,24 @@
+<div class="header">
+  <div class="horizontal-wrapper-narrow with-safety-gap group">
+
+    <div class="logo left">
+      <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+    </div>
+
+    <nav>
+      <ul class="main-menu-horizontal horizontal-links-menu group">
+        {{ range .Site.Menus.main }}
+        <li><a href="{{ $.Site.BaseURL }}{{ .URL }}" class="button-like button-like-on-dark-background">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+
+      <a href="#" class="main-menu-vertical-toggle icon-menu"></a>
+      <ul class="main-menu-vertical">
+        {{ range .Site.Menus.main }}
+        <li><a class="button-like button-like-secondary-dark" href="{{ $.Site.BaseURL }}{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+
+  </div>
+</div>

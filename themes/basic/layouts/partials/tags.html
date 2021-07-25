@@ -1,0 +1,15 @@
+{{ $listClassAttr :=  cond (isset . "listClassAttr") .listClassAttr "" }} 
+{{ $tagClassAttr := cond (isset . "tagClassAttr") .tagClassAttr "" }} 
+{{ $tagIsFromTaxonomy := cond (isset . "tagIsFromTaxonomy") .tagIsFromTaxonomy "false" }} 
+{{ with .tags }}
+<ul class="horizontal-links-menu group {{ $listClassAttr }}">
+{{ range . }}
+  {{ $name := . }}
+  {{ if (eq $tagIsFromTaxonomy "true") }} {{ $name = .Page.Title }} {{ end }} 
+  <li class="left">
+    {{ $href := print (absURL "tags/") (urlize $name) }}
+    <a href="{{ $href }}" class="button-like button-like-monospace {{ $tagClassAttr }}">{{ $name }}</a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

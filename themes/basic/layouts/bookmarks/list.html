@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+{{ partial "page-header.html" (dict "context" .) }}
+
+<div class="horizontal-wrapper-narrow vertical-wrapper-large">
+
+  <div class="text with-safety-gap bookmarks">
+    {{ range .Sections }}
+      {{ partial "bookmark-section.html" (dict "section" . "level" 2) }}
+    {{ end }}
+  </div>
+</div>
+
+{{ end }}

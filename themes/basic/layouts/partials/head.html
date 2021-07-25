@@ -1,0 +1,15 @@
+<head lang="{{ .Site.Params.metaLanguage }}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ .Site.Params.metaDescription }}">
+  <meta name="author" content="{{ .Site.Params.metaAuthor }}">
+
+  {{ $mainCss := resources.Get "scss/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $mainCss.Permalink }}">
+  {{ $iconmoonCss := resources.Get "css/iconmoon.css" | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $iconmoonCss.Permalink }}">
+
+  {{ $title := print .Site.Title " | " .Title }}
+  {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
+  <title>{{ $title }}</title>
+</head>

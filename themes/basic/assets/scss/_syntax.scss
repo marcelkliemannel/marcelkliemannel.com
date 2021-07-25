@@ -1,0 +1,122 @@
+@import '_colors';
+
+.chroma { 
+  background-color:  $color-bright-300;
+  //line-height: 1.1rem;
+
+  /* Other */ 
+  .x { 
+  }
+
+  /* Error */ 
+  .err { 
+    color: #a61717; 
+    background-color: #e3d2d2;
+  }
+
+  /* LineTableTD */ 
+  .lntd { 
+    vertical-align: top;
+    margin: 0;
+    border: 0;
+    
+    &:nth-child(1) {
+      border-right: 1px solid $color-dark-200;
+    }
+
+    &:nth-child(2) {
+      width: 100%;
+    }
+  }
+
+  /* LineTable */ 
+  .lntable { 
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0; 
+    padding: 0; 
+    margin: 0; 
+    border: 0; 
+    display: block;
+    overflow-x: auto;
+    overflow-y: visible;
+  }
+
+/* LineHighlight */ .hl { display: block; width: 100%;background-color: #ffffcc }
+/* LineNumbersTable */ .lnt {  }
+/* LineNumbers */ .ln {  }
+/* Keyword */ .k { color: #000080; font-weight: bold }
+/* KeywordConstant */ .kc { color: #000080; font-weight: bold }
+/* KeywordDeclaration */ .kd { color: #000080; font-weight: bold }
+/* KeywordNamespace */ .kn { color: #000080; font-weight: bold }
+/* KeywordPseudo */ .kp { color: #000080; font-weight: bold }
+/* KeywordReserved */ .kr { color: #000080; font-weight: bold }
+/* KeywordType */ .kt { color: #000080; font-weight: bold }
+/* Name */ .n {  }
+/* NameAttribute */ .na { color: #ff0000 }
+/* NameBuiltin */ .nb {  }
+/* NameBuiltinPseudo */ .bp {  }
+/* NameClass */ .nc {  }
+/* NameConstant */ .no {  }
+/* NameDecorator */ .nd {  }
+/* NameEntity */ .ni {  }
+/* NameException */ .ne {  }
+/* NameFunction */ .nf {  }
+/* NameFunctionMagic */ .fm {  }
+/* NameLabel */ .nl {  }
+/* NameNamespace */ .nn {  }
+/* NameOther */ .nx {  }
+/* NameProperty */ .py {  }
+/* NameTag */ .nt { color: #000080; font-weight: bold }
+/* NameVariable */ .nv {  }
+/* NameVariableClass */ .vc {  }
+/* NameVariableGlobal */ .vg {  }
+/* NameVariableInstance */ .vi {  }
+/* NameVariableMagic */ .vm {  }
+/* Literal */ .l {  }
+/* LiteralDate */ .ld {  }
+/* LiteralString */ .s { color: #0000ff }
+/* LiteralStringAffix */ .sa { color: #0000ff }
+/* LiteralStringBacktick */ .sb { color: #0000ff }
+/* LiteralStringChar */ .sc { color: #800080 }
+/* LiteralStringDelimiter */ .dl { color: #0000ff }
+/* LiteralStringDoc */ .sd { color: #0000ff }
+/* LiteralStringDouble */ .s2 { color: #0000ff }
+/* LiteralStringEscape */ .se { color: #0000ff }
+/* LiteralStringHeredoc */ .sh { color: #0000ff }
+/* LiteralStringInterpol */ .si { color: #0000ff }
+/* LiteralStringOther */ .sx { color: #0000ff }
+/* LiteralStringRegex */ .sr { color: #0000ff }
+/* LiteralStringSingle */ .s1 { color: #0000ff }
+/* LiteralStringSymbol */ .ss { color: #0000ff }
+/* LiteralNumber */ .m { color: #0000ff }
+/* LiteralNumberBin */ .mb { color: #0000ff }
+/* LiteralNumberFloat */ .mf { color: #0000ff }
+/* LiteralNumberHex */ .mh { color: #0000ff }
+/* LiteralNumberInteger */ .mi { color: #0000ff }
+/* LiteralNumberIntegerLong */ .il { color: #0000ff }
+/* LiteralNumberOct */ .mo { color: #0000ff }
+/* Operator */ .o {  }
+/* OperatorWord */ .ow { font-weight: bold }
+/* Punctuation */ .p {  }
+/* Comment */ .c { color: #008800; font-style: italic }
+/* CommentHashbang */ .ch { color: #008800; font-style: italic }
+/* CommentMultiline */ .cm { color: #008800; font-style: italic }
+/* CommentSingle */ .c1 { color: #008800; font-style: italic }
+/* CommentSpecial */ .cs { color: #008800; font-weight: bold }
+/* CommentPreproc */ .cp { color: #008080 }
+/* CommentPreprocFile */ .cpf { color: #008080 }
+/* Generic */ .g {  }
+/* GenericDeleted */ .gd { color: #000000; background-color: #ffdddd }
+/* GenericEmph */ .ge { font-style: italic }
+/* GenericError */ .gr { color: #aa0000 }
+/* GenericHeading */ .gh { color: #999999 }
+/* GenericInserted */ .gi { color: #000000; background-color: #ddffdd }
+/* GenericOutput */ .go { color: #888888 }
+/* GenericPrompt */ .gp { color: #555555 }
+/* GenericStrong */ .gs { font-weight: bold }
+/* GenericSubheading */ .gu { color: #aaaaaa }
+/* GenericTraceback */ .gt { color: #aa0000 }
+/* GenericUnderline */ .gl { text-decoration: underline }
+/* TextWhitespace */ .w { color: #bbbbbb }
+}

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+        {{- partial "header.html" . -}}
+        <div class="main">
+        {{- block "main" . }}{{- end }}
+        </div>
+        {{- partial "footer.html" . -}}
+
+        {{ $mainJs := resources.Get "js/main.js" | resources.Minify | resources.Fingerprint }}
+        <script src="{{ $mainJs.Permalink }}"></script>
+    </body>
+</html>

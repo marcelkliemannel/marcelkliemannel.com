@@ -1,0 +1,81 @@
+@import '_text';
+
+@mixin formatHeading($additional-font-size) {
+  $font-size: calc(#{$normal-text-font-size} + #{$additional-font-size});
+  font-size: $font-size;
+  line-height: calc(#{$font-size} + #{$base-line-height});
+    
+ &:not(.non-chapter) {
+    &:after {
+      display: block;
+      width: 2.5rem;
+      content: '';
+      border-bottom: 3px solid $color-green-400;
+    }
+  }
+
+  .heading-anchor {
+    font-size: calc(#{$font-size} * .6);
+     opacity: 0;
+     // Use padding instead of left to avoid a small gap inside the headline,
+     // safety margin and anchor, which would make the anchor 'blink'.
+     padding: 0 .4rem;
+     line-height: 2rem;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $title-font-family;
+  font-weight: $title-font-weight-bold;
+  letter-spacing: $title-letter-spacing;
+  margin-top: $title-margin-top;
+  margin-bottom: $paragraph-gap;
+
+  &:hover {
+    .heading-anchor { 
+      opacity: 1;
+    }
+  }
+    
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  a {
+    border-width: 2px !important;
+  }
+
+  &.non-chapter {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+h1 {
+  @include formatHeading(.9rem);
+}
+
+h2 {
+  @include formatHeading(.7rem);
+}
+
+h3 {
+  @include formatHeading(.3rem);
+}
+
+h4 {
+  @include formatHeading(.2rem);
+}
+
+h5 {
+  @include formatHeading(.1rem);
+}
+
+h6 {
+  @include formatHeading(-.1rem);
+  text-transform: uppercase;
+}
