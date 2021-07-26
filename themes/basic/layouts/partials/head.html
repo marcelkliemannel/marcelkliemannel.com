@@ -4,6 +4,13 @@
   <meta name="description" content="{{ .Site.Params.metaDescription }}">
   <meta name="author" content="{{ .Site.Params.metaAuthor }}">
 
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png?v=1" | absURL }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png?v=1" | absURL }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png?v=1" | absURL }}">
+  <link rel="manifest" href="{{ "site.webmanifest?v=1" | absURL }}">
+  <meta name="msapplication-TileColor" content="#5cf797">
+  <meta name="theme-color" content="#ffffff">
+
   {{ $mainCss := resources.Get "scss/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
   <link rel="stylesheet" href="{{ $mainCss.Permalink }}">
   {{ $iconmoonCss := resources.Get "css/iconmoon.css" | resources.Minify | resources.Fingerprint }}
