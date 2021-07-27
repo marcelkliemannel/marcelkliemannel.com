@@ -1,0 +1,12 @@
+{{ define "main" }}
+
+{{ partial "page-header.html" (dict "context" . "withPageMeta" false) }}
+
+<div class="horizontal-wrapper-narrow vertical-wrapper-large with-safety-gap">
+  <div class="text">
+    {{ partial "single-content.html" .Content }}
+  </div>
+
+</div>
+
+{{ end }}

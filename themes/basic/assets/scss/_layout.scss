@@ -55,6 +55,10 @@ $xl-gap: 3rem;
   margin-top: $paragraph-gap;
 }
 
+.negative-gap-top-paragraph {
+  margin-top: calc(#{$paragraph-gap} * -1);
+}
+
 .gap-top-small {
   margin-top: $small-gap;
 }

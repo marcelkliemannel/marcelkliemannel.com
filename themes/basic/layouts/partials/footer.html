@@ -1,8 +1,8 @@
-<div class="horizontal-wrapper-narrow vertical-wrapper-large center">
+<div class="horizontal-wrapper-narrow vertical-wrapper-large with-safety-gap center">
   <nav>
-    <ul class="horizontal-links-menu group">
+    <ul class="horizontal-links-menu group negative-gap-top-paragraph">
       {{ range .Site.Menus.main }}
-      <li><a href="{{ $.Site.BaseURL }}{{ .URL }}" class="button-like button-like-on-dark-background button-like-size-m">{{ .Name }}</a></li>
+      <li class="gap-top-paragraph"><a href="{{ $.Site.BaseURL }}{{ .URL }}" class="button-like button-like-on-dark-background button-like-size-m">{{ .Name }}</a></li>
       {{ end }}
     </ul>
   </nav>

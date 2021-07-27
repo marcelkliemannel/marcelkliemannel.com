@@ -10,7 +10,7 @@
       <div class="page-description gap-bottom-medium">{{ . }}</div>
     {{ end }}
 
-    {{ partial "tags.html" (dict "tags" .context.Params.tags "listClassAttr" "gap-top-large" "tagClassAttr" "button-like-inverted-bright") }}
+    {{ partial "tags.html" (dict "tags" .context.Params.tags "listClassAttr" "gap-top-large" "tagClassAttr" "button-like-inverted-bright button-like-size-m") }}
 
     {{ with .postPartial }}
       {{ partial . (merge (dict "context" $.context) $.postPartialParams) }}
