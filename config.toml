@@ -4,6 +4,16 @@ title = "Marcel Kliemannel"
 theme = "basic"
 enableGitInfo = true
 
+[author]
+  name = "My Name Here"
+
+[outputs]
+    page = ["HTML"]
+    home = ["HTML", "RSS"]
+    section = ["HTML"]
+    taxonomyTerm = ["HTML"]
+    taxonomy = ["HTML"]
+
 [sitemap]
   changefreq = "weakly"
   filename = "sitemap.xml"
@@ -45,7 +55,7 @@ enableGitInfo = true
     weight = 1
 
 [params]
-  metaLanguage = "en"
+  metaLanguage = "en-us"
   metaAuthor = "Marcel Kliemannel"
   metaDescription = "Personal website containing articles and a bookmarks collection mainly about software development and an overview over my projects."
   aboutTheAuthorName = "Marcel Kliemannel"

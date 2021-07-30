@@ -16,7 +16,9 @@
   {{ $iconmoonCss := resources.Get "css/iconmoon.css" | resources.Minify | resources.Fingerprint }}
   <link rel="stylesheet" href="{{ $iconmoonCss.Permalink }}">
 
-  {{ $title := print .Title " | " .Site.Title }}
-  {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
-  <title>{{ $title }}</title>
+  <title>{{ (cond .IsHome .Site.Title (print .Title " | " .Site.Title)) }}</title>
+
+  {{ $indexPageRssFeed := (.GetPage "").OutputFormats.Get "rss" }}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="RSS Feed">` $indexPageRssFeed.Rel $indexPageRssFeed.MediaType.Type $indexPageRssFeed.Permalink | safeHTML }}
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ "sitemap.xml" | absURL }}">
 </head>

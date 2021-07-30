@@ -4,7 +4,7 @@
 
   <!-- Articles -->
   {{ partial "sitemap-entry.xml" (dict "page" (.GetPage "articles") "changeFreq" "weakly" "priority" 1.0 ) }}
-  {{ range where $.RegularPages "Section" "==" "articles" }}
+  {{ range (where $.RegularPages "Section" "==" "articles") }}
     {{ partial "sitemap-entry.xml" (dict "page" . "changeFreq" "monthly" "priority" 1.0 ) }}
   {{ end }}
 
