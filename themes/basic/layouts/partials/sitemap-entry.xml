@@ -1,0 +1,7 @@
+<url>
+  <loc>{{ $.page.Permalink }}</loc>
+  {{ $lastmodToUse := (cond (ne $.lastmod nil) $.lastmod $.page.Lastmod) }}
+  {{ if not $lastmodToUse.IsZero }}<lastmod>{{ safeHTML ( $lastmodToUse.Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>{{ end }}
+  {{ with $.changeFreq }}<changefreq>{{ . }}</changefreq>{{ end }}
+  {{ with $.priority }}<priority>{{ . }}</priority>{{ end }}
+</url>

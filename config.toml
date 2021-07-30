@@ -2,6 +2,7 @@ baseURL = "http://localhost:1313"
 languageCode = "en-us"
 title = "Marcel Kliemannel"
 theme = "basic"
+enableGitInfo = true
 
 [sitemap]
   changefreq = "weakly"
