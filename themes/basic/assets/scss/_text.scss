@@ -102,7 +102,7 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
     margin: 0;
     display: block;
     background-color: $color-bright-300;
-    padding: .6rem;
+    padding: .3rem .6rem;
     line-height: 1.6rem;
 
     code {

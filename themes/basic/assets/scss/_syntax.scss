@@ -10,8 +10,10 @@
 
   /* Error */ 
   .err { 
-    color: #a61717; 
-    background-color: #e3d2d2;
+    // The syntax highlighting for Kotlin destruction declarations is failing
+    // with errors. So we have to ignore errors for now.
+    /*color: #a61717; 
+    background-color: #e3d2d2;*/
   }
 
   /* LineTableTD */ 
@@ -45,15 +47,15 @@
 /* LineHighlight */ .hl { display: block; width: 100%;background-color: #ffffcc }
 /* LineNumbersTable */ .lnt {  }
 /* LineNumbers */ .ln {  }
-/* Keyword */ .k { color: #000080; font-weight: bold }
-/* KeywordConstant */ .kc { color: #000080; font-weight: bold }
-/* KeywordDeclaration */ .kd { color: #000080; font-weight: bold }
-/* KeywordNamespace */ .kn { color: #000080; font-weight: bold }
-/* KeywordPseudo */ .kp { color: #000080; font-weight: bold }
-/* KeywordReserved */ .kr { color: #000080; font-weight: bold }
-/* KeywordType */ .kt { color: #000080; font-weight: bold }
+/* Keyword */ .k { color: $color-dark-800; font-weight: bold }
+/* KeywordConstant */ .kc { color: $color-dark-800; font-weight: bold }
+/* KeywordDeclaration */ .kd { color: $color-dark-800; font-weight: bold }
+/* KeywordNamespace */ .kn { color: $color-dark-800; font-weight: bold }
+/* KeywordPseudo */ .kp { color: $color-dark-800; font-weight: bold }
+/* KeywordReserved */ .kr { color: $color-dark-800; font-weight: bold }
+/* KeywordType */ .kt { color: $color-dark-800; font-weight: bold }
 /* Name */ .n {  }
-/* NameAttribute */ .na { color: #ff0000 }
+/* NameAttribute */ .na { color: $color-green-600; }
 /* NameBuiltin */ .nb {  }
 /* NameBuiltinPseudo */ .bp {  }
 /* NameClass */ .nc {  }
@@ -67,7 +69,7 @@
 /* NameNamespace */ .nn {  }
 /* NameOther */ .nx {  }
 /* NameProperty */ .py {  }
-/* NameTag */ .nt { color: #000080; font-weight: bold }
+/* NameTag */ .nt { color: $color-dark-800; font-weight: bold }
 /* NameVariable */ .nv {  }
 /* NameVariableClass */ .vc {  }
 /* NameVariableGlobal */ .vg {  }
@@ -75,27 +77,27 @@
 /* NameVariableMagic */ .vm {  }
 /* Literal */ .l {  }
 /* LiteralDate */ .ld {  }
-/* LiteralString */ .s { color: #0000ff }
-/* LiteralStringAffix */ .sa { color: #0000ff }
-/* LiteralStringBacktick */ .sb { color: #0000ff }
+/* LiteralString */ .s { color: $color-green-800 }
+/* LiteralStringAffix */ .sa { color: $color-green-800 }
+/* LiteralStringBacktick */ .sb { color: $color-green-800 }
 /* LiteralStringChar */ .sc { color: #800080 }
-/* LiteralStringDelimiter */ .dl { color: #0000ff }
-/* LiteralStringDoc */ .sd { color: #0000ff }
-/* LiteralStringDouble */ .s2 { color: #0000ff }
-/* LiteralStringEscape */ .se { color: #0000ff }
-/* LiteralStringHeredoc */ .sh { color: #0000ff }
-/* LiteralStringInterpol */ .si { color: #0000ff }
-/* LiteralStringOther */ .sx { color: #0000ff }
-/* LiteralStringRegex */ .sr { color: #0000ff }
-/* LiteralStringSingle */ .s1 { color: #0000ff }
-/* LiteralStringSymbol */ .ss { color: #0000ff }
-/* LiteralNumber */ .m { color: #0000ff }
-/* LiteralNumberBin */ .mb { color: #0000ff }
-/* LiteralNumberFloat */ .mf { color: #0000ff }
-/* LiteralNumberHex */ .mh { color: #0000ff }
-/* LiteralNumberInteger */ .mi { color: #0000ff }
-/* LiteralNumberIntegerLong */ .il { color: #0000ff }
-/* LiteralNumberOct */ .mo { color: #0000ff }
+/* LiteralStringDelimiter */ .dl { color: $color-green-800 }
+/* LiteralStringDoc */ .sd { color: $color-green-800 }
+/* LiteralStringDouble */ .s2 { color: $color-green-800 }
+/* LiteralStringEscape */ .se { color: $color-green-800 }
+/* LiteralStringHeredoc */ .sh { color: $color-green-800 }
+/* LiteralStringInterpol */ .si { color: $color-green-800 }
+/* LiteralStringOther */ .sx { color: $color-green-800 }
+/* LiteralStringRegex */ .sr { color: $color-green-800 }
+/* LiteralStringSingle */ .s1 { color: $color-green-800 }
+/* LiteralStringSymbol */ .ss { color: $color-green-800 }
+/* LiteralNumber */ .m { color: $color-green-800 }
+/* LiteralNumberBin */ .mb { color: $color-green-800 }
+/* LiteralNumberFloat */ .mf { color: $color-green-800 }
+/* LiteralNumberHex */ .mh { color: $color-green-800 }
+/* LiteralNumberInteger */ .mi { color: $color-green-800 }
+/* LiteralNumberIntegerLong */ .il { color: $color-green-800 }
+/* LiteralNumberOct */ .mo { color: $color-green-800 }
 /* Operator */ .o {  }
 /* OperatorWord */ .ow { font-weight: bold }
 /* Punctuation */ .p {  }

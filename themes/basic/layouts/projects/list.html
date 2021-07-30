@@ -21,9 +21,9 @@
           </div>
 
           <ul class="horizontal-links-menu group">
-            {{ with .Params.gitHub }}<li class="gap-top-paragraph"><a href="{{ . }}" target="_blank" class="button-like button-like-monospace button-like-inverted-dark"><span class="icon-github"></span> GitHub</a></li>{{ end }}
-            {{ with .Params.jetBrainsMarketplace }}<li class="gap-top-paragraph"><a href="{{ . }}" target="_blank" class="button-like button-like-monospace button-like-inverted-dark"><span class="icon-jetbrains"></span> JetBrains Marketplace</a></li>{{ end }}
-            {{ with .Params.mavenCentral }}<li class="gap-top-paragraph"><a href="{{ . }}" target="_blank" class="button-like button-like-monospace button-like-inverted-dark"><span class="icon-download3"></span> Maven Central</a></li>{{ end }}
+            {{ with .Params.gitHub }}<li><a href="{{ . }}" target="_blank" class="button-like button-like-monospace button-like-inverted-dark"><span class="icon-github"></span> GitHub</a></li>{{ end }}
+            {{ with .Params.jetBrainsMarketplace }}<li><a href="{{ . }}" target="_blank" class="button-like button-like-monospace button-like-inverted-dark"><span class="icon-jetbrains"></span> JetBrains Marketplace</a></li>{{ end }}
+            {{ with .Params.mavenCentral }}<li><a href="{{ . }}" target="_blank" class="button-like button-like-monospace button-like-inverted-dark"><span class="icon-download3"></span> Maven Central</a></li>{{ end }}
           </ul>
         </li>
         {{ end }}

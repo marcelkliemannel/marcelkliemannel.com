@@ -84,7 +84,7 @@
   }
 
   &-size-m {
-    font-size: 0.8rem;
+    font-size: .8rem;
   }
 
   &-size-l {
@@ -113,12 +113,21 @@
 // -- Links Menu -------------------------------------------------------------------------------------------------------
 
 .horizontal-links-menu {
+  margin-top: calc(#{$paragraph-gap} * -1);
+
   li {
     display: inline-block;
     margin-right: .5rem;
+    margin-top: $paragraph-gap;
 
     &:last-child {
       margin-right: 0;
+    }
+  }
+
+  &-no-top-gap {
+    li {
+      margin-top: 0;
     }
   }
 }

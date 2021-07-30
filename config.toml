@@ -3,6 +3,11 @@ languageCode = "en-us"
 title = "Marcel Kliemannel"
 theme = "basic"
 
+[sitemap]
+  changefreq = "weakly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
 [markup]
   [markup.highlight]
     lineNos = true
@@ -32,6 +37,11 @@ theme = "basic"
     name = "Contact"
     url = "contact/"
     weight = 4
+
+  [[menu.footer]]
+    name = "Privacy Policy"
+    url = "privacy-policy/"
+    weight = 1
 
 [params]
   metaLanguage = "en"

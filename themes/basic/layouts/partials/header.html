@@ -6,7 +6,7 @@
     </div>
 
     <nav>
-      <ul class="main-menu-horizontal horizontal-links-menu group">
+      <ul class="main-menu-horizontal horizontal-links-menu horizontal-links-menu-no-top-gap group">
         {{ range .Site.Menus.main }}
         <li><a href="{{ $.Site.BaseURL }}{{ .URL }}" class="button-like button-like-on-dark-background">{{ .Name }}</a></li>
         {{ end }}

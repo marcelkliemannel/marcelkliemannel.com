@@ -1,8 +1,8 @@
 <div class="horizontal-wrapper-narrow vertical-wrapper-large with-safety-gap center">
   <nav>
-    <ul class="horizontal-links-menu group negative-gap-top-paragraph">
+    <ul class="horizontal-links-menu group">
       {{ range .Site.Menus.main }}
-      <li class="gap-top-paragraph"><a href="{{ $.Site.BaseURL }}{{ .URL }}" class="button-like button-like-on-dark-background button-like-size-m">{{ .Name }}</a></li>
+      <li><a href="{{ $.Site.BaseURL }}{{ .URL }}" class="button-like button-like-on-dark-background button-like-size-m">{{ .Name }}</a></li>
       {{ end }}
     </ul>
   </nav>
@@ -12,4 +12,10 @@
       The articles are licensed under <a href="http://creativecommons.org/licenses/by-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer">Attribution-NoDerivatives 4.0 International</a>.
     </p>
   </div>
+
+  <ul class="horizontal-links-menu group gap-top-small">
+    {{ range .Site.Menus.footer }}
+    <li class="text text-small text-on-dark-background"><p><a href="{{ $.Site.BaseURL }}{{ .URL }}">{{ .Name }}</a></p></li>
+    {{ end }}
+  </ul>
 </div>

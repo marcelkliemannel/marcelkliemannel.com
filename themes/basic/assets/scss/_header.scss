@@ -37,7 +37,7 @@
       border-bottom: 3px solid $color-green-400;
     }
   }
-
+  
   .main-menu-horizontal {
     margin: 0;
     position: absolute;
@@ -76,8 +76,8 @@
   .main-menu-vertical {
     color: $color-dark-900;
     background-color: $color-bright-100;
-    border-left: 1px solid $color-dark-800;
-    border-bottom: 1px solid $color-dark-800;
+    border-left: 1px solid $color-dark-200;
+    border-bottom: 1px solid $color-dark-200;
     margin: 0;
     padding: calc(calc(#{$header-height} - #{$toggle-font-size}) + 1.2rem) calc(#{$wrapper-safety-gap} + #{$wrapper-safety-gap-intrusion}) 2rem;
     position: absolute;
