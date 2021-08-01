@@ -12,7 +12,9 @@
      {{ end }}
     </div>
 
-    {{ partial "tags.html" (dict "tags" .Params.tags "listClassAttr" "gap-top-small" "tagClassAttr" "button-like-inverted-dark button-like-size-m")}}
+    <div class="gap-top-small">
+      {{ partial "tags.html" (dict "tags" .Params.tags "tagClassAttr" "button-like-inverted-dark button-like-size-m")}}
+    </div>
   </li>
   {{ end }}
 </ul>
