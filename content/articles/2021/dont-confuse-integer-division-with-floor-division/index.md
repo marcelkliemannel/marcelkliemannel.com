@@ -7,7 +7,7 @@ tags: ["Best Practice"]
 
 When mathematical formulas are transferred into code, a common programming error occurs: The floor division operator is implemented by a simple division of two integer types.
 
-To better understand the issues behind this, we will look at the concrete example of implementing the [modulo operation](https://en.wikipedia.org/wiki/Modulo_operation).
+To better understand the problem behind it, we will implement the [modulo operation](https://en.wikipedia.org/wiki/Modulo_operation) once with the floor and once with the integer division.
 
 ## Definition of the Modulo Operation
 
@@ -48,6 +48,8 @@ int moduloWithFloorDivision(x, y) {
   }
 }
 ```
+
+## Testing the Implementations
 
 If we test the two implementations against random positive numbers, we reliably get the same results every time:
 
