@@ -7,14 +7,14 @@
 
     <nav>
       <ul class="main-menu-horizontal horizontal-links-menu horizontal-links-menu-no-top-gap group">
-        {{ range (where .Pages ".Params.menu" "eq" "main") }}
+        {{ range (where $.Site.Pages ".Params.menu" "eq" "main") }}
           <li><a href="{{ .Permalink }}" class="button-like button-like-on-dark-background">{{ .Title }}</a></li>
         {{ end }}
       </ul>
 
       <a href="#" class="main-menu-vertical-toggle icon-menu"></a>
       <ul class="main-menu-vertical">
-        {{ range (where .Pages ".Params.menu" "eq" "main") }}
+        {{ range (where $.Site.Pages ".Params.menu" "eq" "main") }}
         <li><a class="button-like button-like-secondary-dark" href="{{ .Permalink }}">{{ .Title }}</a></li>
         {{ end }}
       </ul>
