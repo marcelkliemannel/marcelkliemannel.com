@@ -1,7 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Open+Sans:wght@400;700&display=swap');
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/jetbrains-mono/jetbrains-mono-v6-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/jetbrains-mono/jetbrains-mono-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/jetbrains-mono/jetbrains-mono-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/jetbrains-mono/jetbrains-mono-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/jetbrains-mono/jetbrains-mono-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/jetbrains-mono/jetbrains-mono-v6-latin-regular.svg#JetBrainsMono') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/open-sans/open-sans-v20-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/open-sans/open-sans-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/open-sans/open-sans-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/open-sans/open-sans-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/open-sans/open-sans-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/open-sans/open-sans-v20-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-700 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/open-sans/open-sans-v20-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/open-sans/open-sans-v20-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/open-sans/open-sans-v20-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/open-sans/open-sans-v20-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/open-sans/open-sans-v20-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/open-sans/open-sans-v20-latin-700.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
 $text-font-family: 'Open Sans', sans-serif;
 $title-font-family: 'Open Sans', sans-serif;
 $title-font-weight: 400;
 $title-font-weight-bold: 700;
-$title-letter-spacing: -0.02rem;
+$title-letter-spacing: -0.03rem;
 $monospace-font-family: 'JetBrains Mono', monospace;
