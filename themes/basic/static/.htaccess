@@ -11,5 +11,5 @@ RewriteCond %{HTTPS}s/%1 ^(on(s)|offs)/(.+)
 RewriteRule ^ http%2://%3%{REQUEST_URI} [L,R=301]
 
 # Force HTTPS
-RewriteCond %{HTTPS} =off
-RewriteRule ^(login|foo|bar|?~@?)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTPS} off 
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
