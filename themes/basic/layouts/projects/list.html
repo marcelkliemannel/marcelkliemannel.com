@@ -16,15 +16,17 @@
         <li>
           <div class="text">
             <h3>{{ .Title }}</h3>
-
-            {{ .Content }}
           </div>
 
-          <ul class="horizontal-links-menu group">
-            {{ with .Params.gitHub }}<li><a href="{{ . }}" target="_blank" class="button-like button-like-monospace button-like-inverted-dark"><span class="icon-github"></span> GitHub</a></li>{{ end }}
-            {{ with .Params.jetBrainsMarketplace }}<li><a href="{{ . }}" target="_blank" class="button-like button-like-monospace button-like-inverted-dark"><span class="icon-jetbrains"></span> JetBrains Marketplace</a></li>{{ end }}
-            {{ with .Params.mavenCentral }}<li><a href="{{ . }}" target="_blank" class="button-like button-like-monospace button-like-inverted-dark"><span class="icon-download3"></span> Maven Central</a></li>{{ end }}
-          </ul>
+          <div class="gap-top-medium">
+            <ul class="horizontal-links-menu group">
+              {{ with .Params.gitHub }}<li><a href="{{ . }}" target="_blank" class="button-like button-like-monospace button-like-inverted-dark"><span class="icon-github"></span> GitHub</a></li>{{ end }}
+              {{ with .Params.jetBrainsMarketplace }}<li><a href="{{ . }}" target="_blank" class="button-like button-like-monospace button-like-inverted-dark"><span class="icon-jetbrains"></span> JetBrains Marketplace</a></li>{{ end }}
+              {{ with .Params.mavenCentral }}<li><a href="{{ . }}" target="_blank" class="button-like button-like-monospace button-like-inverted-dark"><span class="icon-download3"></span> Maven Central</a></li>{{ end }}
+            </ul>
+          </div>
+          
+          <div class="text gap-top-medium">{{ .Content }}</div>
         </li>
         {{ end }}
       </ul>

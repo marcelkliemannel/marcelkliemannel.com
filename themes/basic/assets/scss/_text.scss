@@ -51,7 +51,7 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
 
   ul {
     margin-left: 1.4rem;
-    padding-top: $paragraph-gap;
+    margin-top: $paragraph-gap;
 
     li {
       list-style-type: square;
@@ -60,7 +60,7 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
 
   ol {
     margin-left: 1.5rem;
-    padding-top: $paragraph-gap;
+    margin-top: $paragraph-gap;
 
     li {
       list-style-type: decimal;
