@@ -1,6 +1,5 @@
 ---
 title: "Privacy Policy"
-private: true
 ---
 
 Personal data (usually referred to just as "data" below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there.
@@ -18,28 +17,15 @@ Our privacy policy is structured as follows:
 
 The party responsible for this website (the "controller") for purposes of data protection law is:
 
-Sample company/entrepreneur
-Any street 1
-12345 Anytown
-Germany
+Marcel Kliemannel  
+Altes Bahnwerk 1  
+14473 Potsdam
 
-Telephone: Telephone number
-Fax: Fax number
-Email: muster@mustermail.xy
+[Email address can be found here (spam protection)](https://mailhide.io/e/eJJkNwwq)
 
 The controller's data protection officer is:
 
-Maxie Musterfrau 
-
-[The following information must be added if an external data protection officer has been appointed].
-
-Any street 1
-12345 Anytown
-Germany
-
-Telephone: Telephone number
-Fax: Fax number
-Email: datenschutz@mustermail.xy
+Marcel Kliemannel 
 
 ## II. The rights of users and data subjects
 
