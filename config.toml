@@ -11,11 +11,6 @@ enableGitInfo = true
     taxonomyTerm = ["HTML"]
     taxonomy = ["HTML"]
 
-[sitemap]
-  changefreq = "weakly"
-  filename = "sitemap.xml"
-  priority = 0.5
-
 [markup]
   [markup.highlight]
     lineNos = true
@@ -27,29 +22,6 @@ enableGitInfo = true
     lineNoStart = 1
     lineNumbersInTable = true
     noClasses = false
-
-[menu]
-  [[menu.main]]
-    name = "Articles"
-    url = "articles/"
-    weight = 1
-  [[menu.main]]
-    name = "Projects"
-    url = "projects/"
-    weight = 2
-  [[menu.main]]
-    name = "Bookmarks"
-    url = "bookmarks/"
-    weight = 3
-
-  [[menu.footer]]
-    name = "Privacy Policy"
-    url = "privacy-policy/"
-    weight = 1
-  [[menu.footer]]
-    name = "Contact"
-    url = "contact/"
-    weight = 2
 
 [params]
   metaLanguage = "en-us"

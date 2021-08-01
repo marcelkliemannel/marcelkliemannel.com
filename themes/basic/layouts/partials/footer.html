@@ -5,9 +5,9 @@
 
     <nav>
       <ul class="horizontal-links-menu group gap-top-medium">
-        {{ range .Site.Menus.main }}
-        <li><a href="{{ $.Site.BaseURL }}{{ .URL }}"
-            class="button-like button-like-on-dark-background button-like-size-m">{{ .Name }}</a></li>
+        {{ range (where .Pages ".Params.menu" "eq" "main") }}
+        <li><a href="{{ .Permalink }}"
+            class="button-like button-like-on-dark-background button-like-size-m">{{ .Title }}</a></li>
         {{ end }}
       </ul>
     </nav>
@@ -21,9 +21,9 @@
     </div>
 
     <ul class="horizontal-links-menu group gap-top-small">
-      {{ range .Site.Menus.footer }}
+      {{ range (where .Pages ".Params.menu" "eq" "secondary") }}
       <li class="text text-small text-on-dark-background">
-        <p><a href="{{ $.Site.BaseURL }}{{ .URL }}">{{ .Name }}</a></p>
+        <p><a href="{{ .Permalink }}">{{ .Title }}</a></p>
       </li>
       {{ end }}
     </ul>
