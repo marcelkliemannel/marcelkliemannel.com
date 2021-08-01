@@ -33,7 +33,7 @@ jobs:
         uses: burnett01/rsync-deployments@4.1
         with:
           switches: -avzr --delete
-          path: /public
+          path: /public/
           remote_path: /home/${{ secrets.USER }}/html/
           remote_host: ${{ secrets.HOST }}
           remote_user: ${{ secrets.USER }}
