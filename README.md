@@ -1,6 +1,6 @@
 # marcelkliemannel.com
 
-[My personal website.](https://marcelkliemannel.com)
+[Personal website containing articles and a bookmarks collection mainly about software development and an overview over my projects.](https://marcelkliemannel.com)
 
 ## License
 
