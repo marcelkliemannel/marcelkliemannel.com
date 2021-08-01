@@ -194,9 +194,9 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
 
     #TableOfContents {
       display: none;
-      background-color: $color-bright-300;
-      padding: 0 calc(#{$paragraph-gap} * 2) $paragraph-gap;
       margin-top: .3rem;
+      background-color: $color-bright-200;
+      padding: .5rem $paragraph-gap;
     }
   }
 }
