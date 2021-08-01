@@ -88,8 +88,7 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
   code {
     font-family: $monospace-font-family;
     font-size: .8rem;
-    background-color: $color-bright-300;
-    border-radius: 4px;
+    background-color: $color-bright-400;
     padding: .2rem .4rem;
     white-space: pre;
     overflow: hidden;
@@ -102,7 +101,7 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
   pre {
     margin: 0;
     display: block;
-    background-color: $color-bright-200;
+    background-color: $color-bright-300;
     padding: .3rem .6rem;
     line-height: 1.6rem;
 

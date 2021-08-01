@@ -231,6 +231,4 @@ String htmlText = body().child(head().child(styleTag(".first-row { font-weight: 
                         .toString()
 ```
 
-------
-
 In addition, the class **[HtmlBuilder](https://upsource.jetbrains.com/idea-ce/file/idea-ce-17812b1102973a61b8b73ee7fdbea12cf8036cd6/platform/util/src/com/intellij/openapi/util/text/HtmlBuilder.java)** provides some helper methods when working with HTML texts. In particular, the `append` methods, with which multiple `HtmlChunk`, other `HtmlBuilder`, or plain HTML texts can be connected together. Or wrapper methods for recurring patterns, e.g., `wrapWithHtmlBody`, which encloses the previous element in a `<html><body>...</body></html>` block.
