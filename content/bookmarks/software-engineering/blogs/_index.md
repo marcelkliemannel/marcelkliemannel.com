@@ -1,3 +1,3 @@
 ---
-title: "Software Development Blogs"
+title: "Software Engineering Blogs"
 ---
