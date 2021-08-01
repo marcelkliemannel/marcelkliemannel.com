@@ -5,11 +5,7 @@ RewriteEngine on
 RewriteCond %{REQUEST_URI} !(/$|\.) 
 RewriteRule (.*) %{REQUEST_URI}/ [R=301,L] 
 
-# Remove www from host
-RewriteCond %{HTTP_HOST} ^www\.(.+)
-RewriteCond %{HTTPS}s/%1 ^(on(s)|offs)/(.+)
-RewriteRule ^ http%2://%3%{REQUEST_URI} [L,R=301]
-
-# Force HTTPS
-RewriteCond %{HTTPS} off 
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# Force HTTPS & reroute all other domains
+RewriteCond %{HTTPS} off [NC,OR]
+RewriteCond %{HTTP_HOST} !^marcelkliemannel\.com$ [NC]
+RewriteRule ^(.*)$ https://marcelkliemannel.com$1 [R=301,L]
