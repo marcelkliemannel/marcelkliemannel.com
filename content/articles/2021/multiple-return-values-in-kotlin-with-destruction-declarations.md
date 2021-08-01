@@ -5,7 +5,7 @@ draft: false
 tags: ["Kotlin"]
 ---
 
-Sometimes we find ourselves in the situation where we want to return multiple values as the result of a method call. Some programming languages have such functionality built in and allow us to assign the returned values directly back into individual variables. [Like for example in Go](https://gobyexample.com/multiple-return-values):
+Sometimes we find ourselves in a situation where we want to return multiple values as the result of a method call. Some programming languages have such functionality built-in and allow us to assign the returned values directly back into individual variables. [Like for example in Go](https://gobyexample.com/multiple-return-values):
 
 ```go
 func values() (int, int, int) {
@@ -16,7 +16,7 @@ first, second, third := values()
 log.Printf("%d - %d - %d", first, second, third)
 ```
 
-In Java this is unfortunately not so easily possible, because the Java virtual machine supports only one return value. To return more values, we would have to create a container object that holds the individual values for us. Unfortunately, this bloats the code enormously. The following code is the Java equivalent of the Go code above:
+In Java, this is unfortunately not so easily possible. Because the Java virtual machine supports only one return value. To return more than one value, we would have to create a container object that holds the individual values. Unfortunately, this bloats the code enormously. The following code is the Java equivalent of the Go code above:
 
 ```java
 class ValuesContainer {
@@ -39,7 +39,7 @@ ValuesContainer result = values();
 System.out.println(result.first + " - " + result.second + " - " + result.third);
 ```
 
-If we now migrate this Java code to Kolin, we have already saved a massive amount of code due to the lightweight nature of Kolin alone:
+If we now migrate this Java code to Kotlin, we have already saved a massive amount of code due to the lightweight nature of Kotlin alone:
 
 ```kotlin
 class ValuesContainer(val first: Int, val second: Int, val third: Int)
@@ -50,11 +50,11 @@ ValuesContainer result = values()
 println("${result.first} - ${result.second} - ${result.third}");
 ```
 
-But we still have the inconvenience of having to go the intermediate step via the container object to access the individual values.
+But we still have the inconvenience of the intermediate step via the container object to access the individual values.
 
 ## Destruction Declaration
 
-Kotlin has a solution for this for us: If we now migrate the `ValuesContainer` class into a [data class](https://kotlinlang.org/docs/data-classes.html), by simply putting the `data` keyword in front of  `class`, we can take advantage of Kotlin's _destruction declarations_ functionality. This allows us to split the returned container object into its individual values and assign them directly to separated new variables:
+Kotlin has a solution for this: If we now migrate the `ValuesContainer` class into a [data class](https://kotlinlang.org/docs/data-classes.html), by simply putting the `data` keyword in front of  `class` we can take advantage of Kotlin's _destruction declarations_ functionality. This allows us to split the returned container object into its individual values and assign them directly to separated new variables:
 
 ```kotlin
 data class ValuesContainer(val first: Int, val second: Int, val third: Int)
@@ -73,7 +73,7 @@ val (first: Number, second: Int, first: Number) = values()
 
 ## Common Container Classes
 
-The cases where we want to return two or three values probably occur more frequently, than three or the more values. Since the development of Kotlin is oriented towards simplifying constructs that frequently occur in the real world, the Kotlin standard library offers us helper classes for the first two cases. These would be `kotlin.Pair` for two values and `kotlin.Triple` for three values. With this we are now able to reduce the code even further by replacing our own container class with the built-in one:
+The cases where we want to return two or three values probably occur more frequently, than three or more values. Since the development of Kotlin is oriented towards simplifying constructs that frequently occur in the real world, the Kotlin standard library offers us helper classes for the first two cases. These would be `kotlin.Pair` for two values and `kotlin.Triple` for three values. With this we are now able to reduce the code even further by replacing our own container class with the built-in one:
 
 ```kotlin
 fun values() = Triple(4, 2, 4)
@@ -89,7 +89,7 @@ fun values() : Pair<Int, Int?> = Pair(4, null)
 val (first, second) = values()
 ```
 
-But the return type itself must not be nullable. Which would otherwise lead to a compile error::
+But the return type itself must not be nullable. Which would otherwise lead to a compile error:
 
 ```kotlin
 fun values(): Pair<Int, Int>? = null
@@ -143,5 +143,4 @@ int first = ((Number) result.component1).intValue();
 int second = ((Number) result.component2).intValue();
 ```
 
-So we see that the magic is nothing more than assigning the container object into a variable and then assigning its individual values into individual variables. Kotlin just encapsulates the boilercode for us here that we would normally have to write.
-
+So we see that the magic is nothing more than assigning the container object into a variable and then assigning its individual values into individual variables. Kotlin just encapsulates the boilerplate code for us here that we would have to write otherwise.
