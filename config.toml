@@ -1,11 +1,8 @@
-baseURL = "http://192.168.178.20:1313"
+baseURL = "https://marcelkliemannel.com"
 languageCode = "en-us"
 title = "Marcel Kliemannel"
 theme = "basic"
 enableGitInfo = true
-
-[author]
-  name = "My Name Here"
 
 [outputs]
     page = ["HTML"]
