@@ -1,14 +1,14 @@
 {{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" ?>" | safeHTML }}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Articles -->
-  {{ partial "sitemap-entry.xml" (dict "page" (.GetPage "articles") "changeFreq" "weakly" "priority" 1.0 ) }}
+  {{ partial "sitemap-entry.xml" (dict "page" (.GetPage "articles") "changeFreq" "weekly" "priority" 1.0 ) }}
   {{ range (where $.RegularPages "Section" "==" "articles") }}
     {{ partial "sitemap-entry.xml" (dict "page" . "changeFreq" "monthly" "priority" 1.0 ) }}
   {{ end }}
 
   <!-- Tags -->
   {{ range $name, $tag := .Site.Taxonomies.tags }}
-    {{ partial "sitemap-entry.xml" (dict "page" $tag.Page "changeFreq" "weakly" "priority" 0.9 ) }}
+    {{ partial "sitemap-entry.xml" (dict "page" $tag.Page "changeFreq" "weekly" "priority" 0.9 ) }}
   {{ end }}
 
   <!-- Projects -->
@@ -17,5 +17,5 @@
 
   <!-- Bookmarks -->
   {{ $highestBookmarksLastMod := (index ((where site.RegularPages "Section" "bookmarks" ).ByLastmod.Reverse) 0).Lastmod }}
-  {{ partial "sitemap-entry.xml" (dict "page" (.GetPage "bookmarks") "changeFreq" "weakly" "priority" 0.5 "lastmod" $highestBookmarksLastMod) }}
+  {{ partial "sitemap-entry.xml" (dict "page" (.GetPage "bookmarks") "changeFreq" "weekly" "priority" 0.5 "lastmod" $highestBookmarksLastMod) }}
 </urlset>
