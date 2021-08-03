@@ -1,0 +1,4 @@
+User-agent: * 
+Disallow: /contact
+Disallow: /privacy-policy
+Sitemap: https://marcelkliemannel.com/sitemap.xml
