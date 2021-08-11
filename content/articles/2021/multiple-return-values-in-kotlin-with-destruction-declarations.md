@@ -73,7 +73,7 @@ val (first: Number, second: Int, first: Number) = values()
 
 ## Common Container Classes
 
-The cases where we want to return two or three values probably occur more frequently, than three or more values. Since the development of Kotlin is oriented towards simplifying constructs that frequently occur in the real world, the Kotlin standard library offers us helper classes for the first two cases. These would be `kotlin.Pair` for two values and `kotlin.Triple` for three values. With this we are now able to reduce the code even further by replacing our own container class with the built-in one:
+The cases where we want to return two or three values probably occur more frequently, than four or more values. Since the development of Kotlin is oriented towards simplifying constructs that frequently occur in the real world, the Kotlin standard library offers us helper classes for the first two cases. These would be `kotlin.Pair` for two values and `kotlin.Triple` for three values. With this we are now able to reduce the code even further by replacing our own container class with the built-in one:
 
 ```kotlin
 fun values() = Triple(4, 2, 4)
