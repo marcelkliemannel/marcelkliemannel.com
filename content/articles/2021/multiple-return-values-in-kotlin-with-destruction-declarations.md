@@ -98,7 +98,7 @@ val (first, second, third) = values() // compile error
 
 ## Ignoring Values
 
-If we are not interested in certain values, we can either omit them when they occur at the end:
+If we are not interested in certain values, we can either omit them if they occur at the end:
 
 ```kotlin
 fun values() = Triple(4, 2, 4)
