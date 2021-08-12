@@ -2,6 +2,7 @@
 title: "Contact"
 weight: 2
 menu: secondary
+metaDescription: ""
 ---
 
 ## Information in accordance with § 5 TMG

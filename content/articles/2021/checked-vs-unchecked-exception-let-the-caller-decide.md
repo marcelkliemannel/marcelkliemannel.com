@@ -3,6 +3,7 @@ title: "Checked vs. Unchecked Exception: Let the Caller Decide"
 date: 2021-08-12T17:10:31+02:00
 draft: false
 tags: ["Java", "Best Practice"]
+metaDescription: "Designing an API in way that lets the caller decide to handle exception as checked or unchecked."
 ---
 
 In Java, sometimes we get into the situation where a method call forces us to handle a checked exception, but we're not interested in it right now. E.g., an `UncaughtExceptionHandler` in the thread may take care of it.

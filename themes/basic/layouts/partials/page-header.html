@@ -6,7 +6,7 @@
 
     <h1 class="gap-top-small {{ if not (.Params.tags) }}gap-bottom-medium{{ end }}">{{ .context.Title }}</h1>
 
-    {{ with .context.Params.description }}
+    {{ with .context.Params.pageHeaderDescription }}
       <div class="page-description gap-bottom-medium">{{ . }}</div>
     {{ end }}
 

@@ -1,7 +1,9 @@
 <head lang="{{ .Site.Params.metaLanguage }}">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ .Site.Params.metaDescription }}">
+
+  {{ $description := (cond (ne .Params.metaDescription nil) .Params.metaDescription .Site.Params.metaDescription) }}
+  <meta name="description" content="{{ $description }}">
   <meta name="author" content="{{ .Site.Params.metaAuthor }}">
 
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png?v=1" | absURL }}">
@@ -22,6 +24,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@{{ .Site.Params.twitterUser }}">
   <meta name="twitter:title" content="{{ $title }}">
+  <meta name="twitter:description" content="{{ $description }}">
 
   {{ $indexPageRssFeed := (.GetPage "").OutputFormats.Get "rss" }}
   {{ printf `<link rel="%s" type="%s" href="%s" title="RSS Feed">` $indexPageRssFeed.Rel $indexPageRssFeed.MediaType.Type $indexPageRssFeed.Permalink | safeHTML }}

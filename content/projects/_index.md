@@ -2,6 +2,7 @@
 title: "Projects"
 weight: 2
 menu: main
+metaDescription: "Overview of my software projects."
 # How not to create sub pages as single pages: https://gohugo.io/content-management/build-options/#listing-pages-without-publishing-them
 _build:
   render: true
