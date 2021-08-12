@@ -30,6 +30,6 @@ enableGitInfo = true
   aboutTheAuthorName = "Marcel Kliemannel"
   # Text is also in the _index.md
   aboutTheAuthorDescription = "Software Engineer, JVM Enthusiast and technical writer with a focus on architecture, backend, automation, DevOps, monitoring, performance and security."
-  gitHub = "https://github.com/marcelkliemannel"
+  gitHubUser = "marcelkliemannel"
   stackOverflow = "https://stackoverflow.com/users/story/7059880"
-  twitter = "https://twitter.com/7ur1n9"
+  twitterUser = "7ur1n9"

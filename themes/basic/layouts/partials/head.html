@@ -16,7 +16,12 @@
   {{ $iconmoonCss := resources.Get "css/iconmoon.css" | resources.Minify | resources.Fingerprint }}
   <link rel="stylesheet" href="{{ $iconmoonCss.Permalink }}">
 
-  <title>{{ (cond .IsHome .Site.Title (print .Title " | " .Site.Title)) }}</title>
+  {{ $title := (cond .IsHome .Site.Title (print .Title " | " .Site.Title)) }}
+  <title>{{ $title }}</title>
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@{{ .Site.Params.twitterUser }}">
+  <meta name="twitter:title" content="{{ $title }}">
 
   {{ $indexPageRssFeed := (.GetPage "").OutputFormats.Get "rss" }}
   {{ printf `<link rel="%s" type="%s" href="%s" title="RSS Feed">` $indexPageRssFeed.Rel $indexPageRssFeed.MediaType.Type $indexPageRssFeed.Permalink | safeHTML }}

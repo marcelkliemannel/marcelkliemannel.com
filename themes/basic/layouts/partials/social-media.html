@@ -1,5 +1,5 @@
 <ul class="horizontal-links-menu group">
-  {{ with .context.Site.Params.gitHub }}<li><a href="{{ . }}" target="_blank" {{ with $.linkClassAttr }} class="{{ . }}"{{ end }}><span class="icon-github"></span> GitHub</a></li>{{ end }}
+  {{ with .context.Site.Params.gitHubUser }}<li><a href="https://github.com/{{ . }}" target="_blank" {{ with $.linkClassAttr }} class="{{ . }}"{{ end }}><span class="icon-github"></span> GitHub</a></li>{{ end }}
   {{ with .context.Site.Params.stackOverflow }}<li><a href="{{ . }}" target="_blank" {{ with $.linkClassAttr }} class="{{ . }}"{{ end }}><span class="icon-stackoverflow"></span> Stack Overflow</a></li>{{ end }}
-  {{ with .context.Site.Params.twitter }}<li><a href="{{ . }}" target="_blank" {{ with $.linkClassAttr }} class="{{ . }}"{{ end }}><span class="icon-twitter"></span> Twitter</a></li>{{ end }}
+  {{ with .context.Site.Params.twitterUser }}<li><a href="https://twitter.com/{{ . }}" target="_blank" {{ with $.linkClassAttr }} class="{{ . }}"{{ end }}><span class="icon-twitter"></span> Twitter</a></li>{{ end }}
 </ul>
