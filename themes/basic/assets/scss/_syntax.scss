@@ -1,8 +1,18 @@
-@import '_colors';
+@import '_layout', '_colors';
  
 .chroma {
-  background-color: $color-bright-200;
-  //line-height: 1.1rem;
+  pre {
+    margin: 0;
+    display: block;
+    line-height: 1.6rem;
+
+    code {
+      font-size: .9rem;
+      background-color: transparent !important;
+      display: block;
+      padding: 0;
+    }
+  }
 
   /* Error */ 
   .err { 
@@ -17,10 +27,6 @@
     vertical-align: top;
     margin: 0;
     border: 0;
-    
-    &:nth-child(1) {
-      border-right: 1px solid $color-dark-200;
-    }
 
     &:nth-child(2) {
       width: 100%;
@@ -29,20 +35,49 @@
 
   /* LineTable */ 
   .lntable { 
+    background-color: $color-bright-300;
+    padding: calc(#{$paragraph-gap} / 3) 0;
+
     width: 100%;
     border-collapse: collapse;
-    border-spacing: 0; 
-    padding: 0; 
+    border-spacing: 0;
+    border: none;
     margin: 0; 
-    border: 0; 
     display: block;
     overflow-x: auto;
     overflow-y: visible;
+
+    tr, td {
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    *:focus {
+      outline: none;
+    }
   }
 
   /* Other */ .x {  }
-  /* LineHighlight */ .hl { display: block; width: 100%;background-color: #ffffcc }
-  /* LineNumbersTable */ .lnt { }
+  /* LineHighlight */ 
+  .hl {
+    display: block;
+    width: 100%;
+    background-color: #ffffcc;
+    .lnt {
+      background-color: #ffffcc;
+    }
+   }
+  /* LineNumbersTable */ 
+  .lnt {
+    padding: 0 1rem;
+
+    // If there is only one line, the margin collapses with the next 
+    // column and there is no gap between the number and the code line.
+    &:only-child {
+      display: block;
+    }
+  }
   /* LineNumbers */ .ln { }
   /* Keyword */ .k { color: #000000; font-weight: bold }
   /* KeywordConstant */ .kc { color: #000000; font-weight: bold }

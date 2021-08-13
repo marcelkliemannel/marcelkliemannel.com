@@ -98,21 +98,6 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
     margin: $paragraph-gap 0;
   }
 
-  pre {
-    margin: 0;
-    display: block;
-    background-color: $color-bright-300;
-    padding: .3rem .6rem;
-    line-height: 1.6rem;
-
-    code {
-      font-size: .9rem;
-      background-color: transparent !important;
-      display: block;
-      padding: 0;
-    }
-  }
-
   // Don't affect code block
   table:not([class="lntable"]) {
     $normal-border: 1px solid $color-bright-500;

@@ -57,7 +57,7 @@ But we still have the inconvenience of the intermediate step via the container o
 
 Kotlin has a solution for this: If we now migrate the `ValuesContainer` class into a [data class](https://kotlinlang.org/docs/data-classes.html), by simply putting the `data` keyword in front of  `class` we can take advantage of Kotlin's _destruction declarations_ functionality. This allows us to split the returned container object into its individual values and assign them directly to separated new variables:
 
-```kotlin
+```kotlin {hl_lines=[5]}
 data class ValuesContainer(val first: Int, val second: Int, val third: Int)
 
 fun values() = ValuesContainer(4, 2, 4)
@@ -68,7 +68,7 @@ println("${first} - ${second} - ${third}");
 
 The types of each returned variable are automatically derived from their property types in the data class. However, we can also specify them explicitly:
 
-```kotlin
+```kotlin {hl_lines=[5]}
 val (first: Number, second: Int, first: Number) = values()
 ```
 

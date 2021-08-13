@@ -75,7 +75,7 @@ However, within the API method, we need to throw the correct exception. Unfortun
 
 ```java
 public void doSomething() throws E {
-  throw new E("Eroor"); // ERROR: We can't create an instance of 'E'
+  throw new E("Error"); // ERROR: We can't create an instance of 'E'
 }
 ```
 
@@ -116,8 +116,8 @@ public class CheckedRuntimeExceptionHandler extends ErrorHandler<RuntimeExceptio
 Our API method is now getting the error handler instance as an argument and in the case of an error, obtains a new exception instance from it:
 
 ```java
-public void <E> doSomething(ErrorHandler<E> erroHandler) throws E {
-  throw new erroHandler.createException("Eroor");
+public void <E> doSomething(ErrorHandler<E> errorHandler) throws E {
+  throw new errorHandler.createException("Error");
 }
 ```
 
