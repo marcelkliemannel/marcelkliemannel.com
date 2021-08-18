@@ -87,7 +87,7 @@ val (first, second, third) = values()
 
 ### Arrays and Lists
 
-Similarly, we can use destruction declarations also for Arrays and Lists (but not for Sets and Maps, since they have no deterministic order):
+Similarly, we can use destruction declarations also for Arrays and Lists (but not for Sets and Maps because they have no deterministic order):
 
 ```kotlin
 fun values1() = Array(1, 2, 3, 4, 5)
