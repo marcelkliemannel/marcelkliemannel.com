@@ -76,7 +76,7 @@ val (first: Number, second: Int, first: Number) = values()
 
 Due to Kotlin's philosophy to simplifying constructs that frequently occur in the real world, the standard library offers container classes for up to 5 elements.
 
-### Pair and Tripe
+### Pair and Triple
 
 We could use `kotlin.Pair` and `kotlin.Triple` for two or three elements. With this, we are now able to reduce the example code even further by replacing our container class with the built-in one:
 
@@ -98,7 +98,7 @@ However, this mechanism works out-of-the-box only for up to five variables:
 fun values2() = Array(1, 2, 3, 4, 5, 6) 
 val (first, second, third, fourth, five, six) = values() // Error
 ```
-However, we should note that destruction declarations on Arrays and Lists open up a potential failure source. An `ArrayIndexOutOfBoundsException´ is thrown at runtime if there are not enough elements in the array as variables are defined.
+However, we should note that destruction declarations on Arrays and Lists open up a potential failure source. An `ArrayIndexOutOfBoundsException` is thrown at runtime if there are not enough elements in the array as variables are defined.
 
 ## Extending Destruction Declarations to all Java Classes
 
