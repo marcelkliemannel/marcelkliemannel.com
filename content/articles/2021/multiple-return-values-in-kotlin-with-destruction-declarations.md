@@ -98,17 +98,20 @@ However, this mechanism works out-of-the-box only for up to five variables:
 fun values2() = Array(1, 2, 3, 4, 5, 6) 
 val (first, second, third, fourth, five, six) = values() // Error
 ```
-However, we should note that destruction declarations on Arrays and Lists open up a potential failure source. An `ArrayIndexOutOfBoundsException` is thrown at runtime if there are not enough elements in the array as variables are defined.
+However, we should note that destruction declarations on Arrays and Lists open up a potential failure source: An `ArrayIndexOutOfBoundsException` is thrown at runtime if there are not enough elements in the array as variables are defined.
 
 ## Extending Destruction Declarations to all Java Classes
 
-The underlining mechanism of destruction declarations is an operator with the function name `component*` where the postfix `*` is the number of the variable position, starting at `1`.
+If we create new container classes ourselves or use the existing ones from the standard library, it is easy to use the multiple return value feature.
 
-With [extension functions](https://kotlinlang.org/docs/extensions.html), we can now define the operators for the destruction declaration variables for every Java class we want. For example, to split an instance of `java.time.LocalDate` into a separated day, month, and year variable:
+When we create new container classes or use the existing ones, it is easy to use the multiple return values feature. But since we don't want to reinvent the wheel, we often use existing, external Java classes, which do not fulfill the conditions for destruction declarations.
+
+For example, let's take an instance of a `java.time.LocalDate`, which contains a day, month, and year value. It would be nice to split the object into its three values:
 ```kotlin
 val (day, month, year) = LocalDate.now()
 ```
-for that, we need to define three operator functions which are returning the corresponding date part:
+
+We can do this by taking a closer look at how the underlying mechanism of destruction declarations works: The mapping of each variable to the corresponding property in the instance is an operator with a function name `component*` where the postfix `*` is the number of the variable position, starting at `1`. With [extension functions](https://kotlinlang.org/docs/extensions.html), we can now define the operators for the destruction declaration variables for every Java class we want. For our `java.time.LocalDate` example, this would be:
 ```kotlin
 operator fun LocalDate.component1() : Int = this.dayOfMonth
 operator fun LocalDate.component2() : Int = this.monthValue
