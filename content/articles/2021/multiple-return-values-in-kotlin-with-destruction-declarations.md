@@ -68,17 +68,51 @@ println("${first} - ${second} - ${third}");
 
 The types of each returned variable are automatically derived from their property types in the data class. However, we can also specify them explicitly:
 
-```kotlin {hl_lines=[5]}
+```kotlin
 val (first: Number, second: Int, first: Number) = values()
 ```
 
 ## Common Container Classes
 
-The cases where we want to return two or three values probably occur more frequently, than four or more values. Since the development of Kotlin is oriented towards simplifying constructs that frequently occur in the real world, the Kotlin standard library offers us helper classes for the first two cases. These would be `kotlin.Pair` for two values and `kotlin.Triple` for three values. With this we are now able to reduce the code even further by replacing our own container class with the built-in one:
+Due to Kotlin's philosophy to simplifying constructs that frequently occur in the real world, the standard library offers container classes for up to 5 elements.
+
+### Pair and Triple
+
+We could use `kotlin.Pair` and `kotlin.Triple` for two or three elements. With this, we are now able to reduce the example code even further by replacing our container class with the built-in one:
 
 ```kotlin
 fun values() = Triple(4, 2, 4)
 val (first, second, third) = values()
+```
+
+### Arrays and Lists
+
+Similarly, we can use destruction declarations also for Arrays and Lists (but not for Sets and Maps because they have no deterministic order):
+
+```kotlin
+fun values1() = Array(1, 2, 3, 4, 5)
+val (first, second, third, fourth, five) = values()
+```
+However, this mechanism works out-of-the-box only for up to five variables:
+```kotlin
+fun values2() = Array(1, 2, 3, 4, 5, 6) 
+val (first, second, third, fourth, five, six) = values() // Error
+```
+However, we should note that destruction declarations on Arrays and Lists open up a potential failure source. An `ArrayIndexOutOfBoundsException` is thrown at runtime if there are not enough elements in the array as variables are defined.
+
+## Extending Destruction Declarations to all Java Classes
+
+The underlining mechanism of destruction declarations is an operator with the function name `component*` where the postfix `*` is the number of the variable position, starting at `1`.
+
+With [extension functions](https://kotlinlang.org/docs/extensions.html), we can now define the operators for the destruction declaration variables for every Java class we want. For example, to split an instance of `java.time.LocalDate` into a separated day, month, and year variable:
+```kotlin
+val (day, month, year) = LocalDate.now()
+```
+for that, we need to define three operator functions which are returning the corresponding date part:
+```kotlin
+operator fun LocalDate.component1() : Int = this.dayOfMonth
+operator fun LocalDate.component2() : Int = this.monthValue
+operator fun LocalDate.component3() : Int = this.year
 ```
 
 ## Handling Null Values
