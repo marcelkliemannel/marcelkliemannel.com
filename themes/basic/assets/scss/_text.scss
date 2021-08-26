@@ -92,6 +92,7 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
     padding: .1rem .3rem;
     white-space: pre;
     overflow: hidden;
+    border-radius: 2px;
   }
 
   .highlight {
