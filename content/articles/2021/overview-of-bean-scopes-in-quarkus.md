@@ -24,31 +24,31 @@ Defining dependencies to other classes is done via so-called **injection points*
 
 A non-static **field** that is at least package-private and has the type of our dependent class:
 
-```java
+```java {hl_lines=[5]}
 @Path("/greeting")
 public class GreetingResource {
   
-	@Inject
-	GreetingService greetingService;
+  @Inject
+  GreetingService greetingService;
 
-	@GET
-	@Produces(MediaType.TEXT_PLAIN)
-	public String sayHello(@QueryParam("name") String name) {
+  @GET
+  @Produces(MediaType.TEXT_PLAIN)
+  public String sayHello(@QueryParam("name") String name) {
     return greetingService.sayHello(name);
-	}
+  }
 }
 ```
 
 A **constructor** that is at least package-private and has a parameter with the type of our dependent class (it is allowed to omit the `@Inject` annotation):
 
-```java
+```java {hl_lines=[7]}
 @Path("/greeting")
 public class GreetingResource {
   
   private final GreetingService greetingService;
   
-	@Inject
-	GreetingResource(GreetingService greetingService) {
+  @Inject
+  GreetingResource(GreetingService greetingService) {
     this.greetingService = greetingService;
   }
   
@@ -58,16 +58,18 @@ public class GreetingResource {
 
 A non-static **setter method**, that is at least package-private, returns `void` and has a parameter with the type of our dependent class:
 
-    @Path("/greeting")
-    public class GreetingResource {
+```java {hl_lines=[7]}
+@Path("/greeting")
+public class GreetingResource {
       
-      private GreetingService greetingService;
+  private GreetingService greetingService;
     
-    	@Inject 
-    	void setDeps(GreetingService greetingService) { 
-      	this.greetingService = greetingService;
-    	}
-    }
+  @Inject 
+  void setDeps(GreetingService greetingService) { 
+    this.greetingService = greetingService;
+  }
+}
+```
 
 The question is now, which conditions the CDI mechanism used to create and reuse beans and how we can control them during the design process of our architecture.
 
@@ -135,12 +137,12 @@ class ApplicationStartHandler {
 
 The execution of the application would give us the following output:
 
-  ```
+```
 Application started
 @ApplicationScoped onConstructed
 0
 1
-  ```
+```
 
 We can now observe two things here: First, the creation of the instance gets deferred until we call `getAndIncrementCounter()` for the first time. If we would remove the two calls, we would only get the following output:
 
@@ -284,15 +286,15 @@ Now we can create a JAX-RS resource where we inject the `RequestUserContext` bea
 @Path("/calculator/addition")
 public class CalculatorAdditionResource {
 
-    @Inject
-    RequestUserContext requestLocale;
+  @Inject
+  RequestUserContext requestLocale;
 
-    @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String plus(@QueryParam("a") int a, @QueryParam("b") int b) {
-      NumberFormat numberFormat = NumberFormat.getNumberInstance(requestLocale.getLocale());
-      return numberFormat.format(a + b);
-    }
+  @GET
+  @Produces(MediaType.TEXT_PLAIN)
+  public String plus(@QueryParam("a") int a, @QueryParam("b") int b) {
+    NumberFormat numberFormat = NumberFormat.getNumberInstance(requestLocale.getLocale());
+    return numberFormat.format(a + b);
+  }
 }
 ```
 
@@ -368,9 +370,9 @@ By adding an observer method for the `StartupEvent`, the application start will 
 ```java
 @Singleton
 class SingletonBean {
-	void setup(@Observes StartupEvent event) {
-  	// Initialize bean...
-	}
+  void setup(@Observes StartupEvent event) {
+    // Initialize bean...
+  }
 }
 ```
 
@@ -388,9 +390,9 @@ If we want to react to the creation of a new `RequestScope` or `SessionScope`, w
 ```java
 @RequestScoped // Or @SessionScoped
 class SingletonBean {
-	void setup(@Initialized(RequestContext.class) Object event) { // Or SessionContext.class
-  	// Initialize bean...
-	}
+  void setup(@Initialized(RequestContext.class) Object event) { // Or SessionContext.class
+    // Initialize bean...
+  }
 }
 ```
 
