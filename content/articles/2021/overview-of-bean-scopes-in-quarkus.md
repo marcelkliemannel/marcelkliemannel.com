@@ -1,5 +1,5 @@
 ---
-title: "Quarkus: Bean Scopes Overview"
+title: "Overview of Bean Scopes in Quarkus"
 date: 2021-08-26T15:33:50+02:00
 draft: false
 tags: ["Quarkus"]
