@@ -12,6 +12,6 @@ IntelliJ plugin that provides some useful utilities to support the daily work wi
 
 - Overview of all running Gradle daemons, their status and command line, and an action to terminate them.
 - Managing the contents of the Gradle user home, like listening and cleaning the downloaded Gradle distributions and caches.
-- Overview of the current Gradle environment, which includes all system, user and project Gradle properties; Gradle relevant environment variables and the versions of the used Gradle executables.
+- Overview of the current Gradle environment: This includes all system, user, and project Gradle properties, Gradle relevant environment variables, and the versions of the used Gradle executables.
 - Verification of the checksums of the downloaded Gradle distributions and the Gradle wrapper JAR.
 - Listing the latest Gradle releases.
