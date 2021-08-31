@@ -9,6 +9,10 @@ body {
   font-size: 16px;
   color: $color-bright-100;
   background-color: $color-dark-900;
+
+  // Preventing automatic enlargement of the font size in iOS Safari,
+  // especially in code fences.
+  -webkit-text-size-adjust: 100%;
 }
 
 .main {
