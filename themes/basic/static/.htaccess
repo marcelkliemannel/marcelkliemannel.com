@@ -1,5 +1,8 @@
 RewriteEngine on
 
+Redirect /projects/intellij-byte-code-plugin https://github.com/marcelkliemannel/intellij-byte-code-plugin
+Redirect /project/intellij-gradle-utilities-plugin https://github.com/marcelkliemannel/intellij-gradle-utilities-plugin
+
 # Add trailing slash
 ## TODO removing trailing slash would be better but hugo does not support this yet
 RewriteCond %{REQUEST_URI} !(/$|\.) 
