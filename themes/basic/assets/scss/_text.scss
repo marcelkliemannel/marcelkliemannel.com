@@ -99,8 +99,7 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
     margin: $paragraph-gap 0;
   }
 
-  // Don't affect code block
-  table:not([class="lntable"]) {
+  table:not([class="lntable"]) { // Don't affect code block
     $normal-border: 1px solid $color-bright-500;
 
     margin: $paragraph-gap 0;
@@ -109,6 +108,9 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
     width: 100%;
     border-collapse: collapse;
     border: $normal-border;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
 
     td { 
       padding: .4rem .6rem;
@@ -116,6 +118,7 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
 
       &:last-child {
         border-right: 0;
+        width: 100%;
       }
     }
   
