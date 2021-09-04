@@ -7,7 +7,7 @@
   {{ .Scratch.Set "image1x" ($original.Resize $image1xSize) }}
   {{ $image1x := .Scratch.Get "image1x" }}
   <p class="center">
-    <img src="{{ $image1x.RelPermalink }}" width="{{ $image1x.Width }}" height="{{ $image1x.Height }}" srcset="{{ $original.RelPermalink }} 2x"{{ with $title }} alt="{{ . }}"{{ end }}>
+    <a href="{{ $original.RelPermalink }}" class="image-link"><img src="{{ $image1x.RelPermalink }}" width="{{ $image1x.Width }}" height="{{ $image1x.Height }}" srcset="{{ $original.RelPermalink }} 2x"{{ with $title }} alt="{{ . }}"{{ end }} /></a>
   </p>
 {{ else }}
   {{ errorf "Image '%s' is not a retina image." $original.RelPermalink }}

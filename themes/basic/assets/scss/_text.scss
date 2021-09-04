@@ -38,6 +38,11 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
       outline: dashed 1px $color-dark-300;
       border-bottom-color: transparent;
     }
+
+    &.image-link {
+      display: inline-block;
+      border-bottom: none;
+    }
   }
 
   img {
