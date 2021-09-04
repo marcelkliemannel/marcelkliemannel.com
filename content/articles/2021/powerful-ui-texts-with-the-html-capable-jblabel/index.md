@@ -3,7 +3,7 @@ title: "Powerful UI texts with the HTML capable JBLabel"
 date: 2021-07-10T10:13:28+02:00
 draft: false
 tags: ["IntelliJ SDK"]
-metaDescription: "Overview about the powerful JBLabel in the IntelliJ SDK, which allows to display HTML, auto wrapping and copyable texts."
+summary: "Overview about the powerful JBLabel in the IntelliJ SDK, which allows displaying HTML, auto wrapping, and copyable texts."
 ---
 
 With the **[JBLabel](https://upsource.jetbrains.com/idea-ce/file/idea-ce-17812b1102973a61b8b73ee7fdbea12cf8036cd6/platform/platform-api/src/com/intellij/ui/components/JBLabel.java)**, the IntelliJ SDK offers a powerful extension of the classic Swing `javax.swing.JLabel` to display texts. The most important extension is the ability to format the text using HTML and CSS. To enable this, we just need to put our text into a simple `<html>` block:

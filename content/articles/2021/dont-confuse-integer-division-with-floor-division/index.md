@@ -3,7 +3,7 @@ title: "Don't Confuse Integer Division with Floor Division"
 date: 2021-07-15T18:45:15+02:00
 draft: false
 tags: ["Best Practice"]
-metaDescription: "Showing that the division of two integer types is not equivalent to floor division."
+summary: "We are discussing the problem that we cannot implement a floor division by a simple division of two integer variables."
 ---
 
 When mathematical formulas are transferred into code, a common programming error occurs: The floor division operator is implemented by a simple division of two integer types.

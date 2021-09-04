@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  {{ $description := (cond (ne .Params.metaDescription nil) .Params.metaDescription .Site.Params.metaDescription) }}
+  {{ $description := (cond (ne .Params.summary nil) .Params.summary .Site.Params.metaDescription) }}
   <meta name="description" content="{{ $description }}">
   <meta name="author" content="{{ .Site.Params.metaAuthor }}">
 

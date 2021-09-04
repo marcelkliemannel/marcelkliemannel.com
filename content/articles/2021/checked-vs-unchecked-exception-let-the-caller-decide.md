@@ -3,12 +3,12 @@ title: "Checked vs. Unchecked Exception: Let the Caller Decide"
 date: 2021-08-12T17:10:31+02:00
 draft: false
 tags: ["Java", "API Design"]
-metaDescription: "Designing an API in way that lets the caller decide to handle exception as checked or unchecked."
+summary: "Description of a technique with which we let the caller of an API method decide whether thrown exceptions should be runtime or checked exception."
 ---
 
 In Java, sometimes we get into the situation where a method call forces us to handle a checked exception, but we're not interested in it right now. E.g., an `UncaughtExceptionHandler` in the thread may take care of it.
 
-On the other hand, sometimes APIs handle all errors as `RuntimeExcepition`. But for us, the exception handling from this API must be done immediately, for example, by an error dialog so that the exception is not just rushing through.
+On the other hand, sometimes APIs handle all errors as `RuntimeException`s. But for us, the exception handling from this API must be done immediately, for example, by an error dialog so that the exception is not just rushing through.
 
 A nice example of the first case is a method reference call within chained stream calls, as in the following example:
 

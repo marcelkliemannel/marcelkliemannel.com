@@ -3,14 +3,14 @@
     {{ if .withPageMeta }}
       {{ partial "page-meta.html" .context }}
     {{ end }}
-
+    
     <h1 class="gap-top-small {{ if not (.Params.tags) }}gap-bottom-medium{{ end }}">{{ .context.Title }}</h1>
 
-    {{ with .context.Params.pageHeaderDescription }}
-      <div class="page-description gap-bottom-medium">{{ . }}</div>
+    {{ if (ne .context.Params.hideSummary true) }}
+      {{ with .context.Params.summary }}
+        <div class="page-description gap-bottom-medium">{{ . }}</div>
+      {{ end }}
     {{ end }}
-
-    {{ partial "tags.html" (dict "tags" .context.Params.tags "listClassAttr" "gap-top-small" "tagClassAttr" "button-like-inverted-bright button-like-size-m") }}
 
     {{ with .postPartial }}
       {{ partial . (merge (dict "context" $.context) $.postPartialParams) }}

@@ -3,7 +3,7 @@ title: "Overview of Bean Scopes in Quarkus"
 date: 2021-08-26T15:33:50+02:00
 draft: false
 tags: ["Quarkus"]
-metaDescription: "In-depth description about all bean scopes provided by Quarkus."
+summary: "An in-depth description of all built-in bean scopes provided by Quarkus, the creation of custom scopes, and how to force the initialization of a bean."
 ---
 
 Beans are the centerpiece of a Quark's application. In contrast to a classically POJO class instance, the instance of a bean is encapsulated and lives inside a container object. Therefore beans are called container-managed. The container takes care of the lifecycle from the dependency resolution, the instantiation to the destruction of the bean. This container is called **client-proxy**.
@@ -361,7 +361,7 @@ But, custom scopes are a complex topic since we have to take care of the life cy
 3. In the extension's runtime project, we must create a scope context class that implements `io.quarkus.arc.InjectableContext`. This class manages the life cycle of the beans inside our scope.
 4. In the extension's deployment project, we would have to register our annotation together with the context. As an example, we can look at the method [buildCdiScopes()](https://github.com/adminfaces/quarkus-omnifaces/blob/f084509bc9cf44943b3470adbb8ab7de12aa6aaa/deployment/src/main/java/io/quarkus/omnifaces/deployment/OmniFacesProcessor.java#L55) in the OmniFaces Quarkus extension.
 
-## Force Inizialization
+## Force Initialization
 
 Beans get instantiated either lazily if a bean method gets called or if the parent bean gets initialized. As a consequence, our bean may never get instantiated. But by registering our bean as an observer for specific events, we can force the instantiation.
 

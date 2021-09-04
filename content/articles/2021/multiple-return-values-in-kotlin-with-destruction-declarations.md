@@ -3,7 +3,7 @@ title: "Multiple Return Values in Kotlin with Destruction Declarations"
 date: 2021-07-15T18:43:34+02:00
 draft: false
 tags: ["Kotlin"]
-metaDescription: "Simplifying code in Kotlin by returning multiple values from a method with destruction declarations."
+summary: "We are looking at how to simplify code by using multiple return values from a method in Kotlin with powerful destruction declarations."
 ---
 
 Sometimes we find ourselves in a situation where we want to return multiple values as the result of a method call. Some programming languages have such functionality built-in and allow us to assign the returned values directly back into individual variables. [Like for example in Go](https://gobyexample.com/multiple-return-values):
