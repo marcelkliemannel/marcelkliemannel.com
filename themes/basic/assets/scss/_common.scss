@@ -21,6 +21,8 @@
 // -- Button like ------------------------------------------------------------------------------------------------------
 
 .button-like {
+  $button-like-dark-background-color: $color-dark-500;
+
   color: $text-color-bright-background;
   border-bottom: 2px solid transparent;
   display: inline-block;
@@ -58,21 +60,21 @@
 
     &:hover {
       color: $color-bright-100 !important;
-      border-top-color: $color-dark-700;
+      border-top-color: $button-like-dark-background-color;
       border-bottom-color: $color-green-400 !important;
-      background-color: $color-dark-700;
+      background-color: $button-like-dark-background-color;
     }
   }
 
   &-inverted-dark {
     color: $color-bright-100 !important;
-    background-color: $color-dark-700;
-    border-color: $color-dark-700;
+    background-color: $button-like-dark-background-color;
+    border-color: $button-like-dark-background-color;
 
     &:hover {
       color: $text-color-green-400-background !important;
       border-top-color: $color-green-400;
-      border-bottom-color: $color-dark-700 !important;
+      border-bottom-color: $button-like-dark-background-color !important;
       background-color: $color-green-400;
     }
 
