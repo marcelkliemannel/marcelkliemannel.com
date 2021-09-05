@@ -177,19 +177,8 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
   }
 
   &-small {
-    p {
+    p, ul, ol {
       font-size: calc(#{$normal-text-font-size} * .8) !important;
-    }
-  }
-
-  .table-of-contents {
-    margin: $paragraph-gap 0;
-
-    #TableOfContents {
-      display: none;
-      margin-top: .3rem;
-      background-color: $color-bright-200;
-      padding: .5rem $paragraph-gap;
     }
   }
 }

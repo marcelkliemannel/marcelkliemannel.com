@@ -34,11 +34,9 @@ if (tableOfContents !== null) {
   tableOfContentsToggle.addEventListener("click", function(e) {
     if (tableOfContents.style.display === "block") {
       tableOfContents.style.display = "none";
-      tableOfContentsToggle.innerHTML = "<i class=\"icon-menu\"></i> Show table of contents";
     } 
     else {
       tableOfContents.style.display = "block";
-      tableOfContentsToggle.innerHTML = "<i class=\"icon-cross\"></i> Hide table of contents";
     }
     e.preventDefault()
   });

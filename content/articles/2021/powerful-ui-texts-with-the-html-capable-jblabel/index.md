@@ -18,8 +18,6 @@ The above code results in the following output:
 
 (Even though omitting the body element is semantically incorrect, we should still do this for the sake of readability in simple cases.)
 
-{{< table-of-contents >}}
-
 ## Styling
 
 Because the text for a `JBLabel` can be any ordinary HTML document, we can use CSS to style the text. For more extensive or reusable style definitions, we can write them in a `<style>` block in the `<head>` area, or we can use the inline `style` attribute:
