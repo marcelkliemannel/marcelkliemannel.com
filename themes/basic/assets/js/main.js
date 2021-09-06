@@ -30,13 +30,13 @@ mainMenuVerticalToggle.addEventListener("click", function(e) {
  */
 var tableOfContents = document.getElementById("TableOfContents");
 if (tableOfContents !== null) {
-  var tableOfContentsToggle = document.querySelector(".table-of-contents-toggle");
+  var tableOfContentsToggle = document.querySelector(".table-of-contents-toggle-link");
   tableOfContentsToggle.addEventListener("click", function(e) {
-    if (tableOfContents.style.display === "block") {
+    if (tableOfContents.style.display === "inline-block") {
       tableOfContents.style.display = "none";
     } 
     else {
-      tableOfContents.style.display = "block";
+      tableOfContents.style.display = "inline-block";
     }
     e.preventDefault()
   });

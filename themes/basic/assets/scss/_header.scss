@@ -1,4 +1,4 @@
-@import '_fonts', '_colors';
+@import '_fonts', '_colors', '_layout';
 
 .header {
   $header-height: 4rem;
@@ -103,7 +103,7 @@
     }
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: $narrow-media-max-width) {
     .main-menu-horizontal {
       display: none;
     }
@@ -112,7 +112,7 @@
     }
   }
 
-  @media (min-width: 901px) {
+  @media (min-width: $wide-media-min-width) {
     .main-menu-vertical {
       display: none !important;
     }

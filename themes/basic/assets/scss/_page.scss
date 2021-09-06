@@ -1,4 +1,4 @@
-@import '_colors', '_headings';
+@import '_colors', '_headings', '_layout';
 
 .page-meta {
   font-size: .8rem;
@@ -53,7 +53,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: $narrow-media-max-width) {
   .pages-flex {
     display: block;
 
@@ -67,7 +67,7 @@
   }
 }
 
-@media (min-width: 901px) {
+@media (min-width: $wide-media-min-width) {
   .pages-flex {
     display: flex;
     flex-flow: row wrap;
@@ -94,8 +94,35 @@
 
 // -- Table of Contents -------------------------------------------------------------------------------------------------
 
+@media (max-width: $narrow-media-max-width) {
+  .post-partial {
+    float: none;
+  }
+
+  .table-of-contents-toggle {
+    text-align: center;
+    margin: $small-gap auto 0 auto;
+    display: block;
+  }
+}
+
+@media (min-width: $wide-media-min-width) {
+  .post-partial {
+    float: left;
+  }
+
+  .table-of-contents-toggle {
+    display: flex;   
+    justify-content: flex-end; 
+  }
+}
+
 .table-of-contents {
+  text-align: center;
+
   #TableOfContents {
+    margin:auto;
+    text-align: left;
     display: none;
   }
 }

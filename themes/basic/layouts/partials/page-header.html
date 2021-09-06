@@ -12,6 +12,7 @@
       {{ end }}
     {{ end }}
 
+    <div class="group">
     {{ with .postPartial }}
       <div class="post-partial">
         {{ partial . (merge (dict "context" $.context) $.postPartialParams) }}
@@ -19,10 +20,13 @@
     {{ end }}
 
     {{ if (eq .showTableOfContents "true") }}
-      <div class="table-of-contents gap-top-medium text text-on-dark-background text-small">
-        <a href="#" class="button-like button-like-size-m table-of-contents-toggle"><i class="icon-menu"></i> Table of contents</a>
+      <div class="table-of-contents-toggle text text-on-dark-background text-small">
+        <a href="#" class="button-like button-like-size-m table-of-contents-toggle-link"><i class="icon-menu"></i> Table of contents</a>
+      </div>
+      <div class="table-of-contents text text-on-dark-background text-small">
         {{ .context.Page.TableOfContents }}
       </div>
     {{ end }}
+  </div>
   </div>
 </div>
