@@ -42,7 +42,7 @@
     margin: 0;
     position: absolute;
     top: 50%;
-    right: 0;
+    right: $wrapper-safety-gap;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
