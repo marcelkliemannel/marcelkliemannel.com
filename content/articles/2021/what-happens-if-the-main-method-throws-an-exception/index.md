@@ -78,14 +78,14 @@ We have already learned that each method runs in a thread and that our main meth
 
 A thread is always bound to a thread group. And the thread group of the main thread has the name – again very surprisingly – *main*. Such a thread group can be a child of another thread group. And the topmost thread group, which does not have a parent, has the name *system*. For our main method, this results in the following hierarchy:
 
-![thread-structure](/Users/marcel/Downloads/thread-structure.svg)
+![Thread Structure](thread-structure.svg#center)
 
-If there is a pending uncaught exception during the termination process of a thread, the private method `java.lang.Thread#dispatchUncaughtException()` gets called. This method now checks whether the current thread has a `java.lang.Thread.UncaughtExceptionHandler` handler set via `Thread#setUncaughtExceptionHandler()` (which is not the case by default). Alternatively, it uses the `java.lang.ThreadGroup` of the current thread as the exception handler because it implements the `UncaughtExceptionHandler` interface.
+If there is a pending uncaught exception during the termination process of a thread, the private method `Thread#dispatchUncaughtException()` gets called. This method now checks whether the current thread has a `Thread.UncaughtExceptionHandler` handler set via `Thread#setUncaughtExceptionHandler()` (which is not the case by default). Alternatively, it uses the `ThreadGroup` of the current thread as the exception handler because it implements the `UncaughtExceptionHandler` interface.
 
-The method `UncaughtExceptionHandler#uncaughtException(Thread, Throwable)` gets now called on the found exception handler. This method does the following in the default implementation:
+The method `UncaughtExceptionHandler#uncaughtException()` gets now called on the found exception handler with the exception as an argument. This method does the following in the default implementation:
 
 1. If there is a parent thread group, dispatch the exception handling to the parent by calling its `uncaughtException()`.
-2. Otherwise, check if a global static exception handler was set via `java.lang.Thread#setDefaultUncaughtExceptionHandler()`. If so, dispatch the exception to this handler. 
+2. Otherwise, check if a global static exception handler was set via `Thread#setDefaultUncaughtExceptionHandler()`. If so, dispatch the exception to this handler. 
 3. If none of the previous cases apply, print the exception's stack trace to the standard error output.(This case produced the output we have seen right at the beginning of the article for our main example.)
 
 If no exception handler could be found for the main method, the native code of the JVM prints the exception's stack trace to the standard error stream.
