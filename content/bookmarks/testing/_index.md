@@ -1,4 +1,9 @@
 ---
 title: Testing
 weight: 7
+links:
+- title: "How I Write Tests"
+  link: "https://blog.nelhage.com/2016/12/how-i-test/"
+- title: "Don’t be lazy, use @Rules"
+  link: "https://ncorti.com/blog/junit-rules"
 ---

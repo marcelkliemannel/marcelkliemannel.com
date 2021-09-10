@@ -1,3 +1,14 @@
 ---
 title: "Performance"
+links:
+- title: "HotSpot JVM Performance Tuning Guidelines"
+  link: "https://ionutbalosin.com/2020/01/hotspot-jvm-performance-tuning-guidelines/"
+- title: "Tricks of the Trade: Tuning JVM Memory for Large-scale Services"
+  link: "https://eng.uber.com/jvm-tuning-garbage-collection/"
+- title: "Using JDK 9 Memory Order Modes"
+  link: "http://gee.cs.oswego.edu/dl/html/j9mm.html"
+- title: "JaCoLine - Java Command Line Inspector"
+  link: "https://jacoline.dev/inspect"
+- title: "Why does my Java process consume more memory than Xmx?"
+  link: "https://plumbr.io/blog/memory-leaks/why-does-my-java-process-consume-more-memory-than-xmx"
 ---

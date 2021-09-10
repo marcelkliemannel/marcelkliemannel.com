@@ -1,4 +1,29 @@
 ---
 title: "Java"
 weight: 2
+links:
+- title: "Project Loom and Structured Concurrency"
+  link: "https://www.javaadvent.com/2020/12/project-loom-and-structured-concurrency.html"
+- title: "Why a library developer should use abstract class instead of interface"
+  link: "http://hannesdorfmann.com/android/library-abstract-class/"
+- title: "Thymeleaf Utility Objects"
+  link: "https://gist.github.com/jorgeacetozi/443e8f422dfbdf9c78a34c8eb25d5693"
+- title: "JVM Anatomy Quarks"
+  link: "https://shipilev.net/jvm/anatomy-quarks/"
+- title: "Empirical Study of Usage and Performance of Java Collections"
+  link: "https://www.researchgate.net/publication/313820944_Empirical_Study_of_Usage_and_Performance_of_Java_Collections"
+- title: "The truth about Optional"
+  link: "https://blog.sourced-bvba.be/article/2017/01/06/the-usages-of-optional"
+- title: "Teeing, a hidden gem in the Java API"
+  link: "https://blog.frankel.ch/teeing-java-api/"
+- title: "Brian Goetz: Handling InterruptedException"
+  link: https://topic.alibabacloud.com/a/handling-interruptedexception-brian-goetz_8_8_31503524.html
+- title: "Static vs Dynamic Binding in Java"
+  link: "https://www.geeksforgeeks.org/static-vs-dynamic-binding-in-java/"
+- title: "Java Debuggers: A Peek Under the Hood"
+  link: "https://www.youtube.com/watch?v=buUkXFx9ao8"
+- title: "Hamcrest Matchers"
+  link: "http://hamcrest.org/JavaHamcrest/javadoc/2.1/org/hamcrest/Matchers.html"
+- title: "Compilation Overview"
+  link: "https://openjdk.java.net/groups/compiler/doc/compilation-overview/index.html"
 ---

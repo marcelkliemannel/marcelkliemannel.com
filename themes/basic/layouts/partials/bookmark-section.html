@@ -3,10 +3,10 @@
 <h{{ $.level }}>{{ .Title }}</h{{ $.level }}>
 
 <ul>
-  {{ range .RegularPages }}
+  {{ range $link := .Params.links }}
 
   <li>
-    <a href="{{ .Params.link }}" target="_blank">{{ .Title }}</a><br />
+    <a href="{{ $link.link }}" target="_blank">{{ $link.title }}</a><br />
     {{ with .Plain }}<span class="description">{{ . }}</span>{{ end }}
   </li>
 
