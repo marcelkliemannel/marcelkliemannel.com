@@ -86,7 +86,7 @@ The method `UncaughtExceptionHandler#uncaughtException()` gets now called on the
 
 1. If there is a parent thread group, dispatch the exception handling to the parent by calling its `uncaughtException()`.
 2. Otherwise, check if a global static exception handler was set via `Thread#setDefaultUncaughtExceptionHandler()`. If so, dispatch the exception to this handler. 
-3. If none of the previous cases apply, print the exception's stack trace to the standard error output.(This case produced the output we have seen right at the beginning of the article for our main example.)
+3. If none of the previous cases apply, print the exception's stack trace to the standard error output. (This case produced the output we have seen right at the beginning of the article for our main example.)
 
 If no exception handler could be found for the main method, the native code of the JVM prints the exception's stack trace to the standard error stream.
 
@@ -96,7 +96,7 @@ We have now seen what happened to the exception after we left the main method. S
 
 After the termination of all non-daemon threads, the JVM starts executing all the shutdown hooks added via `Runtime.getRuntime().addShutdownHook(Thread)`.
 
-After that, all internal shutdown hooks are executed. Among other, this includes the hook set by marking a `java.io.File` object with `File#deleteOnExit()`.
+After that, all internal shutdown hooks are executed. Among other, this includes the hook set by marking a `File` object with `deleteOnExit()`.
 
 We have now reached the point where no more Java code will be executed. 
 
