@@ -3,7 +3,7 @@ title: "What Happens if the Main Method Throws an Exception?"
 date: 2021-09-07T20:23:03+02:00
 draft: false
 tags: ["Java"]
-summary: "By breaking down the JVM shutdown sequence, we want to understand how Java code gets executed in threads, thread groups, global exception handling, and what else happens when we fall beyond the main method."
+summary: "By breaking down the JVM shutdown sequence, we want to understand code execution in threads, thread groups, global exception handling, and what else happens when falling beyond the main method."
 ---
 
 If we write a simple main method in Java that does nothing but throw an exception:
