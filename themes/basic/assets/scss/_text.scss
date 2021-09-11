@@ -181,4 +181,10 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
       font-size: calc(#{$normal-text-font-size} * .8) !important;
     }
   }
+
+  .tombstone {
+    width: .6rem;
+    height: .6rem;
+    background-color: $color-dark-500;
+  }
 }
