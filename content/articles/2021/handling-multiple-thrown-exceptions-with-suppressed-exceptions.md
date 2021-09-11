@@ -1,5 +1,5 @@
 ---
-title: "Handling Multiple Thrown Exceptions in Java With Suppressed Exceptions"
+title: "Handling Multiple Thrown Exceptions With Suppressed Exceptions"
 date: 2021-09-11T12:53:40+02:00
 draft: false
 tags: ["Java"]
