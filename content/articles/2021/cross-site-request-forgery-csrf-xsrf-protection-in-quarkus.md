@@ -66,7 +66,7 @@ We can also make this pattern stateful, just like the synchronizer token pattern
 
 This pattern works in principle like the cookie-to-header pattern, except that the requester can transmit the CSRF token from the cookie in other ways. The CSRF token is then sent once as a cookie and once, for example, in a hidden field in a form (see the synchronizer token pattern example). This pattern gets chosen when we want stateless validation, but no JavaScript is involved. However, the same disadvantages from the previous chapter remain.
 
-## Implementing the Synchronizer Token Pattern in Quarkus
+## Implementation of the Synchronizer Token Pattern in Quarkus
 
 ### Generating and Storing the CSRF Token
 
