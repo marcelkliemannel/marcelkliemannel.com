@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+{{ partial "page-header.html" (dict "context" .) }}
+
+<div class="horizontal-wrapper-narrow vertical-wrapper-large with-safety-gap">
+
+  <div class="text">
+    <p>The requested page could not be found.</p>
+    <p>Please <a href="{{ (absURL "contact/") }}">get in touch with me</a> if you think this error should not have occurred.</p>
+  </div>
+
+</div>
+
+{{ end }}
