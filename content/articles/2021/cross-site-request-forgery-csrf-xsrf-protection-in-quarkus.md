@@ -101,7 +101,7 @@ As long as the session is alive and Undertow can associate a request with an exi
 
 ### Providing the CSRF Token
 
-Now that we can generate a CSRF token and store it, we need to provide it to a requester. The concrete implementation for this depends on our HTTP endpoints. We can access the current CSRF token by injecting the `CsrfToken` type into a field in a resource or servlet and then deliver it along with the response.
+Now that we can generate a CSRF token and store it, we need to provide it to a requester. The concrete implementation for this depends on our HTTP endpoints. We can access the current CSRF token by injecting the `CsrfToken` type into a field in a JAX-RS resource or servlet and then deliver it along with the response.
 
 For the HTML content of a contact form page, a solution might look like this:
 
