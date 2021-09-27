@@ -14,4 +14,6 @@ links:
   link: "https://nabeelqu.co/understanding"
 - title: "How to Get Yourself to Do Things"
   link: "https://www.raptitude.com/2015/03/how-to-get-yourself-to-do-things/"
+- title: "How to stop self-sabotaging your career"
+  link: "https://www.science.org/careers/2021/08/how-stop-self-sabotaging-your-career"
 ---

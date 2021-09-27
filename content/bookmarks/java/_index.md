@@ -26,4 +26,6 @@ links:
   link: "http://hamcrest.org/JavaHamcrest/javadoc/2.1/org/hamcrest/Matchers.html"
 - title: "Compilation Overview"
   link: "https://openjdk.java.net/groups/compiler/doc/compilation-overview/index.html"
+- title: "Java API Compliance Checker"
+  link: "https://lvc.github.io/japi-compliance-checker/"
 ---
