@@ -16,4 +16,6 @@ links:
   link: "https://www.raptitude.com/2015/03/how-to-get-yourself-to-do-things/"
 - title: "How to stop self-sabotaging your career"
   link: "https://www.science.org/careers/2021/08/how-stop-self-sabotaging-your-career"
+- title: "How to work hard"
+  link: "http://paulgraham.com/hwh.html"
 ---
