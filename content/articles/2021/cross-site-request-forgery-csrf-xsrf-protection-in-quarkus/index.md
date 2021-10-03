@@ -12,7 +12,9 @@ A CSRF vulnerability often arises from the false assumption that simply authenti
 
 The starting point of this attack could be a fake website that looks very similar to the original one. Or a malicious link or graphic in a spam email.
 
-For example, let's assume that we have a banking website that can transfer money to a target account by making a POST request to `bank.com/transfer?amount=100&account=4567423`. Such a request is only possible with a valid session, and only if the requester can send a cookie with a valid session ID, our server will execute the transfer. The problem now is that a browser for a request to domain X always sends all cookies for domain X. However, it does not distinguish from where this request gets executed. If a fake bank website sends a POST request to `bank.com` with the account number of the attacker and any amount, our server will execute the transfer. Because the browser also sends the valid session cookie for `bank.com`. Our server cannot decide whether the request came from our bank website or the attacker's side.
+For example, let's assume a user logs into our website. The server sent a `JSESSIONID` cookie with the user's session ID as a response to that. Now the user visits the attacker website `melicious-site.com`, which response with malicious JavaScript code. The code will execute a POST request to the endpoint `/change-mail`, which will change the logged-in user's mail address to a value desired by the attacker. The problem now is that if a browser requests domain X, he will always send all cookies. However, it does not distinguish from where this request gets executed. And since the JavaScript code and thus the request gets executed in the user's browser, the browser includes the valid session ID cookie into the malicious request:
+
+{{< retina-image csrf-attack2x.png "CSRF Attack Example" >}}
 
 The protection against CSRF attacks is the use of **CSRF tokens** (better: anti-CSRF tokens). Unfortunately, Quarkus does not have any built-in functionality for this so far. Therefore, in this article, we will look at various implementation strategies in Quarkus.
 
@@ -46,7 +48,9 @@ For this pattern, a CSRF token gets generated per request or user session and it
 
 ### Cookie-to-Header Token Pattern
 
-For this pattern, the server provides the CSRF token via a cookie. The requester now reads the token from this cookie (e.g., via JavaScript), and with the subsequent request, he sends the token back in an HTTP header together with the original cookie. And for the CSRF protection, we just need to check on the server-side if both values match.
+For this pattern, the server provides the CSRF token via a cookie. The requester now reads the token from this cookie (e.g., via JavaScript), and with the subsequent request, he sends the token back in an HTTP header together with the original cookie. And for the CSRF protection, we just need to check on the server-side if both values match:
+
+{{< retina-image cookie-to-header2x.png "Cookie-to-Header Example" >}}
 
 This strategy works because JavaScript running on domain X is only allowed to read cookies from domain X. If a malicious website now sends a request to our domain, the browser will send the cookie. But, the JavaScript on the malicious website cannot provide the correct header value because it has no access to the cookie.
 
