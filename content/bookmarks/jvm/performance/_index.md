@@ -1,6 +1,8 @@
 ---
 title: "Performance"
 links:
+- title: "Java Performance Tuning"
+  link: "http://www.javaperformancetuning.com"
 - title: "HotSpot JVM Performance Tuning Guidelines"
   link: "https://ionutbalosin.com/2020/01/hotspot-jvm-performance-tuning-guidelines/"
 - title: "Tricks of the Trade: Tuning JVM Memory for Large-scale Services"
