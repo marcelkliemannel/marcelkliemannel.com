@@ -8,4 +8,6 @@ links:
   link: "https://www.baeldung.com/cs/hill-climbing-search-vs-best-first-search"
 - title: "Hash maps that don’t hate you"
   link: "https://blog.toit.io/hash-maps-that-dont-hate-you-1a96150b492a"
+- title: "Let's Build a Regex Engine"
+  link: "https://kean.blog/post/lets-build-regex"
 ---
