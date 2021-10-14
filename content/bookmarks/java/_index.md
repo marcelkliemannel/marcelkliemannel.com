@@ -28,4 +28,6 @@ links:
   link: "https://openjdk.java.net/groups/compiler/doc/compilation-overview/index.html"
 - title: "Java API Compliance Checker"
   link: "https://lvc.github.io/japi-compliance-checker/"
+- title: "Oracle JRE and JDK Cryptographic Roadmap"
+  link: "https://java.com/en/jre-jdk-cryptoroadmap.html"
 ---
