@@ -30,4 +30,6 @@ links:
   link: "https://lvc.github.io/japi-compliance-checker/"
 - title: "Oracle JRE and JDK Cryptographic Roadmap"
   link: "https://java.com/en/jre-jdk-cryptoroadmap.html"
+- title: "Awesome Java: A curated list of awesome Java frameworks, libraries and software."
+  link: "https://github.com/akullpp/awesome-java#code-analysis"
 ---
