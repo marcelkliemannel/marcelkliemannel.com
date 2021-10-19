@@ -8,8 +8,6 @@ links:
   link: "http://hannesdorfmann.com/android/library-abstract-class/"
 - title: "Thymeleaf Utility Objects"
   link: "https://gist.github.com/jorgeacetozi/443e8f422dfbdf9c78a34c8eb25d5693"
-- title: "JVM Anatomy Quarks"
-  link: "https://shipilev.net/jvm/anatomy-quarks/"
 - title: "Empirical Study of Usage and Performance of Java Collections"
   link: "https://www.researchgate.net/publication/313820944_Empirical_Study_of_Usage_and_Performance_of_Java_Collections"
 - title: "The truth about Optional"
