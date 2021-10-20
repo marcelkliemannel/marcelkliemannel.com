@@ -92,7 +92,7 @@ To get around the unnecessary autoboxing problem, the stream API has three primi
 
 The primitive stream interfaces provide the same functionality as the object stream interface but use the primitive functional interfaces shown in the previous chapter, which have primitive parameters and return values.
 
-Using a primtivie stream, we can convert the example shown above so that it works without any autoboxing overhead:
+Using a primitive stream, we can convert the example shown above so that it works without any autoboxing overhead:
 
 ```java
 IntStream.of(1, 2, 3, 4, 5) // Vales are directly used as 'int's
