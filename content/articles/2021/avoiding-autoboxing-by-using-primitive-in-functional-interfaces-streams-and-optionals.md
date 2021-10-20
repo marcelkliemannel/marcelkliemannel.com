@@ -34,12 +34,13 @@ However, since specific functional interface patterns occur over and over again,
 
 To avoid always having to work with the wrapper classes of primitive data types, the standard library has primitive interface alternatives for the data types `int`, `long` and `double`:
 
+{{<table "narrow-table">}}
 | With Wrapper Class           | Primitive Alternative                                        |
 | ---------------------------- | ------------------------------------------------------------ |
 | `BinaryOperator<Integer>`    | [IntBinaryOperator](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/IntBinaryOperator.html) |
 | `BinaryOperator<Long>`       | [LongBinaryOperator](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/LongBinaryOperator.html) |
 | `BinaryOperator<Double>`     | [DoubleBinaryOperator](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleBinaryOperator.html) |
-| `Consumer<Integer>`          | [IntConsumer]([IntConsumer](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/IntConsumer.html)) |
+| `Consumer<Integer>`          | [IntConsumer](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/IntConsumer.html) |
 | `Consumer<Long>`             | [LongConsumer](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/LongConsumer.html) |
 | `Consumer<Double>`           | [DoubleConsumer](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleConsumer.html) |
 | `BiConsumer<T, Integer>`     | [ObjIntConsumer<T>](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/ObjIntConsumer.html) |
@@ -69,6 +70,7 @@ To avoid always having to work with the wrapper classes of primitive data types,
 | `Supplier<Integer>`          | [IntSupplier](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/IntSupplier.html) |
 | `Supplier<Long>`             | [LongSupplier](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/LongSupplier.html) |
 | `Supplier<Double>`           | [DoubleSupplier](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/DoubleSupplier.html) |
+{{</table>}}
 
 ## Primitive Stream API
 
