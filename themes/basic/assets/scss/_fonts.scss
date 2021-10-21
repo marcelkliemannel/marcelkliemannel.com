@@ -1,16 +1,4 @@
 @font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/jetbrains-mono/jetbrains-mono-v6-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('../fonts/jetbrains-mono/jetbrains-mono-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/jetbrains-mono/jetbrains-mono-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/jetbrains-mono/jetbrains-mono-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/jetbrains-mono/jetbrains-mono-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/jetbrains-mono/jetbrains-mono-v6-latin-regular.svg#JetBrainsMono') format('svg'); /* Legacy iOS */
-}
-@font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
@@ -40,4 +28,4 @@ $title-font-family: 'Open Sans', sans-serif;
 $title-font-weight: 400;
 $title-font-weight-bold: 700;
 $title-letter-spacing: -0.03rem;
-$monospace-font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+$monospace-font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
