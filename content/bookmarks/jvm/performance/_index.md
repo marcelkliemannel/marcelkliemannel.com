@@ -15,4 +15,6 @@ links:
   link: "https://plumbr.io/blog/memory-leaks/why-does-my-java-process-consume-more-memory-than-xmx"
 - title: "Large pages and Java"
   link: "https://kstefanj.github.io/2021/05/19/large-pages-and-java.html"
+- title: "Renaissance Suite: A modern benchmark suite for the JVM"
+  link: "https://renaissance.dev"
 ---
