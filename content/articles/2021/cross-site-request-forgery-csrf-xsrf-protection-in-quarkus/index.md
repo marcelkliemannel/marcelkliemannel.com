@@ -176,8 +176,8 @@ public class CsrfTokenValidationFilter implements ContainerRequestFilter {
   private static final String CSRF_TOKEN_HEADER_NAME = "X-XSRF-TOKEN";
 
   private static final Response INVALID_CSRF_TOKEN_RESPONSE = Response.status(Response.Status.BAD_REQUEST)
-                                                                      .entity("A valid CSRF token must be provided via the unambiguous header field: " + CSRF_TOKEN_HEADER_NAME)
-                                                                      .build();
+    .entity("A valid CSRF token must be provided via the unambiguous header field: " + CSRF_TOKEN_HEADER_NAME)
+    .build();
   
   @Inject
   CsrfToken csrfToken;
@@ -254,8 +254,8 @@ public class CsrfTokenValidationFilter implements ContainerRequestFilter {
   private static final String CSRF_TOKEN_COOKIE_NAME = "XSRF-TOKEN";
   
   private static final Response INVALID_CSRF_TOKEN_RESPONSE = Response.status(Response.Status.BAD_REQUEST)
-                                                                      .entity("A valid CSRF token must be provided via the unambiguous header field: " + CSRF_TOKEN_HEADER_NAME + " and cookie: " + CSRF_TOKEN_COOKIE_NAME)
-                                                                      .build();
+    .entity("A valid CSRF token must be provided via the unambiguous header field: " + CSRF_TOKEN_HEADER_NAME + " and cookie: " + CSRF_TOKEN_COOKIE_NAME)
+    .build();
   
   @Override
   public void filter(ContainerRequestContext requestContext) {

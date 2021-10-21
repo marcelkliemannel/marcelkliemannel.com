@@ -29,7 +29,8 @@
     border: 0;
 
     &:nth-child(2) {
-      width: 100%;
+      width: 105%; // +5% for the first column, otherwise wide code lines would be cut off at the end 
+      display: block;
     }
   }
 
