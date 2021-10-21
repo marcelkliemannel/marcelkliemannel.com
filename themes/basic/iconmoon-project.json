@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "name": "Untitled Project",
-    "lastOpened": 1418773394855,
-    "created": 1627798318913
+    "name": "marcelkliemannel.com",
+    "lastOpened": 0,
+    "created": 1634818052313
   },
   "iconSets": [
     {
@@ -342,8 +342,11 @@
         {
           "ligatures": "copy, duplicate",
           "name": "copy",
-          "order": 0,
-          "id": 44
+          "order": 12,
+          "id": 44,
+          "prevSize": 32,
+          "code": 59692,
+          "tempChar": ""
         },
         {
           "ligatures": "paste, clipboard-file",
@@ -1216,7 +1219,7 @@
           "id": 189,
           "prevSize": 32,
           "code": 59837,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "menu2, options2",
@@ -1279,7 +1282,7 @@
           "id": 199,
           "prevSize": 32,
           "code": 59847,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "upload3, load3",
@@ -1306,7 +1309,7 @@
           "id": 203,
           "prevSize": 32,
           "code": 59851,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "flag, report",
@@ -1717,7 +1720,7 @@
           "id": 271,
           "prevSize": 32,
           "code": 59919,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "checkmark, tick",
@@ -1978,7 +1981,7 @@
           "id": 314,
           "prevSize": 32,
           "code": 59962,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "arrow-up-right2, up-right2",
@@ -2533,7 +2536,7 @@
           "id": 406,
           "prevSize": 32,
           "code": 60054,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "vine",
@@ -2692,7 +2695,7 @@
           "id": 432,
           "prevSize": 32,
           "code": 60080,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "npm",
@@ -2887,7 +2890,7 @@
           "id": 464,
           "prevSize": 32,
           "code": 60112,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "pinterest",

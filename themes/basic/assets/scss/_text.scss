@@ -104,6 +104,20 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
 
   .highlight {
     margin: $paragraph-gap 0;
+    position: relative;
+
+    .copyButton {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      display: none;
+    }
+
+    &:hover, &:active, &:focus {
+      .copyButton {
+        display: block;
+      }
+    }
   }
 
   table:not([class="lntable"]) { // Don't affect code block

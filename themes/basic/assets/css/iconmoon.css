@@ -31,6 +31,9 @@
 .icon-menu:before {
   content: "\e9bd";
 }
+.icon-copy:before {
+  content: "\e92c";
+}
 .icon-download3:before {
   content: "\e9c7";
 }
