@@ -22,11 +22,13 @@
     </div>
   </div>
 
+  {{ $related := .Site.RegularPages.Related . | first 2 }}
+  {{ if gt (len $related) 0 }}
   <div class="gap-top-xl">
     <h2>Related Articles</h2>
-    {{ $related := .Site.RegularPages.Related . | first 2 }}
     {{ partial "page-list.html"  (dict "context" $related "listClassAttr" "pages-flex" "entryClassAttr" "") }}
   </div>
+  {{ end }}
 </div>
 
 {{ end }}
