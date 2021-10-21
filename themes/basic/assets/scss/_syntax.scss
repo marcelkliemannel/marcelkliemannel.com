@@ -78,9 +78,6 @@
     }
   }
 
-  // After overriding the syntax colors:
-  // - Remove all bold texts
-
   /* LineNumbers */ .ln { }
   /* Keyword */ .k { color: rgb(207, 34, 46) }
   /* KeywordConstant */ .kc { color: #000000 }
@@ -136,13 +133,13 @@
   /* Operator */ .o { color: #000000 }
   /* OperatorWord */ .ow { color: #000000 }
   /* Punctuation */ .p {  }
-  /* Comment */ .c { color: #999988; font-style: italic }
-  /* CommentHashbang */ .ch { color: #999988; font-style: italic }
-  /* CommentMultiline */ .cm { color: #999988; font-style: italic }
-  /* CommentSingle */ .c1 { color: #999988; font-style: italic }
-  /* CommentSpecial */ .cs { color: #999999; font-style: italic }
-  /* CommentPreproc */ .cp { color: #999999; font-style: italic }
-  /* CommentPreprocFile */ .cpf { color: #999999; font-style: italic }
+  /* Comment */ .c { color: rgb(110, 119, 129) }
+  /* CommentHashbang */ .ch { color: rgb(110, 119, 129) }
+  /* CommentMultiline */ .cm { color: rgb(110, 119, 129) }
+  /* CommentSingle */ .c1 { color: rgb(110, 119, 129) }
+  /* CommentSpecial */ .cs { color: rgb(110, 119, 129) }
+  /* CommentPreproc */ .cp { color: rgb(110, 119, 129) }
+  /* CommentPreprocFile */ .cpf { color: rgb(110, 119, 129) }
   /* Generic */ .g {  }
   /* GenericDeleted */ .gd { color: #000000; background-color: #ffdddd }
   /* GenericEmph */ .ge { color: #000000; font-style: italic }
