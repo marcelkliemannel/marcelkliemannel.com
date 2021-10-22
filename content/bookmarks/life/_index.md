@@ -18,4 +18,6 @@ links:
   link: "https://www.science.org/careers/2021/08/how-stop-self-sabotaging-your-career"
 - title: "How to work hard"
   link: "http://paulgraham.com/hwh.html"
+- title: "Willingness to look stupid"
+  link: "https://danluu.com/look-stupid/"
 ---
