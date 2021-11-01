@@ -1,5 +1,3 @@
-@import '_colors', '_headings', '_layout';
-
 .page-meta {
   font-size: .8rem;
 }
@@ -12,22 +10,6 @@
 
   .page-meta {
     color: $color-bright-200;
-  }
-
-  h1 {
-    font-family: $title-font-family;
-    font-weight: $title-font-weight-bold;
-    font-size: 2rem;
-    line-height: 2.2rem;
-
-    &:after {
-      display: block;
-      position: relative;
-      top: .3rem;
-      width: 5.5rem;
-      content: '';
-      border-bottom: 3px solid $color-green-400;
-    }
   }
 
   .page-description {

@@ -1,11 +1,9 @@
-@import '_text';
-
 @mixin formatHeading($additional-font-size) {
   $font-size: calc(#{$normal-text-font-size} + #{$additional-font-size});
   font-size: $font-size;
   line-height: calc(#{$font-size} + #{$base-line-height});
     
- &:not(.non-chapter) {
+  &:not(.non-chapter) {
     &:after {
       display: block;
       width: 2.5rem;
@@ -15,12 +13,13 @@
   }
 
   .heading-anchor {
-    font-size: calc(#{$font-size} * .6);
-     opacity: 0;
-     // Use padding instead of left to avoid a small gap inside the headline,
-     // safety margin and anchor, which would make the anchor 'blink'.
-     padding: 0 .4rem;
-     line-height: 2rem;
+    $anchor-font-size: calc(#{$font-size} * .6);
+    font-size: $anchor-font-size;
+    opacity: 0;
+    // Use padding instead of left to avoid a small gap inside the headline,
+    // safety margin and anchor, which would make the anchor 'blink'.
+    padding: 0 .2rem;
+    line-height: $anchor-font-size;
   }
 }
 
