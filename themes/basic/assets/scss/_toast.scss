@@ -1,0 +1,67 @@
+@import '_colors';
+
+#toast {
+    $bottom-position: 2rem;
+
+    position: fixed;
+    left: 50%;
+    bottom: $bottom-position;
+    z-index: 1;
+    visibility: hidden; 
+    min-width: 10rem;
+    margin-left: -5rem;
+    padding: .5rem 1rem;
+    background-color: $color-dark-500;
+    color: $color-bright-100;
+    text-align: center; 
+
+    &.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+
+        @-webkit-keyframes fadein {
+            from { 
+                bottom: 0; 
+                opacity: 0;
+            } 
+            to {
+                bottom: $bottom-position;
+                opacity: 1;
+            }
+        }
+  
+        @keyframes fadein {
+            from {
+                bottom: 0; 
+                opacity: 0;
+            }
+            to {
+                bottom: $bottom-position;
+                opacity: 1;
+            }
+        }
+  
+        @-webkit-keyframes fadeout {
+            from {
+                bottom: $bottom-position;
+                opacity: 1;
+            } 
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+  
+        @keyframes fadeout {
+            from {
+                bottom: $bottom-position;
+                opacity: 1;
+            }
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+    }
+}

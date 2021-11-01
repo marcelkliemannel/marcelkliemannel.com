@@ -11,14 +11,24 @@
     </div>
   </div>
 
-  <div class="about-the-author gap-top-xl">
-    <div class="about-the-author-title">About the Author</div>
-    <div class="text gap-bottom-medium">
-      <h2 class="about-the-author-name">{{ $.Site.Params.aboutTheAuthorName }}</h2>
-      <p>{{ $.Site.Params.aboutTheAuthorDescription }}</p>
+  <div class="gap-top-xl">
+    <div class="about-the-author">
+      <div class="about-the-author-title">About the Author</div>
+      <div class="text gap-bottom-medium">
+        <h2 class="about-the-author-name">{{ $.Site.Params.aboutTheAuthorName }}</h2>
+        <p>{{ $.Site.Params.aboutTheAuthorDescription }}</p>
+      </div>
+      {{ partial "social-media.html" (dict "context" $.Site "linkClassAttr" "button-like button-like-monospace button-like-size-m button-like-inverted-dark") }}
     </div>
-    {{ partial "social-media.html" (dict "context" $.Site "linkClassAttr" "button-like button-like-monospace button-like-size-m button-like-inverted-dark") }}
   </div>
+
+  {{ $related := .Site.RegularPages.Related . | first 2 }}
+  {{ if gt (len $related) 0 }}
+  <div class="gap-top-xl">
+    <h2>Related Articles</h2>
+    {{ partial "page-list.html"  (dict "context" $related "listClassAttr" "pages-flex" "entryClassAttr" "") }}
+  </div>
+  {{ end }}
 </div>
 
 {{ end }}

@@ -18,4 +18,8 @@ links:
   link: "https://www.science.org/careers/2021/08/how-stop-self-sabotaging-your-career"
 - title: "How to work hard"
   link: "http://paulgraham.com/hwh.html"
+- title: "Willingness to look stupid"
+  link: "https://danluu.com/look-stupid/"
+- title: "Book Summary: Finish What You Start: The Art of Following Through, Taking Action, Executing, & Self-Discipline"
+  link: "https://theartofdefense.medium.com/book-summary-finish-what-you-start-the-art-of-following-through-taking-action-executing-88b883f79a45"
 ---

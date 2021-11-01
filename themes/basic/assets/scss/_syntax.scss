@@ -7,7 +7,7 @@
     line-height: 1.6rem;
 
     code {
-      font-size: .9rem;
+      font-size: .85rem;
       background-color: transparent !important;
       display: block;
       padding: 0;
@@ -29,13 +29,15 @@
     border: 0;
 
     &:nth-child(2) {
-      width: 100%;
+      width: 105%; // +5% for the first column, otherwise wide code lines would be cut off at the end 
+      display: block;
     }
   }
 
   /* LineTable */ 
   .lntable { 
     background-color: $color-bright-300;
+    border-radius: .2rem;
     padding: calc(#{$paragraph-gap} / 3) 0;
 
     width: 100%;
@@ -75,50 +77,51 @@
       display: block;
     }
   }
+
   /* LineNumbers */ .ln { }
-  /* Keyword */ .k { color: #000000; font-weight: bold }
-  /* KeywordConstant */ .kc { color: #000000; font-weight: bold }
-  /* KeywordDeclaration */ .kd { color: #000000; font-weight: bold }
-  /* KeywordNamespace */ .kn { color: #000000; font-weight: bold }
-  /* KeywordPseudo */ .kp { color: #000000; font-weight: bold }
-  /* KeywordReserved */ .kr { color: #000000; font-weight: bold }
-  /* KeywordType */ .kt { color: #445588; font-weight: bold }
+  /* Keyword */ .k { color: rgb(207, 34, 46) }
+  /* KeywordConstant */ .kc { color: #000000 }
+  /* KeywordDeclaration */ .kd { color: rgb(207, 34, 46) }
+  /* KeywordNamespace */ .kn { color: #000000 }
+  /* KeywordPseudo */ .kp { color: #000000 }
+  /* KeywordReserved */ .kr { color: #000000 }
+  /* KeywordType */ .kt { color: rgb(130, 80, 223) }
   /* Name */ .n {  }
-  /* NameAttribute */ .na { color: #008080 }
+  /* NameAttribute */ .na { color: rgb(5, 80, 174) }
   /* NameBuiltin */ .nb { color: #0086b3 }
   /* NameBuiltinPseudo */ .bp { color: #999999 }
-  /* NameClass */ .nc { color: #445588; font-weight: bold }
-  /* NameConstant */ .no { color: #008080 }
-  /* NameDecorator */ .nd { color: #3c5d5d; font-weight: bold }
+  /* NameClass */ .nc { color: rgb(130, 80, 223) }
+  /* NameConstant */ .no { color: rgb(5, 80, 174) }
+  /* NameDecorator */ .nd { color: rgb(207, 34, 46) }
   /* NameEntity */ .ni { color: #800080 }
-  /* NameException */ .ne { color: #990000; font-weight: bold }
-  /* NameFunction */ .nf { color: #990000; font-weight: bold }
+  /* NameException */ .ne { color: rgb(207, 34, 46) }
+  /* NameFunction */ .nf { color: rgb(207, 34, 46) }
   /* NameFunctionMagic */ .fm {  }
-  /* NameLabel */ .nl { color: #990000; font-weight: bold }
+  /* NameLabel */ .nl { color: rgb(207, 34, 46) }
   /* NameNamespace */ .nn { color: #555555 }
   /* NameOther */ .nx {  }
   /* NameProperty */ .py {  }
   /* NameTag */ .nt { color: #000080 }
-  /* NameVariable */ .nv { color: #008080 }
-  /* NameVariableClass */ .vc { color: #008080 }
-  /* NameVariableGlobal */ .vg { color: #008080 }
-  /* NameVariableInstance */ .vi { color: #008080 }
+  /* NameVariable */ .nv { color: rgb(5, 80, 174) }
+  /* NameVariableClass */ .vc { color: rgb(5, 80, 174) }
+  /* NameVariableGlobal */ .vg { color: rgb(5, 80, 174) }
+  /* NameVariableInstance */ .vi { color: rgb(5, 80, 174) }
   /* NameVariableMagic */ .vm {  }
   /* Literal */ .l {  }
   /* LiteralDate */ .ld {  }
-  /* LiteralString */ .s { color: #dd1144 }
-  /* LiteralStringAffix */ .sa { color: #dd1144 }
-  /* LiteralStringBacktick */ .sb { color: #dd1144 }
-  /* LiteralStringChar */ .sc { color: #dd1144 }
-  /* LiteralStringDelimiter */ .dl { color: #dd1144 }
-  /* LiteralStringDoc */ .sd { color: #dd1144 }
-  /* LiteralStringDouble */ .s2 { color: #dd1144 }
-  /* LiteralStringEscape */ .se { color: #dd1144 }
-  /* LiteralStringHeredoc */ .sh { color: #dd1144 }
-  /* LiteralStringInterpol */ .si { color: #dd1144 }
-  /* LiteralStringOther */ .sx { color: #dd1144 }
+  /* LiteralString */ .s { color: rgb(10, 48, 105) }
+  /* LiteralStringAffix */ .sa { color: rgb(10, 48, 105) }
+  /* LiteralStringBacktick */ .sb { color: rgb(10, 48, 105) }
+  /* LiteralStringChar */ .sc { color: rgb(10, 48, 105) }
+  /* LiteralStringDelimiter */ .dl { color: rgb(10, 48, 105) }
+  /* LiteralStringDoc */ .sd { color: rgb(10, 48, 105) }
+  /* LiteralStringDouble */ .s2 { color: rgb(10, 48, 105) }
+  /* LiteralStringEscape */ .se { color: rgb(10, 48, 105) }
+  /* LiteralStringHeredoc */ .sh { color: rgb(10, 48, 105) }
+  /* LiteralStringInterpol */ .si { color: rgb(10, 48, 105) }
+  /* LiteralStringOther */ .sx { color: rgb(10, 48, 105) }
   /* LiteralStringRegex */ .sr { color: #009926 }
-  /* LiteralStringSingle */ .s1 { color: #dd1144 }
+  /* LiteralStringSingle */ .s1 { color: rgb(10, 48, 105) }
   /* LiteralStringSymbol */ .ss { color: #990073 }
   /* LiteralNumber */ .m { color: #009999 }
   /* LiteralNumberBin */ .mb { color: #009999 }
@@ -127,16 +130,16 @@
   /* LiteralNumberInteger */ .mi { color: #009999 }
   /* LiteralNumberIntegerLong */ .il { color: #009999 }
   /* LiteralNumberOct */ .mo { color: #009999 }
-  /* Operator */ .o { color: #000000; font-weight: bold }
-  /* OperatorWord */ .ow { color: #000000; font-weight: bold }
+  /* Operator */ .o { color: #000000 }
+  /* OperatorWord */ .ow { color: #000000 }
   /* Punctuation */ .p {  }
-  /* Comment */ .c { color: #999988; font-style: italic }
-  /* CommentHashbang */ .ch { color: #999988; font-style: italic }
-  /* CommentMultiline */ .cm { color: #999988; font-style: italic }
-  /* CommentSingle */ .c1 { color: #999988; font-style: italic }
-  /* CommentSpecial */ .cs { color: #999999; font-weight: bold; font-style: italic }
-  /* CommentPreproc */ .cp { color: #999999; font-weight: bold; font-style: italic }
-  /* CommentPreprocFile */ .cpf { color: #999999; font-weight: bold; font-style: italic }
+  /* Comment */ .c { color: rgb(110, 119, 129) }
+  /* CommentHashbang */ .ch { color: rgb(110, 119, 129) }
+  /* CommentMultiline */ .cm { color: rgb(110, 119, 129) }
+  /* CommentSingle */ .c1 { color: rgb(110, 119, 129) }
+  /* CommentSpecial */ .cs { color: rgb(110, 119, 129) }
+  /* CommentPreproc */ .cp { color: rgb(110, 119, 129) }
+  /* CommentPreprocFile */ .cpf { color: rgb(110, 119, 129) }
   /* Generic */ .g {  }
   /* GenericDeleted */ .gd { color: #000000; background-color: #ffdddd }
   /* GenericEmph */ .ge { color: #000000; font-style: italic }

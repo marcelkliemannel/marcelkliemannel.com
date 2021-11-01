@@ -6,8 +6,11 @@
 
   <h2 class="gap-bottom-large">Latest Articles</h2>
 
-  {{ partial "page-list.html" (dict "context" ( where site.RegularPages "Section" "articles" | first 10 ) "listClassAttr" "pages-flex" ) }}
+  {{ partial "page-list.html" (dict "context" ( where site.RegularPages "Section" "articles" | first 8 ) "listClassAttr" "pages-flex" ) }}
 
+  <div class="center gap-top-xl text">
+    <b><a href="{{ (.Site.GetPage "/articles").Permalink }}">&raquo; Go to all articles</a></b>
+  </div>
 </div>
 
 {{ end }}

@@ -74,7 +74,7 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
 
   li { 
     list-style-position: inside;
-    text-indent: -1.5rem;
+    text-indent: -1.2rem;
     margin-bottom: $paragraph-gap;
     font-size: $normal-text-font-size;
     line-height: $normal-text-line-height;
@@ -96,7 +96,7 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
     font-family: $monospace-font-family;
     font-size: .8rem;
     background-color: $color-bright-400;
-    padding: .1rem .3rem;
+    padding: .2rem .3rem;
     word-break: break-word;
     overflow: hidden;
     border-radius: 2px;
@@ -104,6 +104,20 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
 
   .highlight {
     margin: $paragraph-gap 0;
+    position: relative;
+
+    .copyButton {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      display: none;
+    }
+
+    &:hover, &:active, &:focus {
+      .copyButton {
+        display: block;
+      }
+    }
   }
 
   table:not([class="lntable"]) { // Don't affect code block
@@ -113,15 +127,28 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
     font-size: $normal-text-font-size;
     line-height: $normal-text-line-height;
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     border: $normal-border;
     display: block;
     overflow-x: auto;
     white-space: nowrap;
 
+    &.narrow-table {
+      overflow-y: auto;
+      max-height: 20rem;
+      position: relative;
+
+      thead {
+        position: sticky;
+        top: 0;
+      }
+    }
+
     td { 
       padding: .4rem .6rem;
       border-right: 1px solid $color-bright-500;
+      border-bottom: 1px solid $color-bright-500;
 
       &:last-child {
         border-right: 0;
@@ -137,7 +164,7 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
         font-weight: bold;
         text-transform: uppercase;
         border-bottom: 2px solid $color-bright-500;
-        border-right: 2px solid $color-bright-500;
+        border-right: 1px solid $color-bright-500;
   
         &:last-child {
           border-right: 0;

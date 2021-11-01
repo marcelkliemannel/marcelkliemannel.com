@@ -1,6 +1,8 @@
 ---
 title: "Performance"
 links:
+- title: "Java Performance Tuning"
+  link: "http://www.javaperformancetuning.com"
 - title: "HotSpot JVM Performance Tuning Guidelines"
   link: "https://ionutbalosin.com/2020/01/hotspot-jvm-performance-tuning-guidelines/"
 - title: "Tricks of the Trade: Tuning JVM Memory for Large-scale Services"
@@ -11,4 +13,8 @@ links:
   link: "https://jacoline.dev/inspect"
 - title: "Why does my Java process consume more memory than Xmx?"
   link: "https://plumbr.io/blog/memory-leaks/why-does-my-java-process-consume-more-memory-than-xmx"
+- title: "Large pages and Java"
+  link: "https://kstefanj.github.io/2021/05/19/large-pages-and-java.html"
+- title: "Renaissance Suite: A modern benchmark suite for the JVM"
+  link: "https://renaissance.dev"
 ---

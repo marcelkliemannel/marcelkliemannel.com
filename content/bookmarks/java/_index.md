@@ -8,8 +8,6 @@ links:
   link: "http://hannesdorfmann.com/android/library-abstract-class/"
 - title: "Thymeleaf Utility Objects"
   link: "https://gist.github.com/jorgeacetozi/443e8f422dfbdf9c78a34c8eb25d5693"
-- title: "JVM Anatomy Quarks"
-  link: "https://shipilev.net/jvm/anatomy-quarks/"
 - title: "Empirical Study of Usage and Performance of Java Collections"
   link: "https://www.researchgate.net/publication/313820944_Empirical_Study_of_Usage_and_Performance_of_Java_Collections"
 - title: "The truth about Optional"
@@ -28,4 +26,8 @@ links:
   link: "https://openjdk.java.net/groups/compiler/doc/compilation-overview/index.html"
 - title: "Java API Compliance Checker"
   link: "https://lvc.github.io/japi-compliance-checker/"
+- title: "Oracle JRE and JDK Cryptographic Roadmap"
+  link: "https://java.com/en/jre-jdk-cryptoroadmap.html"
+- title: "Awesome Java: A curated list of awesome Java frameworks, libraries and software."
+  link: "https://github.com/akullpp/awesome-java#code-analysis"
 ---

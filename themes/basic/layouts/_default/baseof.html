@@ -8,6 +8,8 @@
         </div>
         {{- partial "footer.html" . -}}
 
+        <div id="toast"></div>
+
         {{ $mainJs := resources.Get "js/main.js" | resources.Minify | resources.Fingerprint }}
         <script src="{{ $mainJs.Permalink }}"></script>
     </body>

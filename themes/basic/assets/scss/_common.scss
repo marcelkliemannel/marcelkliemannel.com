@@ -24,11 +24,12 @@
   $button-like-dark-background-color: $color-dark-500;
 
   color: $text-color-bright-background;
-  border-bottom: 2px solid transparent;
   display: inline-block;
   padding: .1rem .6rem;
   text-decoration: none;
   text-align: center;
+  border-left: none;
+  border-right: none;
   border-top: 2px solid transparent;
   border-bottom: 2px solid $color-green-400;
   white-space: nowrap;
@@ -90,7 +91,7 @@
   }
 
   &-size-l {
-    font-size: 1rem;
+    font-size: .9rem;
   }
 
   &-on-dark-background {
