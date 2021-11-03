@@ -6,7 +6,7 @@
 
   <h2 class="gap-bottom-medium">Articles</h2>
 
-  {{ partial "tags.html" (dict "tags" .Site.Taxonomies.tags "tagClassAttr" "button-like button-like-monospace button-like-size-l button-like-inverted-dark" "tagIsFromTaxonomy" "true") }}
+  {{ partial "tags.html" (dict "tags" .Site.Taxonomies.tags "listClassAttr" "gap-bottom-large" "tagClassAttr" "button-like button-like-monospace button-like-size-l button-like-inverted-dark" "tagIsFromTaxonomy" "true") }}
 
   {{ $paginator := .Paginate ((where .Site.RegularPages "Section" "articles")) }}
   {{ partial "page-list.html" (dict "context" $paginator.Pages "listClassAttr" "pages-flex" ) }}

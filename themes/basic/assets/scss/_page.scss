@@ -40,7 +40,7 @@
     display: block;
 
     > li {
-      margin-bottom: 2.5rem;
+      margin-bottom: $large2-gap;
 
       &:last-child {
         margin-bottom: 0;
@@ -54,12 +54,14 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-    margin-top: -2.5rem;
+    position: relative;
+    top: -2.5rem;
+    margin-bottom: -2.5rem;
     margin-left: -2rem;
 
     > li {
       flex: 0 1 50%;
-      margin-top: 2.5rem;
+      margin-top: $large2-gap;
       padding-left: 2rem;
 
       &:first-child {
