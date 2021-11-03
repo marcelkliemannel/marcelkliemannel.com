@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "Marcel Kliemannel"
 theme = "basic"
 enableGitInfo = true
+paginate = 8
 
 [related]
   includeNewer = true

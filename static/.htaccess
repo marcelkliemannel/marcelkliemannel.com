@@ -10,6 +10,9 @@ ErrorDocument 404 /404.html
 RewriteCond %{REQUEST_URI} !(/$|\.) 
 RewriteRule (.*) %{REQUEST_URI}/ [R=301,L] 
 
+# Hugo generates an empty page instread of a 404
+RewriteRule ^articles/?$ / [R=302,L]
+
 # Force HTTPS & reroute all other domains
 RewriteCond %{HTTPS} off [NC,OR]
 RewriteCond %{HTTP_HOST} !^marcelkliemannel\.com$ [NC]
