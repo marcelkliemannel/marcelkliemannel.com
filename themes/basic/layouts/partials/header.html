@@ -8,7 +8,7 @@
     <nav>
       <ul class="main-menu-horizontal horizontal-links-menu horizontal-links-menu-no-top-gap group">
         {{ range (where $.Site.Pages ".Params.menu" "eq" "main") }}
-          <li><a href="{{ .Permalink }}" class="button-like button-like-on-dark-background">{{ .Title }}</a></li>
+          <li><a href="{{ .Permalink }}" class="button-like button-like-on-dark-background-filled">{{ .Title }}</a></li>
         {{ end }}
       </ul>
 

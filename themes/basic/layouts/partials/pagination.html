@@ -19,7 +19,7 @@
         {{ $ellipsed = true }}
         {{ end }}
         {{ if $showNumber }}
-        <li><a class="button-like button-like-inverted-{{ if eq . $pag }}bright{{ else }}dark{{ end }} button-like-size-m" href="{{ .URL }}">{{ .PageNumber }}</a></li>
+        <li><a class="button-like button-like-inverted-{{ if eq . $pag }}inactive{{ else }}dark{{ end }} button-like-size-m" href="{{ .URL }}">{{ .PageNumber }}</a></li>
         {{ else if $shouldEllipse }}
         <li>&hellip;</li>
         {{ end }}

@@ -41,9 +41,9 @@
 
   &:focus, &:active {
     outline: dashed 1px $color-dark-300;
-    border-top-color: transparent !important;
-    background-color: transparent !important;
-    border-bottom-color: transparent !important;
+    border-top-color: transparent;
+    background-color: transparent;
+    border-bottom-color: transparent;
   }
 
   &-secondary-dark {
@@ -55,34 +55,61 @@
   }
 
   &-inverted-bright {
-    color: $text-color-green-400-background !important;
+    color: $text-color-green-400-background;
     background-color: $color-green-400;
     border-color: $color-green-400;
 
-    &:hover {
-      color: $color-bright-100 !important;
+    &:hover:not(:active) {
+      color: $color-bright-100;
       border-top-color: $button-like-dark-background-color;
-      border-bottom-color: $color-green-400 !important;
+      border-bottom-color: $color-green-400;
       background-color: $button-like-dark-background-color;
     }
   }
 
+  &-inverted-bright-on-dark-background {
+    color: $text-color-green-400-background;
+    background-color: $color-green-400;
+    border-color: $color-green-400;
+
+    &:hover:not(:active) {
+      color: $color-bright-100;
+      border-top-color: $button-like-dark-background-color;
+      border-bottom-color: $color-green-400;
+      background-color: $button-like-dark-background-color;
+    }
+
+    &:focus, &:active {
+      color: $color-bright-100;
+    }
+  }
+
+  &-inverted-inactive {
+    border-bottom-color: $color-dark-900;
+    background-color: $color-bright-500;
+    border-color: $color-bright-500;
+
+    &:hover {
+      border-bottom-color: $color-dark-900;
+    }
+  }
+
   &-inverted-dark {
-    color: $color-bright-100 !important;
+    color: $color-bright-100;
     background-color: $button-like-dark-background-color;
     border-color: $button-like-dark-background-color;
 
     &:hover {
-      color: $text-color-green-400-background !important;
+      color: $text-color-green-400-background;
       border-top-color: $color-green-400;
-      border-bottom-color: $button-like-dark-background-color !important;
+      border-bottom-color: $button-like-dark-background-color;
       background-color: $color-green-400;
     }
 
     &:focus, &:active {
-      color: $text-color-bright-background !important;
-      border-color: transparent !important;
-      background-color: transparent !important;
+      color: $text-color-bright-background;
+      border-color: transparent;
+      background-color: transparent;
     }
   }
 
@@ -94,17 +121,29 @@
     font-size: .9rem;
   }
 
-  &-on-dark-background {
-    color: $color-bright-100 !important;
+  &-on-dark-background-filled {
+    color: $color-bright-100;
 
-    &:hover {
-      color: $color-dark-900 !important;
+    &:focus {
+      color: $color-bright-100;
+    }
+
+    &:hover:not(:active) {
+      color: $color-dark-900;
       background-color: $color-green-400;
       border-color: $color-green-400;
     }
 
-    &:focus, &:active {
-      color: $color-bright-100 !important;
+    &:active {
+      color: $color-bright-100;
+    }
+  }
+
+  &-on-dark-background {
+    color: $color-bright-100;
+
+    &:hover, &:focus, &:active {
+      color: $color-bright-100;
     }
   }
 

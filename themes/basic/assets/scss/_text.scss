@@ -190,7 +190,7 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
     color: $text-color-dark-background;
 
     a {
-      color: $text-color-dark-background !important;
+      color: $text-color-dark-background;
       border-bottom-color: $text-color-dark-background;
     
       &:focus, &:active {
@@ -199,13 +199,13 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
     }
 
     code {
-      color: $text-color-bright-background !important;
+      color: $text-color-bright-background;
     }
   }
 
   &-small {
     p, ul, ol {
-      font-size: calc(#{$normal-text-font-size} * .8) !important;
+      font-size: calc(#{$normal-text-font-size} * .8);
     }
   }
 

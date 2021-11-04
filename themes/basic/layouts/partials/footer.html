@@ -1,13 +1,13 @@
 <div class="footer">
   <div class="horizontal-wrapper-narrow vertical-wrapper-large with-safety-gap center">
-    <a href="#top" class="button-like button-like-inverted-bright button-like-size-m"><span
+    <a href="#top" class="button-like button-like-inverted-bright-on-dark-background button-like-size-m"><span
         class="icon-arrow-up2"></span> to top</a>
 
-    <nav class="group gap-top-medium">
+    <nav class="group gap-top-large">
       <ul class="horizontal-links-menu">
         {{ range (where $.Site.Pages ".Params.menu" "eq" "main") }}
         <li><a href="{{ .Permalink }}"
-            class="button-like button-like-on-dark-background button-like-size-m">{{ .Title }}</a></li>
+            class="button-like button-like-on-dark-background-filled button-like-size-m">{{ .Title }}</a></li>
         {{ end }}
       </ul>
     </nav>
