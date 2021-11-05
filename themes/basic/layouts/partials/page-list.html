@@ -1,7 +1,7 @@
 <ul{{ with $.listClassAttr }} class="{{ . }}"{{end}}>
   {{ range .context }}
   <li{{ with $.entryClassAttr }} class="{{ . }}"{{end}}>
-    {{ partial "page-meta.html" . }}
+    {{ partial "page-meta.html" (dict "context" .) }}
     <div  class="text">
       <h3 class="non-chapter"><a href="{{.Permalink}}">{{.Title}}</a></h3>
 

@@ -1,3 +1,7 @@
 <div class="page-meta">
-  {{ .PublishDate.Format "January 2, 2006" }} | {{ .ReadingTime }} min. read
+  {{ with .pageMetaText }}
+    {{ . }}
+  {{ else }}
+    {{ .context.PublishDate.Format "January 2, 2006" }} | {{ .context.ReadingTime }} min. read
+  {{ end }}
 </div>

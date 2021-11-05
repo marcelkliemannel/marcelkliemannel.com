@@ -1,7 +1,7 @@
 <div class="page-header">
   <div class="horizontal-wrapper-narrow with-safety-gap">
-    {{ if .withPageMeta }}
-      {{ partial "page-meta.html" .context }}
+    {{ if or .withPageMeta .pageMetaText }}
+      {{ partial "page-meta.html" (dict "context" .context "pageMetaText" .pageMetaText) }}
     {{ end }}
     
     <h1 class="gap-top-small {{ if not (.Params.tags) }}gap-bottom-medium{{ end }}">{{ .context.Title }}</h1>
