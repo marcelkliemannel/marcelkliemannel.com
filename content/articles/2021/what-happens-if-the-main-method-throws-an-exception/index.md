@@ -19,9 +19,9 @@ public class MyClass {
 
 we get the following output and the JVM exits:
 
-```
+```java
 Exception in thread "main" java.lang.IllegalStateException
-	at org.acme.Main.main(Main.java:10)
+  at org.acme.Main.main(Main.java:10)
 ```
 
 But how? The question may sound trivial because the behavior of the main seems so familiar. However, the answer gives us a deeper understanding of how threads work, thread groups, global exception handling in Java, and what happens during the shutdown of the JVM.

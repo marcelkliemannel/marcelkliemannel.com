@@ -14,7 +14,7 @@ The starting point of this attack could be a fake website that looks very simila
 
 For example, let's assume a user logs into our website. The server sent a `JSESSIONID` cookie with the user's session ID as a response to that. Now the user visits the attacker website `melicious-site.com`, which response with malicious JavaScript code. The code will execute a POST request to the endpoint `/change-mail`, which will change the logged-in user's mail address to a value desired by the attacker. The problem now is that if a browser requests domain X, he will always send all cookies. However, it does not distinguish from where this request gets executed. And since the JavaScript code and thus the request gets executed in the user's browser, the browser includes the valid session ID cookie into the malicious request:
 
-{{< retina-image csrf-attack2x.png "CSRF Attack Example" >}}
+![CSRF Attack Example](csrf-attack.svg#center)
 
 The protection against CSRF attacks is the use of **CSRF tokens** (better: anti-CSRF tokens). Unfortunately, Quarkus does not have any built-in functionality for this so far. Therefore, in this article, we will look at various implementation strategies in Quarkus.
 
@@ -50,7 +50,7 @@ For this pattern, a CSRF token gets generated per request or user session and it
 
 For this pattern, the server provides the CSRF token via a cookie. The requester now reads the token from this cookie (e.g., via JavaScript), and with the subsequent request, he sends the token back in an HTTP header together with the original cookie. And for the CSRF protection, we just need to check on the server-side if both values match:
 
-{{< retina-image cookie-to-header2x.png "Cookie-to-Header Example" >}}
+![Cookie-to-Header Example](cookie-to-header.svg#center)
 
 This strategy works because JavaScript running on domain X is only allowed to read cookies from domain X. If a malicious website now sends a request to our domain, the browser will send the cookie. But, the JavaScript on the malicious website cannot provide the correct header value because it has no access to the cookie.
 

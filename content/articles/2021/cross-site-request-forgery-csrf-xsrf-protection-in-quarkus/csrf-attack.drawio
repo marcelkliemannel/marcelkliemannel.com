@@ -1,1 +1,65 @@
-<mxfile host="app.diagrams.net" modified="2021-11-01T13:13:52.645Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36 Edg/95.0.1020.40" etag="od8aJqCLV1lOlwREiQLT" version="15.3.8" type="device"><diagram id="8iDC9oUhfSnun7ojiw0k" name="Page-1">7VnZcqM4FP0aV3oecLHa+DF2lslsnY4z05l56VJABlUEokHETn/9XIHYDHZM2/RWnZegg5YrnXMX4ZGxCDbXMYr8P5mL6UhX3c3IuBjpumYYFvwTyEuOTE0tB7yYuLJTBSzJJyxBVaIpcXHS6MgZo5xETdBhYYgd3sBQHLN1s9uK0eaqEfJwC1g6iLbR98Tlfo7a+rTCf8XE84uVtcksfxOgorPcSeIjl61rkHE5MhYxYzx/CjYLTMXhFeeSj7va8bY0LMYhP2SA/Q6r2rl/7a3DO/vBeLhR71NFzvKMaCo3PBdnhmNpM38pDgLMj8RjGtA/yApTEkJrHuGYBJhDf+OCSvi2wuZrn3C8jJAjhq5BIoD5PKDQ0uARWOMIhsRlm1IUJeQxW1UFJMZOGifkGd/hJBeHQFnKxUqLknQBUvSI6Rw5T17M0tBdMMrEvCHLLF3BUlJeminbVyggVAjzHvksQIAmPGZPJdPA0bx9zMWZ4ZjjTQ2Sx36NGew+foEuxVtLz4dIH9CmUhLrSlFaIXi/pibDlCCSKvbKuSui4UFy3YN3vcU73qAgonjssOA75P4rsmuq09fZVb8ou2aL3RalNSIiRkKemWDNR9bFFrMs5j7zWIhondvTnfdeeR5OgtXgwO6ioM3AKQi4s2cf9Ku1Mb38PdDv3/8X/P2P0hFWf3gCzAYBhmoexECZqk/tAkaLgQBR4hCWJkoCcelnnOvLsFV4y7cT57Q2y9+Znxl9WdgKdNpEP8jPppOBKLBaDNy+Xd6PRC16RZlHwn2EiG0TqLXPKfFCwB4Z5+CWxhyH7rko3gVGmfOUQWDug3SDrPHvUD6RsDR28OtVM0exh/exK2Mgdht3jDa3MaaIg/83rOiiSg69FUKuNKEbTVHo1pbD5RuSo7YIL834fA1MOrxwQrnwrwb1k4+puOzMRVhTCnWeQ5csbFhVB3jyxP8l5sqCsSeC836/LS+Xy5u3f92A716gqf+UjMfjYi0wPSoG9hFdQFxXdKuLjkUYXs1dlPjYlePgtVSZLVobwks1wnMmxvHMGuwekkCCIaF3zyK5KpL2OyDfLFT5LCafRLIpdrpT4K8KUgpLUceqWlzYpbgUTbaPFe1W2azbs7HVnCT3r5ZsW1OZW/erjql2eEA1VdGRrVYJHsRLtK6qvJebdDvJ9aUMt6s0DF+UAAc4GcInhgvE+x1mp4pfDb9FedBD7vrMnjQTrHkitU/GNsRpfWZq2nRiTrbKZUP/9vTaTu0gJRSI8jYTV+LEJOIlJkWWC+8x7pS0UISS17hZ3DejTVvQ5YzhYxJlbXUb8jmP7vDHFCd8LGL1mzNRdZyNdNiqetb4lHHl+Cj0sBIgQs9++TomJuBGb85CvP4grBC5i3OQO0RtU8XPhApLT29bEQG6eTquKjsqQRaZi+IV3+3+Ll6hlBbb/sIFXs/IARsrK/FhI4WpmmPIBNVf35x50sDR+fGj/W2xbzmod2e66mZR8+lTuMzOGrOYHIqvsHN6uLVxRepZjJbFWGuFrFitZeV8wvxdrYY90u/323rQLPuD1I4dHFtufN6977AwMtTn/3r1se8bYI/iw7ZnzeJDKa7yJ4gpzSuiOTUPKjiADfRS6yY/oeyrxpvXhS1bh4s6/T4FDZ7jBs1ZR+nt9FqaGbDn3inpdeKhWf08mnevfmQ2Lv8H</diagram></mxfile>
+<mxfile host="65bd71144e">
+    <diagram id="8iDC9oUhfSnun7ojiw0k" name="Page-1">
+        <mxGraphModel dx="890" dy="457" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="8Qe01AhGgwnR8X3XI0Tu-1" value="Browser" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;labelBackgroundColor=none;fontSize=14;fontFamily=Tahoma;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="152" y="170" width="110" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="8Qe01AhGgwnR8X3XI0Tu-2" value="example.com" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontSize=14;fontFamily=Tahoma;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="407" y="170" width="100" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="8Qe01AhGgwnR8X3XI0Tu-4" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fontSize=14;fontFamily=Tahoma;strokeWidth=2;" parent="8Qe01AhGgwnR8X3XI0Tu-2" vertex="1">
+                    <mxGeometry x="45" y="80" width="10" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="R89_2Fw37EKm2TWZmUV--1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fontSize=14;fontFamily=Tahoma;strokeWidth=2;" parent="8Qe01AhGgwnR8X3XI0Tu-2" vertex="1">
+                    <mxGeometry x="44" y="304" width="10" height="21" as="geometry"/>
+                </mxCell>
+                <mxCell id="8Qe01AhGgwnR8X3XI0Tu-3" value="malicious-site.com" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fontSize=14;fontFamily=Tahoma;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="170" width="100" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="8Qe01AhGgwnR8X3XI0Tu-13" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fontSize=14;fontFamily=Tahoma;strokeWidth=2;" parent="8Qe01AhGgwnR8X3XI0Tu-3" vertex="1">
+                    <mxGeometry x="45" y="162" width="10" height="76" as="geometry"/>
+                </mxCell>
+                <mxCell id="8Qe01AhGgwnR8X3XI0Tu-5" value="POST /login" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;fontSize=14;fontFamily=Tahoma;strokeWidth=2;" parent="1" source="8Qe01AhGgwnR8X3XI0Tu-1" target="8Qe01AhGgwnR8X3XI0Tu-4" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="235" y="250" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8Qe01AhGgwnR8X3XI0Tu-6" value="&lt;p style=&quot;line-height: 100%&quot;&gt;Set-Cookie: JSESSIONID=a7hks...&lt;/p&gt;" style="html=1;verticalAlign=middle;endArrow=open;dashed=1;endSize=8;exitX=0;exitY=0.95;labelBackgroundColor=none;fontSize=14;fontFamily=Tahoma;strokeWidth=2;spacingTop=0;align=center;horizontal=1;" parent="1" edge="1">
+                    <mxGeometry x="-0.0041" y="-11" relative="1" as="geometry">
+                        <mxPoint x="207" y="289.5" as="targetPoint"/>
+                        <mxPoint x="452" y="289.5" as="sourcePoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8Qe01AhGgwnR8X3XI0Tu-14" value="&lt;p style=&quot;line-height: 0%&quot;&gt;GET /funny-memes&lt;/p&gt;" style="html=1;verticalAlign=middle;endArrow=block;entryX=0;entryY=0;fontSize=14;fontFamily=Tahoma;strokeWidth=2;labelBackgroundColor=none;" parent="1" target="8Qe01AhGgwnR8X3XI0Tu-13" edge="1">
+                    <mxGeometry x="-0.2986" y="14" relative="1" as="geometry">
+                        <mxPoint x="206.82352941176464" y="332" as="sourcePoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8Qe01AhGgwnR8X3XI0Tu-15" value="&amp;lt;script&amp;gt;&lt;br style=&quot;font-size: 14px&quot;&gt;&amp;nbsp; &amp;nbsp;httpRequest.open('POST', 'example.com/change-mail');&lt;br style=&quot;font-size: 14px&quot;&gt;&amp;nbsp; &amp;nbsp;httpRequest.send('new_mail=attacker@evil.com');&lt;br style=&quot;font-size: 14px&quot;&gt;&amp;lt;/script&amp;gt;" style="html=1;verticalAlign=middle;endArrow=open;dashed=1;endSize=8;exitX=0;exitY=0.95;align=left;labelBackgroundColor=#ffffff;fontSize=14;fontFamily=Tahoma;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry x="0.9303" y="-38" relative="1" as="geometry">
+                        <mxPoint x="206.82352941176464" y="408.20000000000005" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                        <mxPoint x="585" y="408.20000000000005" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="R89_2Fw37EKm2TWZmUV--2" value="&lt;p style=&quot;line-height: 120%&quot;&gt;POST /change-mail&lt;br style=&quot;font-size: 14px&quot;&gt;Cookie: JSESSIONID=&lt;span style=&quot;text-align: center&quot;&gt;a7hks&lt;/span&gt;...&lt;br style=&quot;font-size: 14px&quot;&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;new_mail=attacker@evil.com&lt;/span&gt;&lt;/p&gt;" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;align=left;labelBackgroundColor=none;fontSize=14;fontFamily=Tahoma;strokeWidth=2;" parent="1" target="R89_2Fw37EKm2TWZmUV--1" edge="1">
+                    <mxGeometry x="-0.8896" y="-10" relative="1" as="geometry">
+                        <mxPoint x="206.5" y="474" as="sourcePoint"/>
+                        <Array as="points"/>
+                        <mxPoint x="1" y="1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="R89_2Fw37EKm2TWZmUV--3" value="" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0;exitY=0.95;fontSize=14;fontFamily=Tahoma;strokeWidth=2;" parent="1" source="R89_2Fw37EKm2TWZmUV--1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="206.5" y="493.95000000000005" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
