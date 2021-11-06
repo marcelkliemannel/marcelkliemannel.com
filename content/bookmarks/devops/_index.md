@@ -12,4 +12,6 @@ links:
   link: "https://sre.google/sre-book/table-of-contents/"
 - title: "Book: The Site Reliability Workbook - Practical Ways to Implement SRE"
   link: "https://sre.google/sre-book/table-of-contents/"
+- title: "A successful Git branching model"
+  link: "https://nvie.com/posts/a-successful-git-branching-model/"
 ---
