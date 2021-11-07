@@ -3,13 +3,13 @@
 {{ partial "page-header.html" (dict "context" . "withPageMeta" "true" "showTableOfContents" "true" "postPartial" "tags.html" "postPartialParams" (dict "tags" .Params.tags "tagClassAttr" "button-like button-like-monospace button-like-size-m button-like-inverted-bright-on-dark-background" "tagIsFromTaxonomy" "false")) }}
 
 <div class="horizontal-wrapper-narrow vertical-wrapper-large with-safety-gap">
-  <div class="text">
+  <article class="text">
     {{ partial "single-content.html" .Content }}
 
     <div class="gap-paragraph">
       <div class="tombstone"></div>
     </div>
-  </div>
+  </article>
 
   <div class="gap-top-xl">
     <div class="about-the-author">
