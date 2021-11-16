@@ -12,4 +12,6 @@ links:
   link: "https://kean.blog/post/lets-build-regex"
 - title: "Reactive programming vs. Reactive systems"
   link: "https://www.oreilly.com/radar/reactive-programming-vs-reactive-systems/"
+- title: "Goodbye, Clean Code"
+  link: "https://overreacted.io/goodbye-clean-code/"
 ---
