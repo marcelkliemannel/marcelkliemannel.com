@@ -4,7 +4,6 @@ date: 2021-10-20T10:48:42+02:00
 draft: false
 tags: ["Java", "Best Practice"]
 summary: "In this article we look at the primitive equivalents to object-based functional interfaces, streams and optionals, which are available in the Java standard library."
-
 ---
 
 [Autoboxing](https://docs.oracle.com/javase/1.5.0/docs/guide/language/autoboxing.html) is a built-in mechanism in Java for automatically converting primitive types to and from their wrapper class instances:
