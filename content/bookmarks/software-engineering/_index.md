@@ -14,4 +14,6 @@ links:
   link: "https://www.oreilly.com/radar/reactive-programming-vs-reactive-systems/"
 - title: "Goodbye, Clean Code"
   link: "https://overreacted.io/goodbye-clean-code/"
+- title: "How defensive coding leads to bloat"
+  link: "https://swizec.com/blog/how-defensive-coding-leads-to-bloat/"
 ---
