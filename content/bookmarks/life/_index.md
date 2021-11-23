@@ -22,4 +22,6 @@ links:
   link: "https://danluu.com/look-stupid/"
 - title: "Book Summary: Finish What You Start: The Art of Following Through, Taking Action, Executing, & Self-Discipline"
   link: "https://theartofdefense.medium.com/book-summary-finish-what-you-start-the-art-of-following-through-taking-action-executing-88b883f79a45"
+- title: "How to Ask for Feedback"
+  link: "https://www.samjulien.com/how-to-ask-for-feedback"
 ---
