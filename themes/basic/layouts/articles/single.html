@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ partial "page-header.html" (dict "context" . "withPageMeta" "true" "showTableOfContents" "true" "postPartial" "tags.html" "postPartialParams" (dict "tags" .Params.tags "tagClassAttr" "button-like button-like-monospace button-like-size-m button-like-inverted-bright-on-dark-background" "tagIsFromTaxonomy" "false")) }}
+{{ partial "page-header.html" (dict "context" . "withPageMeta" "true" "showTableOfContents" "true" "titleDepth" 1 "postPartial" "tags.html" "postPartialParams" (dict "tags" .Params.tags "tagClassAttr" "button-like button-like-monospace button-like-size-m button-like-inverted-bright-on-dark-background" "tagIsFromTaxonomy" "false")) }}
 
 <div class="horizontal-wrapper-narrow vertical-wrapper-large with-safety-gap">
   <article class="text">

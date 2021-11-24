@@ -4,7 +4,8 @@
       {{ partial "page-meta.html" (dict "context" .context "pageMetaText" .pageMetaText) }}
     {{ end }}
     
-    <h1 class="gap-top-small {{ if not (.Params.tags) }}gap-bottom-medium{{ end }}">{{ .context.Title }}</h1>
+    {{ $titleDepthToUse := (cond (isset . "titleDepth") .titleDepth 2) }}
+    <h{{ $titleDepthToUse }} class="gap-top-small {{ if not (.Params.tags) }}gap-bottom-medium{{ end }}">{{ .context.Title }}</h{{ $titleDepthToUse }}>
 
     {{ if (ne .context.Params.hideSummary true) }}
       {{ with .context.Params.summary }}

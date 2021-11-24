@@ -3,7 +3,7 @@
 <div class="gap-top-xl center">
     <ul class="horizontal-links-menu group">
         {{ if $pag.HasPrev }}
-        <li><a {{ if $pag.HasPrev }}href="{{ $pag.Prev.URL }}" {{ end }} class="button-like button-like-inverted-dark button-like-size-m">&laquo; Previous</a></li>
+        <li><a {{ if $pag.HasPrev }}href="{{ $pag.Prev.URL }}" {{ end }} class="button-like button-like-inverted-dark button-like-size-m" rel="prev">&laquo; Previous</a></li>
         {{ end }}
         {{ $ellipsed := false }}
         {{ $shouldEllipse := false }}
@@ -19,13 +19,13 @@
         {{ $ellipsed = true }}
         {{ end }}
         {{ if $showNumber }}
-        <li><a class="button-like button-like-inverted-{{ if eq . $pag }}inactive{{ else }}dark{{ end }} button-like-size-m" href="{{ .URL }}">{{ .PageNumber }}</a></li>
+        <li><a class="button-like button-like-inverted-{{ if eq . $pag }}inactive{{ else }}dark{{ end }} button-like-size-m" href="{{ .URL }}" rel="canonical">{{ .PageNumber }}</a></li>
         {{ else if $shouldEllipse }}
         <li>&hellip;</li>
         {{ end }}
         {{ end }}
         {{ if $pag.HasNext }}
-        <li><a {{ if $pag.HasNext }}href="{{ $pag.Next.URL }}" {{ end }} class="button-like button-like-inverted-dark button-like-size-m">Next &raquo;</a></li>
+        <li><a {{ if $pag.HasNext }}href="{{ $pag.Next.URL }}" {{ end }} class="button-like button-like-inverted-dark button-like-size-m" rel="next">Next &raquo;</a></li>
         {{ end }}
     </ul>
 </div>
