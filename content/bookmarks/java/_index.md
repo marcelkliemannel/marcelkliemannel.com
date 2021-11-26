@@ -30,4 +30,6 @@ links:
   link: "https://java.com/en/jre-jdk-cryptoroadmap.html"
 - title: "Awesome Java: A curated list of awesome Java frameworks, libraries and software."
   link: "https://github.com/akullpp/awesome-java#code-analysis"
+- title: "Memoizing Functions With Core Java 9"
+  link: "https://dzone.com/articles/memoizing-functions-with-core-java9"
 ---
