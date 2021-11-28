@@ -325,7 +325,7 @@ Session scoped beans are not limited to anonymous sessions. We can also use them
 
 ## Dynamically Scoped
 
-We might find ourselves in the situation where we want to set the scope of a bean class at runtime dynamically. Or, we may want to use a class that comes from an external library as a bean. In both cases, we could not hard-code the scope annotation to the class. So-called **producer methods** are a solution to this problem.
+We might find ourselves in the situation where we want to set the scope of a bean class at runtime dynamically. Or, we may want to use a class that comes from an external library as a bean. In both cases, we could not hard-code the scope annotation to the class. So-called **producer methods** (which must be annotated with `javax.enterprise.inject.Produces`) are a solution to this problem.
 
 In the following example, we define two producer methods, each creating an instance of `MyService`. If the "dev" profile is active, CDI will create a single application-scoped instance at runtime (the first method). However, if this is not the case, Quarkus would fall back to a method which annotated with `@DefaultBean` and, in our case, produces a request-scoped service (the second method):
 
@@ -342,7 +342,7 @@ public class MyServiceProducer {
   @Produces
   @RequestScoped
   @DefaultBean
-  public MyBean createRequestScopedService() {
+  public MyService createRequestScopedService() {
     return new MyService();
   }
 }
