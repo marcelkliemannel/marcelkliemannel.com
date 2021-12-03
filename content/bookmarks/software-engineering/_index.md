@@ -16,4 +16,6 @@ links:
   link: "https://overreacted.io/goodbye-clean-code/"
 - title: "How defensive coding leads to bloat"
   link: "https://swizec.com/blog/how-defensive-coding-leads-to-bloat/"
+- title: "The Fibonacci Sequence as a Functor"
+  link: "https://www.math3ma.com/blog/fibonacci-sequence"
 ---
