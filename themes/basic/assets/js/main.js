@@ -48,7 +48,7 @@ if (tableOfContents !== null) {
  */
 document.querySelectorAll('.highlight').forEach(function (highlightDiv) {
   var button = document.createElement('button');
-  button.className = 'copyButton button-like button-like-inverted-dark button-like-size-l';
+  button.className = 'copy-Button button-like button-like-inverted-dark button-like-size-l';
   button.type = 'button';
   button.innerHTML = '<span class="icon-copy"></span> Copy';
   button.addEventListener("click", () => copyCodeToClipboard(button, highlightDiv));
