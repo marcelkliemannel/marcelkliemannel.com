@@ -104,15 +104,16 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
     margin: $paragraph-gap 0;
     position: relative;
 
-    .copyButton {
+    .copy-Button {
       position: absolute;
-      right: 1rem;
-      top: 1rem;
+      right: .4rem;
+      top: .4rem;
       display: none;
+      font-size: .8rem;
     }
 
     &:hover, &:active, &:focus {
-      .copyButton {
+      .copy-Button {
         display: block;
       }
     }
