@@ -6,4 +6,6 @@ links:
   link: "https://www.first.org/cvss/calculator/3.1"
 - title: "The Joy of Cryptography"
   link: "https://joyofcryptography.com"
+- title: "DNSLog.cn"
+  link: "http://dnslog.cn"
 ---
