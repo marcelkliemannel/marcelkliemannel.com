@@ -8,4 +8,6 @@ links:
   link: "https://joyofcryptography.com"
 - title: "DNSLog.cn"
   link: "http://dnslog.cn"
+- title: "Canary Tokens"
+  link: "https://canarytokens.org/generate"
 ---
