@@ -18,4 +18,6 @@ links:
   link: "https://swizec.com/blog/how-defensive-coding-leads-to-bloat/"
 - title: "The Fibonacci Sequence as a Functor"
   link: "https://www.math3ma.com/blog/fibonacci-sequence"
+- title: "Carbon: Create and share beautiful images of your source code"
+  link: "https://carbon.now.sh"
 ---
