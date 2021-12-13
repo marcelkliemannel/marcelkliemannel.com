@@ -10,4 +10,6 @@ links:
   link: "http://dnslog.cn"
 - title: "Canary Tokens"
   link: "https://canarytokens.org/generate"
+- title: "Exploiting JNDI Injections in Java"
+  link: "https://www.veracode.com/blog/research/exploiting-jndi-injections-java"
 ---
