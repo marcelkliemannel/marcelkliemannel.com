@@ -26,6 +26,16 @@
     margin: 0;
     border: 0;
 
+    &:nth-child(1) {
+      /* LineHighlight */ 
+      .hl {
+        display: block;
+        width: 100%;
+        background-color: $color-dark-500;
+        color: $color-bright-100;
+      }
+    }
+
     &:nth-child(2) {
       width: 105%; // +5% for the first column, otherwise wide code lines would be cut off at the end 
       display: block;
@@ -59,12 +69,6 @@
   }
 
   /* Other */ .x {  }
-  /* LineHighlight */ 
-  .hl {
-    display: block;
-    width: 100%;
-    background-color: rgb(255, 255, 219);
-   }
   /* LineNumbersTable */ 
   .lnt {
     padding: 0 1rem;

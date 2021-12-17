@@ -52,6 +52,7 @@ $medium-gap: 1rem;
 $large-gap: 2rem;
 $large2-gap: 2.5rem;
 $xl-gap: 3rem;
+$xxl-gap: 4rem;
 
 .gap-top-paragraph {
   margin-top: $paragraph-gap;
@@ -71,6 +72,10 @@ $xl-gap: 3rem;
 
 .gap-top-xl {
   margin-top: $xl-gap;
+}
+
+.gap-top-xxl {
+  margin-top: $xxl-gap;
 }
 
 .gap-bottom-small {

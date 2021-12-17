@@ -60,7 +60,7 @@ async function copyCodeToClipboard(button, highlightDiv) {
   const codeToCopy = highlightDiv.querySelector(":last-child > .chroma > code").innerText;
 
   navigator.clipboard.writeText(codeToCopy).then(function() {
-    showToast("Code copied.")
+    showToast("Code copied to clipboard.")
   }, function(err) {
     console.error('Async: Could not copy text: ', err);
   });

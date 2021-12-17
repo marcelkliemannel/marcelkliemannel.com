@@ -133,9 +133,9 @@
     font-family: $title-font-family;
     font-weight: $title-font-weight-bold;
     font-size: .9rem;
-    color: $text-color-green-400-background;
     line-height: $line-height;
-    background-color: $color-green-400;
+    background-color: $color-dark-500;
+    color: $color-bright-100;
     padding: 0 .4rem;
     position: absolute;
     top: calc(calc(#{$line-height} / 2) * -1)
