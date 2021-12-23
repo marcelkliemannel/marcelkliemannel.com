@@ -14,4 +14,6 @@ links:
   link: "https://sre.google/sre-book/table-of-contents/"
 - title: "A successful Git branching model"
   link: "https://nvie.com/posts/a-successful-git-branching-model/"
+- title: "Intro To Deployment Strategies: Blue-Green, Canary, And More"
+  link: "https://harness.io/blog/blue-green-canary-deployment-strategies/"
 ---
