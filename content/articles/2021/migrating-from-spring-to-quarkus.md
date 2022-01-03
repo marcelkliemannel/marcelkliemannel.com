@@ -393,7 +393,7 @@ Not supported yet are the `@Primary` and `@Order` annotations.
 
 ##### @Conditional
 
-Spring includes a set of conditional annotations that we can use to control the creation of a bean. For example, we can use `@ConditionalOnJava(value = JavaVersion.ELEVEN)` to make a bean class available to the DI container only if the Java version is greater than or equal to 11.
+Spring includes a set of conditional annotations with which we can control the creation conditions of a bean. For example, we can use `@ConditionalOnJava(value = JavaVersion.ELEVEN)` to make a bean class available to the DI container only if the Java version is greater than or equal to 11.
 
 Such a feature is [not yet available in Quarkus](https://github.com/quarkusio/quarkus/issues/4114) because Quarkus will do most of the DI configuration at build time. An alternative is to [create beans dynamically]({{< ref "migrating-from-spring-to-quarkus.md#dynamically-creation-of-beans" >}}) using the `@Produces` annotations.
 
