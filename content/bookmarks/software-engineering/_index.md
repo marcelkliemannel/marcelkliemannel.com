@@ -20,4 +20,6 @@ links:
   link: "https://www.math3ma.com/blog/fibonacci-sequence"
 - title: "Carbon: Create and share beautiful images of your source code"
   link: "https://carbon.now.sh"
+- title: "Hype-Driven Development: Don't Be a Victim!"
+  linke: "https://blog.payara.fish/hype-driven-development-video"
 ---
