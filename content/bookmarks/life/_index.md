@@ -24,4 +24,6 @@ links:
   link: "https://theartofdefense.medium.com/book-summary-finish-what-you-start-the-art-of-following-through-taking-action-executing-88b883f79a45"
 - title: "How to Ask for Feedback"
   link: "https://www.samjulien.com/how-to-ask-for-feedback"
+- title: "How to tell a compelling story in scientific presentations"
+  link: "https://www.nature.com/articles/d41586-021-03603-2?utm_term=Autofeed&utm_campaign=nature&utm_medium=Social&utm_source=Twitter#Echobox=1640956542"
 ---
