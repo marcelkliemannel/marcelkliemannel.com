@@ -41,7 +41,7 @@ paginate = 8
   metaDescription = "Personal website containing articles and a bookmarks collection mainly about software development and an overview over my projects."
   aboutTheAuthorName = "Marcel Kliemannel"
   # Text is also in the _index.md
-  aboutTheAuthorDescription = "Software Engineer, JVM Enthusiast and technical writer with a focus on architecture, backend, automation, DevOps, monitoring, performance, and security."
+  aboutTheAuthorDescription = "Software Engineer, JVM Enthusiast and technical writer with a focus on architecture, backend, security, automation, DevOps, monitoring, and performance."
   gitHubUser = "marcelkliemannel"
   stackOverflow = "https://stackoverflow.com/users/story/7059880"
   twitterUser = "7ur1n9"
