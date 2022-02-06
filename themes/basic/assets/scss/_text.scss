@@ -106,8 +106,8 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
 
     .copy-Button {
       position: absolute;
-      right: .4rem;
-      top: .4rem;
+      right: .2rem;
+      top: .2rem;
       display: none;
       font-size: .8rem;
     }
@@ -162,6 +162,8 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
         font-size: .9rem;
         font-weight: bold;
         text-transform: uppercase;
+        text-align: left;
+        padding: .1rem .6rem;
         border-bottom: 2px solid $color-bright-500;
         border-right: 1px solid $color-bright-500;
   
