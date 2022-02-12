@@ -21,5 +21,7 @@ links:
 - title: "Carbon: Create and share beautiful images of your source code"
   link: "https://carbon.now.sh"
 - title: "Hype-Driven Development: Don't Be a Victim!"
-  linke: "https://blog.payara.fish/hype-driven-development-video"
+  link: "https://blog.payara.fish/hype-driven-development-video"
+- title: "HTTP Feeds"
+  link: "https://www.http-feeds.org/"
 ---
