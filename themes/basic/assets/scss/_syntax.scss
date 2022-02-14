@@ -26,7 +26,24 @@
     margin: 0;
     border: 0;
 
+    /* Other */ .x {  }
+    /* LineNumbersTable */ 
+    .lnt {
+      padding: 0;
+  
+      // If there is only one line, the margin collapses with the next 
+      // column and there is no gap between the number and the code line.
+      &:only-child {
+        display: block;
+      }
+    }
+
     &:nth-child(1) {
+      .lnt {
+        padding-left: 1rem;
+        padding-right: .5rem;
+      }
+
       /* LineHighlight */ 
       .hl {
         display: block;
@@ -37,6 +54,7 @@
     }
 
     &:nth-child(2) {
+      padding-left: .5rem;
       width: 105%; // +5% for the first column, otherwise wide code lines would be cut off at the end 
       display: block;
     }
@@ -65,18 +83,6 @@
 
     *:focus {
       outline: none;
-    }
-  }
-
-  /* Other */ .x {  }
-  /* LineNumbersTable */ 
-  .lnt {
-    padding: 0 1rem;
-
-    // If there is only one line, the margin collapses with the next 
-    // column and there is no gap between the number and the code line.
-    &:only-child {
-      display: block;
     }
   }
 
