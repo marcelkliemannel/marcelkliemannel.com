@@ -28,4 +28,6 @@ links:
   link: "https://www.nature.com/articles/d41586-021-03603-2"
 - title: "Putting Ideas Into Words"
   link: "http://paulgraham.com/words.html"
+- title: "How to explain an idea: a mega post"
+  link: "https://www.markpollard.net/how-to-explain-an-idea/"
 ---
