@@ -26,4 +26,6 @@ links:
   link: "https://www.http-feeds.org/"
 - title: "Cloud Design Patterns"
   link: "https://docs.microsoft.com/en-us/azure/architecture/patterns/"
+- title: "Design Patterns"
+  link: "https://refactoring.guru/design-patterns"
 ---
