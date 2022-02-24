@@ -12,4 +12,6 @@ links:
   link: "https://github.com/donnemartin/system-design-primer#study-guide"
 - title: "Tech Interview Handbook"
   link: "https://techinterviewhandbook.org"
+- title: "InterviewBit"
+  link: "https://www.interviewbit.com/practice/"
 ---
