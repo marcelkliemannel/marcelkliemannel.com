@@ -28,4 +28,6 @@ links:
   link: "https://docs.microsoft.com/en-us/azure/architecture/patterns/"
 - title: "Design Patterns"
   link: "https://refactoring.guru/design-patterns"
+- title: "Don't Let the Internet Dupe You, Event Sourcing is Hard"
+  link: "https://chriskiehl.com/article/event-sourcing-is-hard"
 ---
