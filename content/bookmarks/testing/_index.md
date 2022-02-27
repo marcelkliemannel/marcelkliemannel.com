@@ -7,4 +7,6 @@ links:
   link: "https://ncorti.com/blog/junit-rules"
 - title: "JUnit Pioneer - JUnit 5 Extension Pack"
   link: "https://junit-pioneer.org/docs/"
+- title: "Consumer Driven Contract Testing"
+  link: "https://github.com/christian-draeger/pact-example"
 ---
