@@ -30,4 +30,6 @@ links:
   link: "http://paulgraham.com/words.html"
 - title: "How to explain an idea: a mega post"
   link: "https://www.markpollard.net/how-to-explain-an-idea/"
+- title: "The Logic of Risk Taking"
+  link: "https://medium.com/incerto/the-logic-of-risk-taking-107bf41029d3"
 ---
