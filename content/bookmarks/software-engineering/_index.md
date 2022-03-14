@@ -30,4 +30,6 @@ links:
   link: "https://refactoring.guru/design-patterns"
 - title: "Don't Let the Internet Dupe You, Event Sourcing is Hard"
   link: "https://chriskiehl.com/article/event-sourcing-is-hard"
+- title: "The Code Review Pyramid"
+  link: "https://www.morling.dev/blog/the-code-review-pyramid/"
 ---
