@@ -32,4 +32,6 @@ links:
   link: "https://github.com/akullpp/awesome-java#code-analysis"
 - title: "Memoizing Functions With Core Java 9"
   link: "https://dzone.com/articles/memoizing-functions-with-core-java9"
+- title: "Java-Deserialization-Cheat-Sheet"
+  link: "https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet"
 ---
