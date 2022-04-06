@@ -8,4 +8,6 @@ links:
   link: "https://ionutbalosin.com/2019/03/kotlin-explicit-inlining-at-megamorphic-call-sites-pays-off-in-performance/"
 - title: "inline, noinline, crossinline — What do they mean?"
   link: "https://medium.com/android-news/inline-noinline-crossinline-what-do-they-mean-b13f48e113c2"
+- title: "Crash course on the Kotlin compiler"
+  link: "https://medium.com/google-developer-experts/crash-course-on-the-kotlin-compiler-1-frontend-parsing-phase-9898490d922b"
 ---
