@@ -10,4 +10,6 @@ links:
   link: "https://medium.com/android-news/inline-noinline-crossinline-what-do-they-mean-b13f48e113c2"
 - title: "Crash course on the Kotlin compiler"
   link: "https://medium.com/google-developer-experts/crash-course-on-the-kotlin-compiler-1-frontend-parsing-phase-9898490d922b"
+- title: "Annotation use-site targets"
+  link: "https://kotlinlang.org/docs/annotations.html#annotation-use-site-targets"
 ---
