@@ -34,4 +34,6 @@ links:
   link: "https://dzone.com/articles/memoizing-functions-with-core-java9"
 - title: "Java-Deserialization-Cheat-Sheet"
   link: "https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet"
+- title: "JavaMail Frequently Asked Questions"
+  link: "https://javaee.github.io/javamail/FAQ"
 ---
