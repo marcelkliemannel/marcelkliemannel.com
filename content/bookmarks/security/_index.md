@@ -12,4 +12,6 @@ links:
   link: "https://canarytokens.org/generate"
 - title: "Exploiting JNDI Injections in Java"
   link: "https://www.veracode.com/blog/research/exploiting-jndi-injections-java"
+- title: "The Joy of Cryptography"
+  link: "https://joyofcryptography.com"
 ---
