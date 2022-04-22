@@ -8,4 +8,6 @@ links:
   link: "https://turriate.com/articles/modern-javascript-everything-you-missed-over-10-years"
 - title: "Beautiful CSS box-shadow examples"
   link: "https://getcssscan.com/css-box-shadow-examples"
+- title: "Over 1900 pixel-perfect icons for web design"
+  link: "https://tabler-icons.io"
 ---
