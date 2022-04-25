@@ -14,4 +14,6 @@ links:
   link: "https://www.veracode.com/blog/research/exploiting-jndi-injections-java"
 - title: "The Joy of Cryptography"
   link: "https://joyofcryptography.com"
+- title: "Hash collisions and exploitations"
+  link: "https://github.com/corkami/collisions"
 ---
