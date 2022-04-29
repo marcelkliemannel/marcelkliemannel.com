@@ -32,4 +32,6 @@ links:
   link: "https://www.markpollard.net/how-to-explain-an-idea/"
 - title: "The Logic of Risk Taking"
   link: "https://medium.com/incerto/the-logic-of-risk-taking-107bf41029d3"
+- title: "103 Bits of Advice I Wish I Had Known"
+  link: "https://kk.org/thetechnium/103-bits-of-advice-i-wish-i-had-known/"
 ---
