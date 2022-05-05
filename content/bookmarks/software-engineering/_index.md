@@ -32,4 +32,6 @@ links:
   link: "https://chriskiehl.com/article/event-sourcing-is-hard"
 - title: "The Code Review Pyramid"
   link: "https://www.morling.dev/blog/the-code-review-pyramid/"
+- title: "Mermaid: Create diagrams and visualizations using text and code"
+  link: "https://mermaid-js.github.io/mermaid/"
 ---
