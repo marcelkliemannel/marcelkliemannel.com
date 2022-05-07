@@ -10,4 +10,6 @@ links:
   link: "https://getcssscan.com/css-box-shadow-examples"
 - title: "Over 1900 pixel-perfect icons for web design"
   link: "https://tabler-icons.io"
+- title: "RSS Feed Best Practises"
+  link: "https://kevincox.ca/2022/05/06/rss-feed-best-practices/"
 ---

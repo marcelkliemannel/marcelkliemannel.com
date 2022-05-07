@@ -34,4 +34,6 @@ links:
   link: "https://www.morling.dev/blog/the-code-review-pyramid/"
 - title: "Mermaid: Create diagrams and visualizations using text and code"
   link: "https://mermaid-js.github.io/mermaid/"
+- title: "Event Streaming is not Event Sourcing!"
+  link: "https://event-driven.io/en/event_streaming_is_not_event_sourcing/"
 ---
