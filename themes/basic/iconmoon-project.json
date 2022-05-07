@@ -2,18 +2,26 @@
   "metadata": {
     "name": "marcelkliemannel.com",
     "lastOpened": 0,
-    "created": 1634818052313
+    "created": 1651937089088
   },
   "iconSets": [
     {
       "selection": [
         {
           "order": 1,
+          "id": 2,
+          "prevSize": 32,
+          "code": 59649,
+          "name": "gradle",
+          "tempChar": ""
+        },
+        {
+          "order": 1,
           "id": 0,
           "name": "jetbrains",
           "prevSize": 32,
           "code": 59648,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 0,
@@ -34,11 +42,27 @@
         "url": "https://simpleicons.org",
         "designer": "N/A",
         "license": "CC0 1.0 Universal",
-        "licenseURL": "https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md"
+        "licenseURL": "https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md",
+        "iconsHash": 1591697341
       },
       "height": 1024,
       "prevSize": 32,
       "icons": [
+        {
+          "id": 2,
+          "paths": [
+            "M968.533 183.467c-64-64-162.133-64-226.133-4.267-4.267 4.267-4.267 8.533-4.267 12.8s0 8.533 4.267 12.8l21.333 21.333c4.267 4.267 12.8 4.267 21.333 0 17.067-12.8 34.133-17.067 55.467-17.067 51.2 0 93.867 42.667 93.867 93.867 0 25.6-8.533 46.933-25.6 64-128 128-302.933-230.4-691.2-46.933-25.6 12.8-38.4 42.667-25.6 68.267v4.267l64 115.2c12.8 25.6 46.933 34.133 72.533 21.333l29.867-17.067c34.133-21.333 64-42.667 93.867-68.267 4.267-4.267 17.067-4.267 21.333 0 8.533 4.267 8.533 12.8 4.267 21.333l-4.267 4.267c-29.867 25.6-64 51.2-98.133 72.533l-29.867 12.8c-12.8 8.533-25.6 12.8-42.667 12.8-29.867 0-59.733-17.067-72.533-42.667l-64-110.933c-119.467 85.333-196.267 251.733-153.6 460.8 0 8.533 8.533 12.8 17.067 12.8h72.533c8.533 0 12.8-4.267 17.067-12.8 8.533-59.733 59.733-98.133 119.467-89.6 46.933 4.267 85.333 42.667 89.6 89.6 0 8.533 8.533 12.8 17.067 12.8h68.267c8.533 0 12.8-4.267 17.067-12.8 8.533-59.733 59.733-98.133 119.467-89.6 46.933 4.267 85.333 42.667 89.6 89.6 0 8.533 8.533 12.8 17.067 12.8h68.267c8.533 0 17.067-8.533 17.067-17.067 0-98.133 29.867-209.067 102.4-264.533 251.733-196.267 183.467-362.667 123.733-422.4zM704 477.867l-51.2-25.6c0-17.067 12.8-29.867 29.867-29.867s29.867 12.8 29.867 29.867c4.267 12.8 0 21.333-8.533 25.6z"
+          ],
+          "attrs": [
+            {}
+          ],
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "tags": [
+            "gradle"
+          ],
+          "grid": 0
+        },
         {
           "id": 0,
           "paths": [
@@ -71,7 +95,8 @@
         }
       ],
       "colorThemes": [],
-      "colorThemeIdx": 0
+      "colorThemeIdx": 0,
+      "invisible": false
     },
     {
       "selection": [
@@ -346,7 +371,7 @@
           "id": 44,
           "prevSize": 32,
           "code": 59692,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "paste, clipboard-file",
@@ -1219,7 +1244,7 @@
           "id": 189,
           "prevSize": 32,
           "code": 59837,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "menu2, options2",
@@ -1282,7 +1307,7 @@
           "id": 199,
           "prevSize": 32,
           "code": 59847,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "upload3, load3",
@@ -1309,7 +1334,7 @@
           "id": 203,
           "prevSize": 32,
           "code": 59851,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "flag, report",
@@ -1720,7 +1745,7 @@
           "id": 271,
           "prevSize": 32,
           "code": 59919,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "checkmark, tick",
@@ -1981,7 +2006,7 @@
           "id": 314,
           "prevSize": 32,
           "code": 59962,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "ligatures": "arrow-up-right2, up-right2",
@@ -2536,7 +2561,7 @@
           "id": 406,
           "prevSize": 32,
           "code": 60054,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "vine",
@@ -2695,7 +2720,7 @@
           "id": 432,
           "prevSize": 32,
           "code": 60080,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "npm",
@@ -2890,7 +2915,7 @@
           "id": 464,
           "prevSize": 32,
           "code": 60112,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "name": "pinterest",
