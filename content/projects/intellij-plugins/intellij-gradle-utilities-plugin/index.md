@@ -4,7 +4,7 @@ gitHub: "https://github.com/marcelkliemannel/intellij-gradle-utilities-plugin"
 jetBrainsMarketplace: "https://plugins.jetbrains.com/plugin/16800-gradle-utilities"
 ---
 
-IntelliJ plugin that provides some useful utilities to support the daily work with Gradle:
+An IntelliJ plugin that provides some useful utilities to support the daily work with Gradle:
 
 {{< retina-image main-menu2x.png "Gradle Utilities Main Menu" >}}
 

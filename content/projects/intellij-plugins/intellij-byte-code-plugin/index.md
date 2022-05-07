@@ -4,7 +4,7 @@ gitHub: "https://github.com/marcelkliemannel/intellij-byte-code-plugin"
 jetBrainsMarketplace: "https://plugins.jetbrains.com/plugin/16970-byte-code-analyzer"
 ---
 
-This IntelliJ plugin provides a modern and powerful tool window to analyze byte code. Its supports Java, Kotlin, Groovy, and other JVM language class files:
+An IntelliJ plugin that provides a modern and powerful tool window to analyze byte code. Its supports Java, Kotlin, Groovy, and other JVM language class files:
 
 {{< retina-image tool-window-structure-view2x.png "Byte Code Analyzer Tool Window" >}}
 
