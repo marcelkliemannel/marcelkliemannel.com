@@ -12,4 +12,6 @@ links:
   link: "https://tabler-icons.io"
 - title: "RSS Feed Best Practises"
   link: "https://kevincox.ca/2022/05/06/rss-feed-best-practices/"
+- title: "The Open Graph protocol"
+  link: "https://ogp.me"
 ---
