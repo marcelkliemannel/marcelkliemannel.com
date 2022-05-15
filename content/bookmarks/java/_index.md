@@ -36,4 +36,6 @@ links:
   link: "https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet"
 - title: "JavaMail Frequently Asked Questions"
   link: "https://javaee.github.io/javamail/FAQ"
+- title: "Jandex"
+  link: "https://github.com/wildfly/jandex"
 ---
