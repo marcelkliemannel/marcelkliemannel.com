@@ -38,4 +38,6 @@ links:
   link: "https://javaee.github.io/javamail/FAQ"
 - title: "Jandex"
   link: "https://github.com/wildfly/jandex"
+- title: "revapi-diff: Report differences between Java APIs"
+  link: "https://github.com/realityforge/revapi-diff"
 ---
