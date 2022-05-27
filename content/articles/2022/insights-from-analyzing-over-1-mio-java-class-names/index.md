@@ -55,7 +55,7 @@ __The final data set consists of 1,369,558 class names__ (which are 48% of the f
 
 ## Java Source Sets
 
-A convention is to organize Java sources into source sets using the directory format `/src/$sourceSetName/java`/, to distinguish, for example, productive and test code. 
+A convention is to organize Java sources into source sets using the directory format `/src/$sourceSetName/java`/, to distinguish, for example, productive and test code.
 
 In the sample are __76% of the Java files structured in source sets__. 94% are under `/src/`.
 
