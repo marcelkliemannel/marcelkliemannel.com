@@ -16,7 +16,7 @@ There is a simple solution: Our Quarkus backend must use a filter which _interna
 
 ![clientSideRoutingForwarding](clientsiderouting_forwarding.svg#center)
 
-In other words, we hand over the responsibility for 404 errors to the frontend framework. 
+In other words, we hand over the responsibility for 404 errors to the frontend framework.
 
 The critical point here is that we have to do an internal forwarding, not a redirect. So that a request to `/about` would return the same response as a request to `/` (the index page). But the URL stays at the `/about` page. This behavior is essential for the routing mechanism of the JavaScript frontend to serve the subpage.
 
