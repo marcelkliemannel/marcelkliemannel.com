@@ -28,7 +28,7 @@ Due to the modular design of Quarkus, there are many ways to implement the HTTP 
 
 ### JAX-RS Filter with the RESTEasy Extension
 
-If we use the RESTEasy extension (`quarkus-resteasy`), we can implement a JAX-RS  `javax.ws.rs.container.ContainerResponseFilter`:
+If we use the RESTEasy extension `quarkus-resteasy`, we can implement a JAX-RS  `javax.ws.rs.container.ContainerResponseFilter`:
 
 ```java
 @Provider
@@ -69,7 +69,7 @@ Explanations:
 
 ### Java Servlet API Filter with the Undertow Extension
 
-If our Quarkus application uses the Undertow Servlet extension (`quarkus-undertow`), we can implement a `javax.servlet.http.HttpFilter` from the Java Servlet API:
+If our Quarkus application uses the Undertow Servlet extension `quarkus-undertow`, we can implement a `javax.servlet.http.HttpFilter` from the Java Servlet API:
 
 ```java
 @WebFilter("/*")
