@@ -63,7 +63,6 @@ Explanations:
 - __Line 1:__ With the `@Provider` annotation, we make the filter discoverable.
 - __Line 2__: We should choose the lowest possible priority for this filter so that other filters can run before this one. Note that `ContainerResponseFilter` are using a descending order.
 - __Line 13__: We only want to handle 404 (Not Found) cases.
-
 - __Line 20__: If another filter in the chain altered the response before use (e.g., added a header), we would reverse this by resetting the response object at this point.
 - __Lines 21, 22__:  We explicitly set the stats code to 200 (OK) and the `Content-Type` header to HTML. (At least in Quarkus 2.9, setting both would not be needed, but this protects us against future changes.)
 - __Line 23__: The final internal forwarding to the index resource.
