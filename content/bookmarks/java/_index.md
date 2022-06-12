@@ -40,4 +40,6 @@ links:
   link: "https://github.com/wildfly/jandex"
 - title: "revapi-diff: Report differences between Java APIs"
   link: "https://github.com/realityforge/revapi-diff"
+- title: "SIMD accelerated sorting in Java - how it works and why it was 3x faster"
+  link: "https://jbaker.io/2022/06/09/vectors-in-java/"
 ---
