@@ -43,5 +43,4 @@ paginate = 8
   # Text is also in the _index.md
   aboutTheAuthorDescription = "Software Engineer, JVM Enthusiast and technical writer with a focus on architecture, backend, security, automation, DevOps, monitoring, and performance."
   gitHubUser = "marcelkliemannel"
-  stackOverflow = "https://stackoverflow.com/users/story/7059880"
   twitterUser = "7ur1n9"

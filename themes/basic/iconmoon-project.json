@@ -2,7 +2,7 @@
   "metadata": {
     "name": "marcelkliemannel.com",
     "lastOpened": 0,
-    "created": 1651937089088
+    "created": 1655316916616
   },
   "iconSets": [
     {
@@ -2911,7 +2911,7 @@
         {
           "ligatures": "stackoverflow, brand71",
           "name": "stackoverflow",
-          "order": 6,
+          "order": 0,
           "id": 464,
           "prevSize": 32,
           "code": 60112,
