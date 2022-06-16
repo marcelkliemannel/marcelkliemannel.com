@@ -38,4 +38,6 @@ links:
   link: "https://event-driven.io/en/event_streaming_is_not_event_sourcing/"
 - title: "How do Video Games Stay in Sync? An Intro to the Fascinating Networking of Real Time Games."
   link: "https://medium.com/geekculture/how-do-video-games-stay-in-sync-an-intro-to-the-fascinating-networking-of-real-time-games-e923e66e8a0f"
+- title: "A Git Origin Story"
+  link: "https://www.linuxjournal.com/content/git-origin-story"
 ---
