@@ -42,4 +42,6 @@ links:
   link: "https://github.com/realityforge/revapi-diff"
 - title: "SIMD accelerated sorting in Java - how it works and why it was 3x faster"
   link: "https://jbaker.io/2022/06/09/vectors-in-java/"
+- title: "Data Oriented Programming in Java"
+  link: "https://www.infoq.com/articles/data-oriented-programming-java/"
 ---
