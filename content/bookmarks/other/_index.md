@@ -8,4 +8,6 @@ links:
   link: "https://practicaltypography.com/ligatures-in-programming-fonts-hell-no.html"
 - title: "Line Goes Up – The Problem With NFTs"
   link: "https://www.youtube.com/watch?v=YQ_xWvX1n9g"
+- title: "RAS syndrome"
+  link: "https://en.wikipedia.org/wiki/RAS_syndrome"
 ---
