@@ -40,4 +40,6 @@ links:
   link: "https://medium.com/geekculture/how-do-video-games-stay-in-sync-an-intro-to-the-fascinating-networking-of-real-time-games-e923e66e8a0f"
 - title: "A Git Origin Story"
   link: "https://www.linuxjournal.com/content/git-origin-story"
+- title: "Sorting algorithms visualized"
+  link: "https://github.com/ForeignGods/Sorting-Algorithms-Blender"
 ---
