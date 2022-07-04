@@ -1,6 +1,7 @@
 RewriteEngine on
 
 Redirect /projects/intellij-byte-code-plugin https://github.com/marcelkliemannel/intellij-byte-code-plugin
+Redirect /projects/intellij-jvms-manager-plugin https://github.com/marcelkliemannel/intellij-jvms-manager-plugin
 Redirect /project/intellij-gradle-utilities-plugin https://github.com/marcelkliemannel/intellij-gradle-utilities-plugin
 
 ErrorDocument 404 /404.html
