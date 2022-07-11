@@ -42,4 +42,6 @@ links:
   link: "https://www.linuxjournal.com/content/git-origin-story"
 - title: "Sorting algorithms visualized"
   link: "https://github.com/ForeignGods/Sorting-Algorithms-Blender"
+- title: "The Continuous Delivery Test"
+  link: "https://github.com/ForeignGods/Sorting-Algorithms-Blender](https://sourceless.org/posts/the-continuous-delivery-test.html"
 ---
