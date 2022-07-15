@@ -36,4 +36,6 @@ links:
   link: "https://kk.org/thetechnium/103-bits-of-advice-i-wish-i-had-known/"
 - title: "A Pragmatic Guide to Getting Things Done"
   link: "https://hamberg.no/gtd"
+- title: "Ten Lessons I wish I had been Taught"
+  link: "https://alumni.media.mit.edu/~cahn/life/gian-carlo-rota-10-lessons.html"
 ---
