@@ -44,4 +44,6 @@ links:
   link: "https://jbaker.io/2022/06/09/vectors-in-java/"
 - title: "Data Oriented Programming in Java"
   link: "https://www.infoq.com/articles/data-oriented-programming-java/"
+- title: "5 Mundane Java Performance Tips"
+  link: "https://richardstartin.github.io/posts/5-java-mundane-performance-tricks"
 ---
