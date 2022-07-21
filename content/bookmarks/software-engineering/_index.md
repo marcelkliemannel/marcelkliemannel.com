@@ -44,4 +44,6 @@ links:
   link: "https://github.com/ForeignGods/Sorting-Algorithms-Blender"
 - title: "The Continuous Delivery Test"
   link: "https://github.com/ForeignGods/Sorting-Algorithms-Blender](https://sourceless.org/posts/the-continuous-delivery-test.html"
+- title: "What happens when you press a key in your terminal?"
+  link: "https://jvns.ca/blog/2022/07/20/pseudoterminals/"
 ---
