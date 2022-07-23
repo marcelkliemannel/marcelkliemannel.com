@@ -162,7 +162,7 @@ tasks.register("B", B::class.java) {
 
 ## Limit the Usage of Log Level "lifecycle" or Standard Output
 
-When we run tasks, Gradle gives us a constantly updating progress indicator:
+During the execution of Gradle, we will get a constantly updating progress indicator output:
 
 ```bash
 ❯ ./gradlew build
