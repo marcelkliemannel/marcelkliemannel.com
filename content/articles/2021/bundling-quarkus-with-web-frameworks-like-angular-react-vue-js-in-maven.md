@@ -234,7 +234,7 @@ There are two ways to include their deletion into the _clean_ phase. One way wou
 
 ```xml
 <execution>
-  <id>npm run build</id>
+  <id>npm run clean</id>
   <goals>
     <goal>npm</goal>
   </goals>
