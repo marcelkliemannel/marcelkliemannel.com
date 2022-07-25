@@ -18,6 +18,8 @@ The advantage of the multi-module approach is that we can develop both sides ind
 
 ## Basic Project Structure
 
+([A full project example can be found at GitHub.](https://github.com/marcelkliemannel/quarkus-frontend-example))
+
 For the multi-module approach, we need to create a Maven project with three sub-modules. The basic structure of our project would look like this:
 
 ```shell
