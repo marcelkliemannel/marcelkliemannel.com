@@ -72,9 +72,9 @@ public class CustomConfigSource implements ConfigSource {
     try (Reader reader = Files.newBufferedReader(propertiesFile)) {
       var properties = new Properties();
       properties.load(reader);
-      var collector = Collectors.toMap(entry -> String.valueOf(entry.getKey()), 
-                                       entry -> String.valueOf(entry.getValue());
-      this.properties = properties.entrySet().stream().collect(collector);
+      this.properties = properties.entrySet().stream()
+                                  .collect(Collectors.toMap(entry -> String.valueOf(entry.getKey()), 
+                                                            entry -> String.valueOf(entry.getValue()));
     }
     catch (IOException e) {
       throw new IllegalStateException("Failed to read properties file: " + propertiesFile, e);
