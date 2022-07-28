@@ -55,6 +55,7 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
   ul {
     margin-left: 1.7rem;
     margin-top: $paragraph-gap;
+    list-style-position: outside;
 
     li {
       list-style-type: square;
@@ -64,15 +65,14 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
   ol {
     margin-left: 1.7rem;
     margin-top: $paragraph-gap;
+    list-style-position: outside;
 
     li {
       list-style-type: decimal;
     }
   }
 
-  li { 
-    list-style-position: inside;
-    text-indent: -1.2rem;
+  li {
     margin-bottom: $paragraph-gap;
     font-size: $normal-text-font-size;
     line-height: $normal-text-line-height;
@@ -106,8 +106,8 @@ $normal-text-line-height: calc(#{$normal-text-font-size} + #{$base-line-height})
 
     .copy-Button {
       position: absolute;
-      right: .2rem;
-      top: .2rem;
+      right: 0rem;
+      top: 0rem;
       display: none;
       font-size: .8rem;
     }
