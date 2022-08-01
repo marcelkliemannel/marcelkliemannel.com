@@ -10,4 +10,6 @@ links:
   link: "https://www.morling.dev/blog/jdk-flight-recorder-file-format/"
 - title: "Create a new JVM instance in a native application via JNI"
   link: "https://docs.oracle.com/javase/7/docs/technotes/guides/jni/spec/invocation.html"
+- title: "The Java memory model explained"
+  link: "https://www.youtube.com/watch?v=qADk_tj4wY8"
 ---
