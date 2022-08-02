@@ -40,4 +40,6 @@ links:
   link: "https://alumni.media.mit.edu/~cahn/life/gian-carlo-rota-10-lessons.html"
 - title: "9 Stoic Rules For A Better Life (From Marcus Aurelius)"
   link: "https://www.youtube.com/watch?v=heh5XLwZVOY"
+- title: "The procrastination cure you don't want to hear"
+  link: "https://www.youtube.com/watch?v=iow5V3Qlvwo"
 ---
