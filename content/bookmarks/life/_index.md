@@ -42,4 +42,6 @@ links:
   link: "https://www.youtube.com/watch?v=heh5XLwZVOY"
 - title: "The procrastination cure you don't want to hear"
   link: "https://www.youtube.com/watch?v=iow5V3Qlvwo"
+- title: "Productivity Porn"
+  link: "https://calebschoepp.com/blog/2022/productivity-porn/"
 ---
