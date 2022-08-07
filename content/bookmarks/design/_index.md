@@ -10,4 +10,6 @@ links:
   link: "https://placeholder.com/"
 - title: "Faux Code Generator"
   link: "http://knutsynstad.com/fauxcode/?ref=undesign"
+- title: "The two types of quality"
+  link: "https://zenorocha.com/the-two-types-of-quality"
 ---
