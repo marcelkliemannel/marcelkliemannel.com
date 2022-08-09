@@ -196,7 +196,7 @@ An explicit main class has the advantage that we can start Quarkus directly from
 
 ## Spring's IoC Container vs Quarkus' ArC Container
 
-Both [Spring](https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-introduction) and [Quarkus](https://quarkus.io/guides/cdi-reference) implement the inversion of control principle (IoC) using the dependency injection (DI) mechanism. In summary, with DI, an object only defines dependencies to other objects (for example, through constructor arguments, properties, or setter methods) but is not responsible for their instantiation. Instead, an object receives the instances of its dependent objects at runtime by a higher-level controller, the so-called *container*. This container is not only responsible for the DI. It also takes care of all aspects of the life cycle of an object. Such a controlled object gets called *a bean*.
+Both [Spring](https://docs.spring.io/spring-framework/docs/5.3.x/reference/html/core.html#beans-introduction) and [Quarkus](https://quarkus.io/guides/cdi-reference) implement the inversion of control principle (IoC) using the dependency injection (DI) mechanism. In summary, with DI, an object only defines dependencies to other objects (for example, through constructor arguments, properties, or setter methods) but is not responsible for their instantiation. Instead, an object receives the instances of its dependent objects at runtime by a higher-level controller, the so-called *container*. This container is not only responsible for the DI. It also takes care of all aspects of the life cycle of an object. Such a controlled object gets called a *bean*.
 
 Substantially, Spring and Quarkus don't differ much in how we work with the DI mechanism, how the container handles the lifecycles, and how we define beans. So for most use cases, in terms of DI, we only have to get used to new annotation names and slightly different default behavior of certain features.
 
@@ -220,7 +220,7 @@ MyBean myBean = Arc.container().select(MyBean.class).get();
 MyBean myBean = CDI.current().select(MyBean.class).get();
 ```
 
-In Spring, it is possible to have multiple `ApplicationContext` instances. However, this is not possible in Quarkus. But, we can only override the built-in implementation with our own.
+In Spring, it is possible to have multiple `ApplicationContext` instances. However, this is not possible in Quarkus. We can only override the built-in implementation with our own.
 
 Another essential difference is that Quarkus [removes all unreferenced beans](https://quarkus.io/guides/cdi-reference#remove_unused_beans) (with some exceptions) for optimization reasons. Unlike in Spring, we can no longer access them programmatically at runtime.
 
