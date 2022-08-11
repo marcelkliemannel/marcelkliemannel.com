@@ -44,4 +44,6 @@ links:
   link: "https://www.youtube.com/watch?v=iow5V3Qlvwo"
 - title: "Productivity Porn"
   link: "https://calebschoepp.com/blog/2022/productivity-porn/"
+- title: "How to present to executives"
+  link: "https://lethain.com/present-to-executives/"
 ---
