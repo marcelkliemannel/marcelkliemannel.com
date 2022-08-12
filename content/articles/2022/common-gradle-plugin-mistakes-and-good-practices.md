@@ -103,7 +103,7 @@ fun myAction() {
 
 Gradle distinguishes between *strong* and *soft* relationship between tasks.
 
-If we define the strong relationship between tasks A and B (e.g., by using `dependsOn` or `finalizedBy`) and execute only task A, Gradle will also execute task B. In contrast, if we define the soft relationship between both (e.g., using `mustRunAfter` or `shouldRunAfter`) and execute only task A, Gradle will not execute task B.
+If we define the strong relationship between tasks A and B (e.g., by using `dependsOn` or `finalizedBy`) and execute only task A, Gradle will also execute task B. In contrast, if we define the soft relationship between both (e.g., using `mustRunAfter` or `shouldRunAfter`) and execute only task A, Gradle will not execute task B. But if we execute A and B, Gradle will execute them in the correct order.
 
 As a general rule, tasks from plugins should prefer to use soft relations to other tasks. This rule provides the most flexibility for the plugin user. If he only wants to execute this particular task, he does not need any exclusions. And if he wants a strong relationship, he can create it with a one-liner.
 
@@ -239,7 +239,7 @@ target.configurations.getByName("runtimeClasspath").resolvedConfiguration.files.
 
 ## Don’t Apply Other Plugins
 
-Generally, we should adhere to the following logic: If someone wants our plugin to use the outputs of another plugin, he must provide this plugin.
+Generally, we should adhere to the following logic: If someone wants our plugin to use the outputs of another plugin, _he_ must provide this plugin, not our plugin.
 
 Let's say we created a plugin that signs the `jar` task outputs. This plugin would only work if the project also has the `java` plugin applied because it provides the `jar` task. So, semantically, our plugin has one well-defined function. But, if our plugin automatically applies the `java` plugin, it also serves all the functions of the `java` plugin.
 
