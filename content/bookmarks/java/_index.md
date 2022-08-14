@@ -46,4 +46,6 @@ links:
   link: "https://www.infoq.com/articles/data-oriented-programming-java/"
 - title: "5 Mundane Java Performance Tips"
   link: "https://richardstartin.github.io/posts/5-java-mundane-performance-tricks"
+- title: "How to set an ideal thread pool size"
+  link: "https://engineering.zalando.com/posts/2019/04/how-to-set-an-ideal-thread-pool-size.html"
 ---
