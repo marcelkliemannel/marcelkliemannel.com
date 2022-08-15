@@ -12,4 +12,6 @@ links:
   link: "https://docs.oracle.com/javase/7/docs/technotes/guides/jni/spec/invocation.html"
 - title: "The Java memory model explained"
   link: "https://www.youtube.com/watch?v=qADk_tj4wY8"
+- title: "Native Memory — The Silent JVM Killer"
+  link: "https://medium.com/swlh/native-memory-the-silent-jvm-killer-595913cba8e7"
 ---
