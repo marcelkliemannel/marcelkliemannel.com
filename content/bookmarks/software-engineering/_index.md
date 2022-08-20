@@ -50,4 +50,6 @@ links:
   link: "https://medium.com/@BrandonBryson/assessing-legacy-code-using-chestertons-fence-38b299aa472f"
 - title: "Delivery Lead Time In Practice"
   link: "https://isthisit.nz/posts/2022/delivery-lead-time-in-practice/"
+- title: "6 Docker Compose Best Practices for Dev and Prod"
+  link: "https://prod.releasehub.com/blog/6-docker-compose-best-practices-for-dev-and-prod"
 ---
