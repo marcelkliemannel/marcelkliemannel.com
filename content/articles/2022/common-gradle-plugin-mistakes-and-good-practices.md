@@ -101,7 +101,7 @@ fun myAction() {
 
 ## Strong vs. Soft Task Relationships
 
-Gradle distinguishes between *strong* and *soft* relationship between tasks.
+Gradle distinguishes between *strong* and *soft* relationships between tasks.
 
 If we define the strong relationship between tasks A and B (e.g., by using `dependsOn` or `finalizedBy`) and execute only task A, Gradle will also execute task B. In contrast, if we define the soft relationship between both (e.g., using `mustRunAfter` or `shouldRunAfter`) and execute only task A, Gradle will not execute task B. But if we execute A and B, Gradle will execute them in the correct order.
 
