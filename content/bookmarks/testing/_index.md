@@ -10,4 +10,6 @@ links:
   link: "https://junit-pioneer.org/docs/"
 - title: "Consumer Driven Contract Testing"
   link: "https://github.com/christian-draeger/pact-example"
+- title: "ArchUnit - Java architecture testing"
+  link: "https://www.archunit.org/getting-started"
 ---
