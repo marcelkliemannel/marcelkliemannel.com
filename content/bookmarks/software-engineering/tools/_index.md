@@ -7,4 +7,6 @@ links:
   link: "https://github.com/zalando/zally"
 - title: "Markdown for Timelines"
   link: "https://markwhen.com"
+- title: "JSON Visio"
+  link: "https://jsonvisio.com"
 ---
