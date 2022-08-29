@@ -12,4 +12,6 @@ links:
   link: "https://github.com/christian-draeger/pact-example"
 - title: "ArchUnit - Java architecture testing"
   link: "https://www.archunit.org/getting-started"
+- title: "LogUnit: A Java library for unit-testing logging"
+  link: "https://github.com/netmikey/logunit"
 ---
