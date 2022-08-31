@@ -86,10 +86,15 @@ public class FrontendForwardingFilter extends HttpFilter {
     // Handling for special cases (see next chapters)
     // ...
     
-    response.reset();
-    response.setStatus(200);
-    response.setContentType(MediaType.TEXT_HTML);
-    request.getRequestDispatcher("/").forward(request, response);
+    try {
+      response.reset();
+      response.setStatus(200);
+      response.setContentType(MediaType.TEXT_HTML);
+      request.getRequestDispatcher("/").forward(request, response);
+    } 
+    finally {
+      response.getOutputStream().close();
+    }
   }
 }
 ```
