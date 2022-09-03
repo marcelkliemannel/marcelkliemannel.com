@@ -48,4 +48,6 @@ links:
   link: "https://richardstartin.github.io/posts/5-java-mundane-performance-tricks"
 - title: "How to set an ideal thread pool size"
   link: "https://engineering.zalando.com/posts/2019/04/how-to-set-an-ideal-thread-pool-size.html"
+- title: "A Guide to Concurrent Queues in Java"
+  link: "https://www.baeldung.com/java-concurrent-queues"
 ---
