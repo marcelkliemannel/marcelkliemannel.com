@@ -54,4 +54,6 @@ links:
   link: "https://prod.releasehub.com/blog/6-docker-compose-best-practices-for-dev-and-prod"
 - title: "Service Mesh Comparison"
   link: "https://servicemesh.es"
+- title: "Useful engineering metrics and why velocity is not one of them"
+  link: "https://lucasfcosta.com/2022/08/31/engineering-metrics.html"
 ---
