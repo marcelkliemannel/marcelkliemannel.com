@@ -9,4 +9,6 @@ links:
   link: "https://markwhen.com"
 - title: "JSON Visio"
   link: "https://jsonvisio.com"
+- title: "Kaitai Struct - A new way to develop parsers for binary structures"
+  link: "https://kaitai.io"
 ---
