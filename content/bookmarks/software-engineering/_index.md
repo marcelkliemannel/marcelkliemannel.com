@@ -56,4 +56,6 @@ links:
   link: "https://servicemesh.es"
 - title: "Useful engineering metrics and why velocity is not one of them"
   link: "https://lucasfcosta.com/2022/08/31/engineering-metrics.html"
+- title: "What is a LSM Tree 🪵?"
+  link: "https://creativcoder.dev/what-is-lsm-tree"
 ---
