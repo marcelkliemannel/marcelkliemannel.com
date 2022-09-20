@@ -16,4 +16,6 @@ links:
   link: "https://ogp.me"
 - title: "No-Class CSS Frameworks"
   link: "https://css-tricks.com/no-class-css-frameworks/"
+- title: "Cache your CORS"
+  link: "https://httptoolkit.tech/blog/cache-your-cors/"
 ---
