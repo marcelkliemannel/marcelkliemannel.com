@@ -11,4 +11,6 @@ links:
   link: "https://jsonvisio.com"
 - title: "Kaitai Struct - A new way to develop parsers for binary structures"
   link: "https://kaitai.io"
+- title: "OSINT tools collection"
+  link: "https://github.com/cipher387/osint_stuff_tool_collection"
 ---
