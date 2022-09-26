@@ -50,4 +50,6 @@ links:
   link: "https://engineering.zalando.com/posts/2019/04/how-to-set-an-ideal-thread-pool-size.html"
 - title: "A Guide to Concurrent Queues in Java"
   link: "https://www.baeldung.com/java-concurrent-queues"
+- title: "The Spring Data findAll Anti-Pattern"
+  link: "https://vladmihalcea.com/spring-data-findall-anti-pattern/"
 ---
