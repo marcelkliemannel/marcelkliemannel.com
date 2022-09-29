@@ -175,24 +175,26 @@ The minimum required configuration of this plugin would be as follows:
     <workingDirectory>${working.dir}</workingDirectory>
     <nodeVersion>${node.version}</nodeVersion>
   </configuration>    
-  <executions>
+  <executions> 
     <execution>
       <id>Install Node.js and npm</id>
       <goals>
         <goal>install-node-and-npm</goal>
       </goals>
-      <phase>generate-resources</phase>
-    </execution>  
+      <phase>generate-sources</phase>
+      <configuration>
+        <nodeVersion>${node.version}</nodeVersion>
+      </configuration>
+    </execution>
     <execution>
-      <id>npm run build</id>
+      <id>npm install</id>
       <goals>
         <goal>npm</goal>
       </goals>
       <configuration>
-        <arguments>run build</arguments>
+        <arguments>install</arguments>
       </configuration>
-      <phase>generate-resources</phase>
-    </execution>   
+    </execution>
   </executions>
 </plugin>
 ```
