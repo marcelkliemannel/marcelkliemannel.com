@@ -58,4 +58,6 @@ links:
   link: "https://lucasfcosta.com/2022/08/31/engineering-metrics.html"
 - title: "What is a LSM Tree 🪵?"
   link: "https://creativcoder.dev/what-is-lsm-tree"
+- title: "Why JWTs Suck as Session Tokens"
+  link: "https://developer.okta.com/blog/2017/08/17/why-jwts-suck-as-session-tokens"
 ---
