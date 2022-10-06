@@ -13,4 +13,6 @@ links:
   link: "https://kaitai.io"
 - title: "OSINT tools collection"
   link: "https://github.com/cipher387/osint_stuff_tool_collection"
+- title: "https://badssl.com"
+  link: "https://badssl.com"
 ---
