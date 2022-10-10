@@ -14,4 +14,6 @@ links:
   link: "https://www.youtube.com/watch?v=qADk_tj4wY8"
 - title: "Native Memory — The Silent JVM Killer"
   link: "https://medium.com/swlh/native-memory-the-silent-jvm-killer-595913cba8e7"
+- title: "Profiler: Shallow and retained sizes"
+  link: "https://www.yourkit.com/docs/java/help/sizes.jsp"
 ---
