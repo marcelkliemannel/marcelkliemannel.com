@@ -16,4 +16,6 @@ links:
   link: "https://joyofcryptography.com"
 - title: "Hash collisions and exploitations"
   link: "https://github.com/corkami/collisions"
+- title: "How Do You Prove a Secret?"
+  link: "https://www.quantamagazine.org/how-to-prove-you-know-a-secret-without-giving-it-away-20221011/"
 ---
