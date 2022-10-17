@@ -18,4 +18,6 @@ links:
   link: "https://github.com/corkami/collisions"
 - title: "How Do You Prove a Secret?"
   link: "https://www.quantamagazine.org/how-to-prove-you-know-a-secret-without-giving-it-away-20221011/"
+- title: "AWSome Pentesting Cheatsheet"
+  link: "https://github.com/pop3ret/AWSome-Pentesting/blob/main/AWSome-Pentesting-Cheatsheet.md"
 ---
