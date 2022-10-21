@@ -46,4 +46,6 @@ links:
   link: "https://calebschoepp.com/blog/2022/productivity-porn/"
 - title: "How to present to executives"
   link: "https://lethain.com/present-to-executives/"
+- title: "How to turn down “volunteer” (but not really) projects at work"
+  link: "https://www.askamanager.org/2022/10/how-to-turn-down-volunteer-but-not-really-projects-at-work.html"
 ---
