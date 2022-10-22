@@ -11,6 +11,7 @@ This IntelliJ plugin provides a task-manager-like tool window to monitor and man
 #### Key Features
 
 - The main part of the tool window is a tree table that lists all running JVM processes and their child processes.
-- For each process, the tool window provides a detailed information overview. This includes the system properties for JVMs, command line, environment variables, up time, etc.
-- There is an easy-to-use UI to access detailed information about any running JVM process, like getting a thread dump, version, classloader hierarchy, and the heap space.
+- For each JVM process the process details contains information about the main class, attached debugger and Java agents, and system properties.
+- Besides that, the process details provides the memory usage, command line, environment variables, uptime, and a lot more.
+- here is an easy-to-use UI to access detailed information about any running JVM process, like getting a thread dump, version, classloader hierarchy, and the heap space.
 - In addition, the plugin provides a one-click solution to trigger the garbage collection and start the OpenJDK JVM monitoring tool.
