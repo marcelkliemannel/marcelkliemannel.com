@@ -62,4 +62,6 @@ links:
   link: "https://developer.okta.com/blog/2017/08/17/why-jwts-suck-as-session-tokens"
 - title: "Bocker - Docker implemented in around 100 lines of bash"
   link: "https://github.com/p8952/bocker"
+- title: "High Cardinality"
+  link: "https://develotters.com/posts/high-cardinality/"
 ---
