@@ -16,4 +16,6 @@ links:
   link: "https://nvie.com/posts/a-successful-git-branching-model/"
 - title: "Intro To Deployment Strategies: Blue-Green, Canary, And More"
   link: "https://harness.io/blog/blue-green-canary-deployment-strategies/"
+- title: "Error Prone - Static Analysis Tool"
+  link: "https://errorprone.info/index"
 ---
