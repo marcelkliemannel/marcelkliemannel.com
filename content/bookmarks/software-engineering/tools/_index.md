@@ -15,4 +15,6 @@ links:
   link: "https://github.com/cipher387/osint_stuff_tool_collection"
 - title: "https://badssl.com"
   link: "https://badssl.com"
+- title: "Image Steganography Tool"
+  link: "https://github.com/7thSamurai/steganography"
 ---
