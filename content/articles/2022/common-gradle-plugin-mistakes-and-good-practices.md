@@ -245,7 +245,7 @@ Let's say we created a plugin that signs the `jar` task outputs. This plugin wou
 
 The user might now be inclined to use only our plugin since he implicitly gets the `java` plugin. However, this violates clean code principles at different levels, mainly because we should avoid to use functionalities from implicit dependencies. Especially in the case of implicit Gradle plugins, it should be noted that they do not only serve as code libraries, but also affect the project configuration. Therefore, we should not entourage our plugin users to use implicit dependencies.
 
-Therefore, our plugin should apply logic only when all required plugins are present in the project:
+Our plugin should apply logic only when all required plugins are present in the project:
 
 ```kotlin
 fun apply(target: Project) {
