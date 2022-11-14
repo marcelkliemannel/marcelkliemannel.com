@@ -243,7 +243,7 @@ Generally, we should adhere to the following logic: If someone wants our plugin 
 
 Let's say we created a plugin that signs the `jar` task outputs. This plugin would only work if the project also has the `java` plugin applied because it provides the `jar` task. So, from a semantic point of view, our plugin has one well-defined function. But, if our plugin automatically applies the `java` plugin, it also serves all the functions of the `java` plugin.
 
-The user might now be inclined to use only our plugin since he implicitly gets the `java` plugin. However, this violates clean code principles at different levels, mainly because we should avoid to use functionalities from implicit dependencies. Especially in the case of implicit Gradle plugins, it should be noted that they do not only serve as code libraries, but also affect the project configuration. Therefore, we should not entourage our plugin users to use implicit dependencies.
+The user might now be inclined to use only our plugin since he implicitly gets the `java` plugin. However, this violates clean code principles at different levels, mainly because we should avoid to use functionalities from implicit dependencies. Especially in the case of implicit Gradle plugins, it should be noted that they do not only serve as code libraries, but also affect the project configuration. Therefore, we should not encourage our plugin users to use implicit dependencies.
 
 Our plugin should apply logic only when all required plugins are present in the project:
 
