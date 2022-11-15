@@ -56,4 +56,6 @@ links:
   link: "https://www.baeldung.com/java-concurrent-queues"
 - title: "The Spring Data findAll Anti-Pattern"
   link: "https://vladmihalcea.com/spring-data-findall-anti-pattern/"
+- title: "Problems - A library that implements application/problem+json"
+  link: "https://github.com/zalando/problem"
 ---
