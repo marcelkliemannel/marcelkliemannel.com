@@ -48,4 +48,6 @@ links:
   link: "https://lethain.com/present-to-executives/"
 - title: "How to turn down “volunteer” (but not really) projects at work"
   link: "https://www.askamanager.org/2022/10/how-to-turn-down-volunteer-but-not-really-projects-at-work.html"
+- title: "Slow Down, Finish Faster"
+  link: "https://briandicroce.com/slow-down-finish-faster/"
 ---
