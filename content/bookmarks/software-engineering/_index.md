@@ -64,4 +64,6 @@ links:
   link: "https://github.com/p8952/bocker"
 - title: "High Cardinality"
   link: "https://develotters.com/posts/high-cardinality/"
+- title: "Always use [closed, open) intervals"
+  link: "https://fhur.me/posts/always-use-closed-open-intervals"
 ---
