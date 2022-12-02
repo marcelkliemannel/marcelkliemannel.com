@@ -66,4 +66,6 @@ links:
   link: "https://develotters.com/posts/high-cardinality/"
 - title: "Always use [closed, open) intervals"
   link: "https://fhur.me/posts/always-use-closed-open-intervals"
+- title: "I/O is no longer the bottleneck"
+  link: "https://benhoyt.com/writings/io-is-no-longer-the-bottleneck/"
 ---
