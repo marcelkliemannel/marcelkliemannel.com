@@ -68,4 +68,6 @@ links:
   link: "https://fhur.me/posts/always-use-closed-open-intervals"
 - title: "I/O is no longer the bottleneck"
   link: "https://benhoyt.com/writings/io-is-no-longer-the-bottleneck/"
+- title: "BT Protocol Reverse Engineering"
+  link: "https://github.com/Freeyourgadget/Gadgetbridge/wiki/BT-Protocol-Reverse-Engineering"
 ---
