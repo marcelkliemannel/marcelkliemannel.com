@@ -17,4 +17,6 @@ links:
   link: "https://kstefanj.github.io/2021/05/19/large-pages-and-java.html"
 - title: "Renaissance Suite: A modern benchmark suite for the JVM"
   link: "https://renaissance.dev"
+- title: "Containerize your Java applications"
+  link: "https://learn.microsoft.com/en-us/azure/developer/java/containers/overview"
 ---
