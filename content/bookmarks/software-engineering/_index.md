@@ -70,4 +70,6 @@ links:
   link: "https://benhoyt.com/writings/io-is-no-longer-the-bottleneck/"
 - title: "BT Protocol Reverse Engineering"
   link: "https://github.com/Freeyourgadget/Gadgetbridge/wiki/BT-Protocol-Reverse-Engineering"
+- title: "Self-Signed SSL Certificates / OpenSSL Cheatsheet and Guide"
+  link: "https://docs.joshuatz.com/cheatsheets/security/self-signed-ssl-certs/"
 ---
