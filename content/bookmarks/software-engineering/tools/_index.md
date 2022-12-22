@@ -17,4 +17,6 @@ links:
   link: "https://badssl.com"
 - title: "Image Steganography Tool"
   link: "https://github.com/7thSamurai/steganography"
+- title: "Dead simple wildcard DNS for any IP Address"
+  link: "https://nip.io/"
 ---
