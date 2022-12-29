@@ -58,4 +58,6 @@ links:
   link: "https://vladmihalcea.com/spring-data-findall-anti-pattern/"
 - title: "Problems - A library that implements application/problem+json"
   link: "https://github.com/zalando/problem"
+- title: "Lock @Scheduled Tasks With ShedLock and Spring Boot"
+  link: "https://rieckpil.de/lock-scheduled-tasks-with-shedlock-and-spring-boot/"
 ---
