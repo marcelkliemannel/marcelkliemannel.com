@@ -18,6 +18,8 @@ Besides the classic 404 error page, we should also look at what our application 
 
 This article will first look at how we can handle and modify error responses (responses with an HTTP status code greater than or equal to 400) in a centralized way in Quarkus. And after that, we create a custom error page fitting the media type from the `Accept` header of a request.
 
+**[The full source code of all examples can be found at GitHub.](https://github.com/marcelkliemannel/quarkus-centralized-error-response-handling-example)**
+
 ## Centralized Error Handling
 
 There are two approaches to centralized error handling in Quarkus: a global exception mapper or a global response filter. Both have their advantages and disadvantages. Which of the two approaches we want to use or even combine the two depends on the desired result and our HTTP API implementation.
@@ -57,10 +59,11 @@ A exemplary implementation strategy could look like this:
 
 ### Global Exception Mapper
 
-A global exception mapper implements the interface `javax.ws.rs.ext.ExceptionMapper` and uses the highest exception class to be handled as a type parameter. The method to be implemented gets the thrown exception as input and must return a `Response` object for the error:
+A global exception mapper implements the interface `javax.ws.rs.ext.ExceptionMapper` with the highest exception class to be handled as a type parameter. And to be discoverable by Quarkus, the claas needx to be annoated with `javax.ws.rs.ext.Provider`. The method to be implemented gets the thrown exception as input and must return a `Response` object for the error:
 
 ```java
-public class ErrorPageResponsEexceptionMapper implements ExceptionMapper<Exception> {
+@Provider
+public class ErrorPageResponseExceptionMapper implements ExceptionMapper<Exception> {
   
   @Inject
   javax.inject.Provider<ContainerRequestContext> containerRequestContextProvider;
@@ -83,7 +86,7 @@ public class ErrorPageResponsEexceptionMapper implements ExceptionMapper<Excepti
       // Overwrite error message
       Response originalErrorResponse = ((WebApplicationException) exception).getResponse();
       return Response.fromResponse(originalErrorResponse)
-                     .entity(originalErrorResponse.getStatusInfo().getReasonPhrase())
+                     .entity(exception.getMessage())
                      .build();
     }
     // Special mappings
@@ -94,7 +97,7 @@ public class ErrorPageResponsEexceptionMapper implements ExceptionMapper<Excepti
     else {
       logger.fatalf(exception,
                     "Failed to process request to: {}",
-                    containerRequestContextProvider.get().getUriInfo());
+                    httpServerRequestProvider.get().absoluteURI());
       return Response.serverError().entity("Internal Server Error").build();
     }
   }
@@ -119,7 +122,7 @@ public class ErrorPageResponseFilter implements ContainerResponseFilter {
   @Override
   public void filter(ContainerRequestContext requestContext, ContainerResponseContext responseContext) {
     int status = responseContext.getStatus();
-    if (status >= 400) {
+    if (status >= Response.Status.BAD_REQUEST.getStatusCode()) {
       // Modify error response...
     }
   }
@@ -146,22 +149,19 @@ The following code allows us to determine the best matching media type for the e
 
 ```java
 private static final List<MediaType> ERROR_MEDIA_TYPES = List.of(MediaType.TEXT_PLAIN_TYPE, MediaType.TEXT_HTML_TYPE, MediaType.APPLICATION_JSON_TYPE);
-private static final MediaType DEFAULT_ERROR_MEDIA_TYPE = MediaType.TEXT_PLAIN_TYPE;
 
-private MediaType determineErrorContentMediaType(ContainerRequestContext containerRequestContext)
-  List<MediaType> acceptableMediaTypes = containerRequestContext.getAcceptableMediaTypes();
-  MediaType bestMatch = MediaTypeHelper.getBestMatch(ERROR_MEDIA_TYPES, acceptableMediaTypes);
-  return bestMatch != null ? bestMatch : DEFAULT_ERROR_MEDIA_TYPE;
+private MediaType determineErrorContentMediaType(ContainerRequestContext containerRequestContext) {
+    List<MediaType> acceptableMediaTypes = containerRequestContext.getAcceptableMediaTypes();
+    // Both list parameters must be a sortable collection
+    return MediaTypeHelper.getBestMatch(new ArrayList<>(ERROR_MEDIA_TYPES), new ArrayList<>(acceptableMediaTypes));
 }   
 ```
 
 Let's go through this in detail:
 
-- In line 1, we define all `MediaType`s we support, and in line 2, the default one which we will use as a fallback.
-- In line 5, we read all `MediaType`s from the `Accept` headers of the request that the requester expects.
-- In line 6, we try to find a match between the supported `MediaType`s and the expected ones.
-
-(As an alternative to best matching, we could also consider setting only a status code if no one matches and not returning any content.)
+- In line 1, we define all `MediaType`s we want to support;
+- in line 4, we read all `MediaType`s from the `Accept` headers of the request that the requester expects;
+- and in line 5, we try to find a match between the supported `MediaType`s and the expected ones.
 
 ### Create Media Type Dependend Content
 
@@ -171,21 +171,21 @@ After we have determined the type of our error page, we can create the type-depe
 private String createErrorContent(MediaType errorMediaType, int errorStatus, String errorMessage) {
   // as JSON
   if (errorMediaType.equals(MediaType.APPLICATION_JSON_TYPE)) {
-    return createJsonErrorContent(errorStatus, errorMessage);
+    return createJsonErrorContent(errorStatus, errorDetails);
   }
   // as HTML
   else if (errorMediaType.equals(MediaType.TEXT_HTML_TYPE)) {
-    return createHtmlErrorContent(errorStatus, errorMessage);
+    return createHtmlErrorContent(errorStatus, errorDetails);
   }
-  // as text
-  else if (errorMediaType.equals(MediaType.TEXT_PLAIN_TYPE)) {
-    return createTextErrorContent(errorStatus, errorMessage);
-  }
+  // as text; also the fallback case
   else {
-    throw new IllegalStateException("snh: Unexpected media type: " + errorMediaType);
+    return createTextErrorContent(errorStatus, errorDetails);
   }
 }
 ```
+
+(As an alternative to the fallback case, we could also consider setting only a status code and not returning any content.)
+
 
 In the following three subsections, we will look at the implementations for each content type.
 
@@ -216,7 +216,7 @@ To generate such a JSON error response, we need the Quarkus RESTEasy Jackson ext
 </dependency>
 
 // Gradle build.gradle.kts
-implement("io.quarkus:quarkus-resteasy-jackson")
+implementation("io.quarkus:quarkus-resteasy-jackson")
 ```
 
 With the Jackson library, it's pretty easy to program our desired JSON structure. First, the structure gets filled with the error status code and message and finally transformed to a textual representation:
@@ -227,12 +227,14 @@ ObjectMapper objectMapper;
 
 private String createJsonErrorContent(int errorStatus, String errorMessage) {
   ObjectNode errorObject = objectMapper.createObjectNode();
-  errorObject.put("status", errorStatus);
-  errorObject.put("title", errorMessage);
-  
-  ArrayNode errorsArray = objectMapper.createArrayNode().add(errorObject);
-  
-  return objectMapper.writeValueAsString(obj)
+  errorObject.put("status", errorStatus.getStatusCode());
+  errorObject.put("title", errorStatus.getReasonPhrase());
+
+  if (errorDetails != null) {
+    errorObject.put("detail", errorDetails);
+  }
+
+  return objectMapper.createArrayNode().add(errorObject);
 }
 ```
 
@@ -248,7 +250,7 @@ To create an HTML error page, we are using the [Qute templating engine](https://
 </dependency>
 
 // Gradle build.gradle.kts
-implement("io.quarkus:quarkus-resteasy-qute")
+implementation("io.quarkus:quarkus-resteasy-qute")
 ```
 
 The HTML error page itself is a simple HTML file that we put into the resource folder  `src/main/resources/templates` as `error.html`:
@@ -259,16 +261,16 @@ The HTML error page itself is a simple HTML file that we put into the resource f
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Error {errorStatus}</title>
+  <title>Error {errorStatus} ({errorTitle})</title>
 </head>
 <body>
-  <h1>Error {errorStatus}</h1>
-  <p>{errorMessage}</p>
+<h1>Error {errorStatus} ({errorTitle})</h1>
+<p>{errorDetails}</p>
 </body>
 </html>
 ```
 
-In the file, we use the two placeholders `{errorStatus}` and `{errorMessage}`, which are dynamically replaced at runtime by Qute when rendering the final HTML code.
+In the file, we use the three placeholders `{errorStatus}`, `{errorTitle}` and `{errorDetails}`, which are dynamically replaced at runtime by Qute when rendering the final HTML code.
 
 For the HTML error page generation, we are first injecting the template file, then replacing both placeholders, and finally rendering the result to a textual representation:
 
@@ -276,10 +278,22 @@ For the HTML error page generation, we are first injecting the template file, th
 @Inject
 Template error;
 
-private String createHtmlErrorContent(int errorStatus, String errorMessage) {
-  return error.data("errorStatus", errorStatus)
-              .data("errorMessage", errorMessage)
-              .render();
+private TemplateInstance createHtmlErrorContent(Response.StatusType errorStatus, String errorDetails) {
+  return error.data("errorStatus", errorStatus.getStatusCode())
+              .data("errorTitle", errorStatus.getReasonPhrase())
+              .data("errorDetails", errorDetails);
+}
+```
+
+RESTEasy has a built-in functionality that automatically replaces HTML code with HTML entities for all 403 (Bad Request) `plain/html` responses. This would break our HTML error page for this status code, and therefore we need to disable this functionality. But don't worry, we don't open a security hole by doing this, because the Qute template engine takes care of the HTML entities sanitization for the placeholders for us. To disable the built-in sanitizer, we need to set a configuration property in the no-args constructor:
+
+```java
+// or public ErrorPageResponseExceptionMapper() { 
+public ErrorPageResponseFilter() { 
+  // Avoid the full replacement of the HTML error page with HTML entities for
+  // bad request responses. The Qute template engine will handle this for us.
+  ResteasyContext.getContextData(ResteasyDeployment.class)
+                 .setProperty(ResteasyContextParameters.RESTEASY_DISABLE_HTML_SANITIZER, true);
 }
 ```
 
@@ -289,7 +303,16 @@ Last but not least, for the plain text error page generation, we are simply crea
 
 ```java
 private static String createTextErrorContent(int errorStatus, String errorMessage) {
-  return String.format("Error %d (%s)", errorStatus, errorMessage);
+  var errorText = new StringBuilder();
+  errorText.append("Error ")
+           .append(errorStatus.getStatusCode())
+           .append(" (").append(errorStatus.getReasonPhrase()).append(")");
+
+  if (errorDetails != null) {
+    errorText.append("\n\n").append(errorDetails);
+  }
+
+  return errorText.toString();
 }
 ```
 
@@ -300,7 +323,7 @@ We now have everything to include the error page generation in either the global
 In the **global exception mapper**, we use the response we generated from the exception mapping as the basis and use its HTTP status and message to generate the error content:
 
 ```java
-public class ErrorPageResponsEexceptionMapper implements ExceptionMapper<Exception> {
+public class ErrorPageResponseExceptionMapper implements ExceptionMapper<Exception> {
  
   @Inject
   javax.inject.Provider<ContainerRequestContext> containerRequestContextProvider;
@@ -310,10 +333,10 @@ public class ErrorPageResponsEexceptionMapper implements ExceptionMapper<Excepti
   @Override
   public Response toResponse(Exception exception) {
     Response errorResponse = mapExceptionToResponse(exception);
-    
-    MediaType errorMediaType = determineErrorContentMediaType(containerRequestContextProvider.get())
-    String errorContent = createErrorContent(errorMediaType, errorResponse.getStatus(), errorResponse.getEntity().toString());
-    
+    List<MediaType> acceptableMediaTypes = VertxUtil.extractAccepts(VertxUtil.extractRequestHeaders(httpServerRequestProvider.get()));
+    MediaType errorMediaType = determineErrorContentMediaType(acceptableMediaTypes);
+    String errorContent = createErrorContent(errorMediaType, errorResponse.getStatusInfo(), errorResponse.getEntity().toString());
+
     return Response.fromResponse(errorResponse)
                    .type(errorMediaType)
                    .entity(errorContent)
@@ -335,10 +358,11 @@ public class ErrorPageResponseFilter implements ContainerResponseFilter {
   public void filter(ContainerRequestContext requestContext, ContainerResponseContext responseContext) {
     int status = responseContext.getStatus();
     if (status >= Response.Status.BAD_REQUEST.getStatusCode()) {
-      MediaType errorMediaType = determineErrorContentMediaType(requestContext)
-      String errorContent = createErrorContent(errorMediaType, responseContext.getStatus(), responseContext.getEntity().toString());
-    
-      responseContext.setEntity(errorContent, null, errorMediaType)
+      MediaType errorMediaType = determineErrorContentMediaType(requestContext);
+      String errorDetails = Optional.ofNullable(responseContext.getEntity()).map(Object::toString).orElse(null);
+      Object errorContent = createErrorContent(errorMediaType, responseContext.getStatusInfo(), errorDetails);
+
+      responseContext.setEntity(errorContent, null, errorMediaType);
     }
   }
 }
