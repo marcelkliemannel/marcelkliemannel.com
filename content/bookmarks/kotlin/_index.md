@@ -12,4 +12,6 @@ links:
   link: "https://medium.com/google-developer-experts/crash-course-on-the-kotlin-compiler-1-frontend-parsing-phase-9898490d922b"
 - title: "Annotation use-site targets"
   link: "https://kotlinlang.org/docs/annotations.html#annotation-use-site-targets"
+- title: "Valiktor: Type-safe, powerful and extensible fluent DSL to validate objects in Kotlin"
+  link: "https://github.com/valiktor/valiktor"
 ---
