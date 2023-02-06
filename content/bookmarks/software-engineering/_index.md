@@ -72,4 +72,6 @@ links:
   link: "https://github.com/Freeyourgadget/Gadgetbridge/wiki/BT-Protocol-Reverse-Engineering"
 - title: "Self-Signed SSL Certificates / OpenSSL Cheatsheet and Guide"
   link: "https://docs.joshuatz.com/cheatsheets/security/self-signed-ssl-certs/"
+- title: "The Clean Architecture"
+  link: "https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html"
 ---
