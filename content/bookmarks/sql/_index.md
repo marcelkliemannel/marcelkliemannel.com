@@ -10,4 +10,6 @@ links:
   link: "https://vladmihalcea.com/relational-database-sql-prepared-statements/"
 - title: "Say NO to Venn Diagrams When Explaining JOINs"
   link: "https://blog.jooq.org/say-no-to-venn-diagrams-when-explaining-joins/"
+- title: "Draw Entity-Relationship Diagrams"
+  link: "https://dbdiagram.io"
 ---
