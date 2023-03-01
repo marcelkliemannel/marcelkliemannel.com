@@ -74,4 +74,6 @@ links:
   link: "https://docs.joshuatz.com/cheatsheets/security/self-signed-ssl-certs/"
 - title: "The Clean Architecture"
   link: "https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html"
+- title: "How to Write a Spelling Corrector"
+  link: "https://norvig.com/spell-correct.html"
 ---
