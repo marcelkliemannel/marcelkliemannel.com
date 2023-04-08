@@ -71,9 +71,10 @@ links:
 - title: "BT Protocol Reverse Engineering"
   link: "https://github.com/Freeyourgadget/Gadgetbridge/wiki/BT-Protocol-Reverse-Engineering"
 - title: "Self-Signed SSL Certificates / OpenSSL Cheatsheet and Guide"
-  link: "https://docs.joshuatz.com/cheatsheets/security/self-signed-ssl-certs/"
 - title: "The Clean Architecture"
   link: "https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html"
 - title: "How to Write a Spelling Corrector"
   link: "https://norvig.com/spell-correct.html"
+- title: "GraphQL: From Excitement to Deception"
+  link: "https://betterprogramming.pub/graphql-from-excitement-to-deception-f81f7c95b7cf"
 ---
