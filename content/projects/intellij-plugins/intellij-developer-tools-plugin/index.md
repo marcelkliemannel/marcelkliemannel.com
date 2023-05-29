@@ -1,7 +1,7 @@
 ---
 title: "Developer Tools"
 gitHub: "https://github.com/marcelkliemannel/intellij-developer-tools-plugin"
-jetBrainsMarketplace: "https://plugins.jetbrains.com/plugin/21902-gradle-utilities"
+jetBrainsMarketplace: "https://plugins.jetbrains.com/plugin/21904-gradle-utilities"
 ---
 
 An IntelliJ plugin is a powerful and versatile set of tools designed to enhance the development experience for software engineers. With its extensive collection of features, developers can increase their productivity and simplify complex operations without leaving their coding environment.
