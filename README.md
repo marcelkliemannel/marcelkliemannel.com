@@ -1,6 +1,6 @@
 # marcelkliemannel.com
 
-[Personal website containing articles and a bookmarks collection mainly about software development and an overview over my projects.](https://marcelkliemannel.com)
+[Personal website with articles, bookmarks, and open-source projects, mainly about software development.](https://marcelkliemannel.com)
 
 ## Development
 

@@ -43,8 +43,8 @@ enableGitInfo = true
 [params]
   metaLanguage = "en-US"
   metaAuthor = "Marcel Kliemannel"
-  metaDescription = "Personal website containing articles and a bookmarks collection mainly about software development and an overview over my projects."
+  metaDescription = "Personal website with articles, bookmarks, and open-source projects, mainly about software development."
   aboutTheAuthorName = "Marcel Kliemannel"
   # Text is also in the _index.md
-  aboutTheAuthorDescription = "Software Engineer, JVM Enthusiast and technical writer with a focus on architecture, backend, security, automation, DevOps, monitoring, and performance."
+  aboutTheAuthorDescription = "Software engineer, JVM enthusiast, and technical writer focused on architecture, backend development, security, automation, DevOps, monitoring, and performance."
   gitHubUser = "marcelkliemannel"

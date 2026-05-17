@@ -23,7 +23,7 @@ Marcel Kliemannel
 Altes Bahnwerk 1  
 14473 Potsdam
 
-[Email address can be found here (spam protection)](https://mailhide.io/e/eJJkNwwq)
+[Email address (spam-protected)](https://mailhide.io/e/eJJkNwwq)
 
 The controller's data protection officer is:
 

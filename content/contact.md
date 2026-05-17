@@ -10,8 +10,8 @@ Marcel Kliemannel
 Altes Bahnwerk 1  
 14473 Potsdam
 
-[Email address can be found here (spam protection)](https://mailhide.io/e/eJJkNwwq)
+[Email address (spam-protected)](https://mailhide.io/e/eJJkNwwq)
 
-## Responsible according to § 55 Abs.2 RStV
+## Responsible according to § 55 Abs. 2 RStV
 
 Marcel Kliemannel

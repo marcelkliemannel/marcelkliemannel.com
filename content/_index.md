@@ -1,4 +1,4 @@
 ---
 title: "Hi, I'm Marcel"
-summary: "Software Engineer, JVM Enthusiast and technical writer with a focus on architecture, backend, security, automation, DevOps, monitoring, and performance."
+summary: "Software engineer, JVM enthusiast, and technical writer focused on architecture, backend development, security, automation, DevOps, monitoring, and performance."
 ---
