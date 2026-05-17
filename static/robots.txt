@@ -1,4 +1,62 @@
 User-agent: * 
 Disallow: /contact
+Disallow: /impressum
 Disallow: /privacy-policy
+
+User-agent: GPTBot
+Disallow: /contact
+Disallow: /impressum
+
+User-agent: ChatGPT-User
+Disallow: /contact
+Disallow: /impressum
+
+User-agent: OAI-SearchBot
+Disallow: /contact
+Disallow: /impressum
+
+User-agent: Google-Extended
+Disallow: /contact
+Disallow: /impressum
+
+User-agent: CCBot
+Disallow: /contact
+Disallow: /impressum
+
+User-agent: anthropic-ai
+Disallow: /contact
+Disallow: /impressum
+
+User-agent: ClaudeBot
+Disallow: /contact
+Disallow: /impressum
+
+User-agent: PerplexityBot
+Disallow: /contact
+Disallow: /impressum
+
+User-agent: meta-externalagent
+Disallow: /contact
+Disallow: /impressum
+
+User-agent: Meta-ExternalFetcher
+Disallow: /contact
+Disallow: /impressum
+
+User-agent: Applebot-Extended
+Disallow: /contact
+Disallow: /impressum
+
+User-agent: Bytespider
+Disallow: /contact
+Disallow: /impressum
+
+User-agent: Amazonbot
+Disallow: /contact
+Disallow: /impressum
+
+User-agent: YouBot
+Disallow: /contact
+Disallow: /impressum
+
 Sitemap: https://marcelkliemannel.com/sitemap.xml

@@ -5,6 +5,9 @@
   {{ $description := (cond (ne .Params.summary nil) .Params.summary .Site.Params.metaDescription) }}
   <meta name="description" content="{{ $description }}">
   <meta name="author" content="{{ .Site.Params.metaAuthor }}">
+  {{ with .Params.robots }}
+  <meta name="robots" content="{{ . }}">
+  {{ end }}
 
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png?v=3" | absURL }}">
   <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg?v=3" | absURL }}">
