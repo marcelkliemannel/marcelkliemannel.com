@@ -1,1 +1,13 @@
-@import '_reset', '_colors', '_fonts', '_text', '_headings', '_layout', '_page', '_common', '_header', '_icons', '_syntax', '_footer', '_toast'
+@use 'reset';
+@use 'colors';
+@use 'fonts';
+@use 'text';
+@use 'headings';
+@use 'layout';
+@use 'page';
+@use 'common';
+@use 'header';
+@use 'icons';
+@use 'syntax';
+@use 'footer';
+@use 'toast';

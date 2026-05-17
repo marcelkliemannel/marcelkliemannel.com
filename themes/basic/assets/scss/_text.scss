@@ -1,3 +1,6 @@
+@use 'colors' as *;
+@use 'fonts' as *;
+
 $base-line-height: .8rem;
 $paragraph-gap: .8rem;
 $title-margin-top: calc(1rem + #{$paragraph-gap});

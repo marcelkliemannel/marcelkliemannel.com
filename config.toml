@@ -1,9 +1,11 @@
 baseURL = "https://marcelkliemannel.com"
-languageCode = "en-us"
+locale = "en-US"
 title = "Marcel Kliemannel"
 theme = "basic"
 enableGitInfo = true
-paginate = 8
+
+[pagination]
+  pagerSize = 8
 
 [related]
   includeNewer = true
@@ -20,10 +22,13 @@ paginate = 8
     page = ["HTML"]
     home = ["HTML", "RSS"]
     section = ["HTML"]
-    taxonomyTerm = ["HTML"]
     taxonomy = ["HTML"]
+    term = ["HTML"]
 
 [markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
   [markup.highlight]
     lineNos = true
     style = "borland"
@@ -36,11 +41,11 @@ paginate = 8
     noClasses = false
 
 [params]
-  metaLanguage = "en-us"
+  metaLanguage = "en-US"
   metaAuthor = "Marcel Kliemannel"
   metaDescription = "Personal website containing articles and a bookmarks collection mainly about software development and an overview over my projects."
   aboutTheAuthorName = "Marcel Kliemannel"
   # Text is also in the _index.md
   aboutTheAuthorDescription = "Software Engineer, JVM Enthusiast and technical writer with a focus on architecture, backend, security, automation, DevOps, monitoring, and performance."
   gitHubUser = "marcelkliemannel"
-  twitterUser = "7ur1n9"
+  xUser = "7ur1n9"

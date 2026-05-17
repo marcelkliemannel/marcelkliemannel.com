@@ -15,7 +15,8 @@
   <meta name="msapplication-TileColor" content="#061332">
   <meta name="theme-color" content="#061332">
 
-  {{ $mainCss := resources.Get "scss/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+  {{ $sassOptions := dict "transpiler" "dartsass" }}
+  {{ $mainCss := resources.Get "scss/main.scss" | css.Sass $sassOptions | resources.Minify | resources.Fingerprint }}
   <link rel="stylesheet" href="{{ $mainCss.Permalink }}">
   {{ $iconmoonCss := resources.Get "css/iconmoon.css" | resources.Minify | resources.Fingerprint }}
   <link rel="stylesheet" href="{{ $iconmoonCss.Permalink }}">
@@ -24,7 +25,7 @@
   <title>{{ $title }}</title>
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@{{ .Site.Params.twitterUser }}">
+  <meta name="twitter:site" content="@{{ .Site.Params.xUser }}">
   <meta name="twitter:title" content="{{ $title }}">
   <meta name="twitter:description" content="{{ $description }}">
 

@@ -18,7 +18,7 @@
         <h2 class="about-the-author-name">{{ $.Site.Params.aboutTheAuthorName }}</h2>
         <p>{{ $.Site.Params.aboutTheAuthorDescription }}</p>
       </div>
-      {{ partial "social-media.html" (dict "context" $.Site "linkClassAttr" "button-like button-like-monospace button-like-size-m button-like-inverted-dark") }}
+      {{ partial "social-media.html" (dict "context" . "linkClassAttr" "button-like button-like-monospace button-like-size-m button-like-inverted-dark") }}
     </div>
   </div>
 

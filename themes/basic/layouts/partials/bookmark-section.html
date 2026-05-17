@@ -6,7 +6,7 @@
   {{ range $link := .Params.links }}
 
   <li>
-    <a href="{{ $link.link }}" target="_blank">{{ $link.title }}</a><br />
+    <a href="{{ $link.link }}" target="_blank" rel="noopener noreferrer">{{ $link.title }}</a><br />
     {{ with .Plain }}<span class="description">{{ . }}</span>{{ end }}
   </li>
 
