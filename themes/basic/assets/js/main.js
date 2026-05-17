@@ -1,74 +1,67 @@
-/**
- * Main menu toggle
- */
-var mainMenuVertical = document.querySelector(".main-menu-vertical");
-var mainMenuVerticalToggle = document.querySelector(".main-menu-vertical-toggle");
-mainMenuVerticalToggle.addEventListener("click", function(e) {
-  if (mainMenuVertical.style.display === "block") {
-    mainMenuVertical.style.display = "none";
+const mainMenuVertical = document.querySelector(".main-menu-vertical");
+const mainMenuVerticalToggle = document.querySelector(".main-menu-vertical-toggle");
 
-    // Icon
-    mainMenuVerticalToggle.classList.remove("icon-cross")
-    mainMenuVerticalToggle.classList.add("icon-menu")
+if (mainMenuVertical && mainMenuVerticalToggle) {
+  mainMenuVerticalToggle.addEventListener("click", function (event) {
+    event.preventDefault();
 
-    mainMenuVerticalToggle.classList.remove("main-menu-vertical-toggle-menu-visible");
-  } 
-  else {
-    mainMenuVertical.style.display = "block";
-    
-    // Icon
-    mainMenuVerticalToggle.classList.remove("icon-menu")
-    mainMenuVerticalToggle.classList.add("icon-cross")
-
-    mainMenuVerticalToggle.classList.add("main-menu-vertical-toggle-menu-visible");
-  }
-  e.preventDefault()
-});
-
-
-/**
- * Table of contents toggle
- */
-var tableOfContents = document.getElementById("TableOfContents");
-if (tableOfContents !== null) {
-  var tableOfContentsToggle = document.querySelector(".table-of-contents-toggle-link");
-  tableOfContentsToggle.addEventListener("click", function(e) {
-    if (tableOfContents.style.display === "inline-block") {
-      tableOfContents.style.display = "none";
-    } 
-    else {
-      tableOfContents.style.display = "inline-block";
-    }
-    e.preventDefault()
+    const menuIsVisible = mainMenuVertical.classList.toggle("main-menu-vertical-visible");
+    mainMenuVerticalToggle.classList.toggle("main-menu-vertical-toggle-menu-visible", menuIsVisible);
+    mainMenuVerticalToggle.classList.toggle("icon-cross", menuIsVisible);
+    mainMenuVerticalToggle.classList.toggle("icon-menu", !menuIsVisible);
+    mainMenuVerticalToggle.setAttribute("aria-expanded", String(menuIsVisible));
   });
 }
 
-/**
- * Code block copy button
- */
-document.querySelectorAll('.highlight').forEach(function (highlightDiv) {
-  var button = document.createElement('button');
-  button.className = 'copy-Button button-like button-like-inverted-dark button-like-size-l';
-  button.type = 'button';
+const tableOfContents = document.getElementById("TableOfContents");
+const tableOfContentsToggle = document.querySelector(".table-of-contents-toggle-link");
+
+if (tableOfContents && tableOfContentsToggle) {
+  tableOfContentsToggle.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    const tableOfContentsIsVisible = tableOfContents.classList.toggle("table-of-contents-visible");
+    tableOfContentsToggle.setAttribute("aria-expanded", String(tableOfContentsIsVisible));
+  });
+}
+
+document.querySelectorAll(".highlight").forEach(function (highlightDiv) {
+  const button = document.createElement("button");
+  button.className = "copy-button button-like button-like-inverted-dark button-like-size-l";
+  button.type = "button";
   button.innerHTML = '<span class="icon-copy"></span> Copy';
-  button.addEventListener("click", () => copyCodeToClipboard(button, highlightDiv));
+  button.addEventListener("click", function () {
+    copyCodeToClipboard(highlightDiv);
+  });
 
   highlightDiv.appendChild(button);
 });
 
-async function copyCodeToClipboard(button, highlightDiv) {
-  const codeToCopy = highlightDiv.querySelector(":last-child > .chroma > code").innerText;
+function copyCodeToClipboard(highlightDiv) {
+  const code = highlightDiv.querySelector(".lntd:last-child code, .chroma > pre code, .chroma > code");
 
-  navigator.clipboard.writeText(codeToCopy).then(function() {
-    showToast("Code copied to clipboard.")
-  }, function(err) {
-    console.error('Async: Could not copy text: ', err);
+  if (!code) {
+    return;
+  }
+
+  navigator.clipboard.writeText(code.innerText).then(function () {
+    showToast("Code copied to clipboard.");
+  }, function (error) {
+    console.error("Async: Could not copy text: ", error);
   });
 }
 
 function showToast(message) {
-  var toast = document.getElementById("toast");
+  const toast = document.getElementById("toast");
+
+  if (!toast) {
+    return;
+  }
+
   toast.className = "show";
-  toast.innerText = message
-  setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+  toast.innerText = message;
+
+  setTimeout(function () {
+    toast.className = toast.className.replace("show", "");
+  }, 3000);
 }

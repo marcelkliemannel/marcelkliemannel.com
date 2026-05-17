@@ -1,19 +1,19 @@
-<ul{{ with $.listClassAttr }} class="{{ . }}"{{end}}>
+<ul{{ with $.listClassAttr }} class="{{ . }}"{{ end }}>
   {{ range .context }}
-  <li{{ with $.entryClassAttr }} class="{{ . }}"{{end}}>
+  <li{{ with $.entryClassAttr }} class="{{ . }}"{{ end }}>
     {{ partial "page-meta.html" (dict "context" .) }}
-    <div  class="text">
-      <h3 class="non-chapter"><a href="{{.Permalink}}">{{.Title}}</a></h3>
+    <div class="text">
+      <h3 class="non-chapter"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
 
       {{ with .Params.summary }}
       <div class="text gap-top-small">
         <p>{{ . }}</p>
       </div>
-     {{ end }}
+      {{ end }}
     </div>
 
     <div class="gap-top-small">
-      {{ partial "tags.html" (dict "tags" .Params.tags "tagClassAttr" "button-like-inverted-dark button-like-size-m")}}
+      {{ partial "tags.html" (dict "tags" .Params.tags "tagClassAttr" "button-like-inverted-dark button-like-size-m") }}
     </div>
   </li>
   {{ end }}

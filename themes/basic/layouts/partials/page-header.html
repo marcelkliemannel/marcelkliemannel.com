@@ -22,12 +22,12 @@
 
     {{ if (eq .showTableOfContents "true") }}
       <div class="table-of-contents-toggle text text-on-dark-background text-small">
-        <a href="#" class="button-like button-like-size-m button-like-on-dark-background table-of-contents-toggle-link"><i class="icon-menu"></i> Table of Contents</a>
+        <a href="#" class="button-like button-like-size-m button-like-on-dark-background table-of-contents-toggle-link" aria-expanded="false"><i class="icon-menu"></i> Table of Contents</a>
       </div>
       <div class="table-of-contents text text-on-dark-background">
         {{ .context.Page.TableOfContents }}
       </div>
     {{ end }}
-  </div>
+    </div>
   </div>
 </div>

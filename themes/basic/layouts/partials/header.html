@@ -1,24 +1,23 @@
 <div class="header">
   <div class="horizontal-wrapper-narrow with-safety-gap group">
-    <a id="#top"></a>
+    <span id="top"></span>
     <div class="logo left">
       <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
     </div>
 
-    <nav>
+    <nav aria-label="Main navigation">
       <ul class="main-menu-horizontal horizontal-links-menu horizontal-links-menu-no-top-gap group">
         {{ range (where $.Site.Pages ".Params.menu" "eq" "main") }}
-          <li><a href="{{ .Permalink }}" class="button-like button-like-on-dark-background-filled">{{ .Title }}</a></li>
+        <li><a href="{{ .Permalink }}" class="button-like button-like-on-dark-background-filled">{{ .Title }}</a></li>
         {{ end }}
       </ul>
 
-      <a href="#" class="main-menu-vertical-toggle icon-menu"></a>
+      <a href="#" class="main-menu-vertical-toggle icon-menu" aria-label="Toggle main navigation" aria-expanded="false"></a>
       <ul class="main-menu-vertical">
         {{ range (where $.Site.Pages ".Params.menu" "eq" "main") }}
         <li><a class="button-like button-like-secondary-dark" href="{{ .Permalink }}">{{ .Title }}</a></li>
         {{ end }}
       </ul>
     </nav>
-
   </div>
 </div>

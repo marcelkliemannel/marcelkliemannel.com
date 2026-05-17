@@ -110,9 +110,13 @@
   text-align: center;
 
   #TableOfContents {
-    margin:auto;
+    margin: auto;
     text-align: left;
     display: none;
+
+    &.table-of-contents-visible {
+      display: inline-block;
+    }
   }
 }
 
@@ -143,7 +147,7 @@
     color: $color-bright-100;
     padding: 0 .4rem;
     position: absolute;
-    top: calc(calc(#{$line-height} / 2) * -1)
+    top: calc(calc(#{$line-height} / 2) * -1);
   }
 
   &-name {
